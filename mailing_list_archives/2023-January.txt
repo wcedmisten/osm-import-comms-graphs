@@ -1,0 +1,1541 @@
+From davisklavins at gmail.com  Sun Jan  1 13:29:00 2023
+From: davisklavins at gmail.com (=?UTF-8?B?RMSBdmlzIEvEvGF2acWGxaE=?=)
+Date: Sun, 1 Jan 2023 15:29:00 +0200
+Subject: [Imports] Latvia-bot
+Message-ID: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+
+Informing about Latvia-bot
+<https://wiki.openstreetmap.org/wiki/Automated_edits/Latvia-bot> which uses
+open data from the State Land Service of Latvia. See bot's wiki page for
+more information.
+Posting post factum because Automated edits code of conduct
+<https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct>
+didn't clearly state that posting to imports mailing list is mandatory
+until a few months ago changes were made as a result of discussion on one
+of the changesets <https://www.openstreetmap.org/changeset/128629973>.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230101/48f370b1/attachment.htm>
+
+From lonvia at denofr.de  Sun Jan  1 20:14:24 2023
+From: lonvia at denofr.de (Sarah Hoffmann)
+Date: Sun, 1 Jan 2023 21:14:24 +0100
+Subject: [Imports] Latvia-bot
+In-Reply-To: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+Message-ID: <Y7HpoGZbT4d/OQsb@sao.topf.org>
+
+On Sun, Jan 01, 2023 at 03:29:00PM +0200, D?vis K?avi?? wrote:
+> Informing about Latvia-bot
+> <https://wiki.openstreetmap.org/wiki/Automated_edits/Latvia-bot> which uses
+> open data from the State Land Service of Latvia. See bot's wiki page for
+> more information.
+> Posting post factum because Automated edits code of conduct
+> <https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct>
+> didn't clearly state that posting to imports mailing list is mandatory
+> until a few months ago changes were made as a result of discussion on one
+> of the changesets <https://www.openstreetmap.org/changeset/128629973>.
+
+Your use of addr:place is wrong. addr:place is to be used only in cases
+where the housenumber does not refer to a street.  This may or may not
+exist in Latvia but in the few instances I spot checked, addr:place
+should have been addr:city.
+
+Kind regards
+
+Sarah
+
+
+From davisklavins at gmail.com  Mon Jan  2 13:10:02 2023
+From: davisklavins at gmail.com (=?UTF-8?B?RMSBdmlzIEvEvGF2acWGxaE=?=)
+Date: Mon, 2 Jan 2023 15:10:02 +0200
+Subject: [Imports] Latvia-bot
+In-Reply-To: <Y7HpoGZbT4d/OQsb@sao.topf.org>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+Message-ID: <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+
+Thank you for the clarification! Updated everything as it makes sense to
+use one tag for all types of settlements and description of the tag matches
+the use case ("the name of the largest settlement (city / town / other)
+that is included in the address"). At the same time, tags addr:town,
+addr:village and addr:hamlet are used in OSM, but not all of them even have
+a wiki page in English. Originally, addr:place was chosen for the bot to
+avoid separate tags addr:village and addr:hamlet which also were not used
+as much. Addr:city seemed to be misleading for some users due to its name
+indicating city. If I started from scratch defining address tags for OSM, I
+would use addr:place for all these cases as its name better indicates that
+various types of settlements are included. For me, it doesn't seem logical
+to define separate tag only for cases when there is no street as using the
+same settlement tag when there is one seems fine. In Latvia, when there is
+no street, addr:housename is used instead of addr:housenumber.
+
+On Sun, 1 Jan 2023 at 22:14, Sarah Hoffmann <lonvia at denofr.de> wrote:
+
+> On Sun, Jan 01, 2023 at 03:29:00PM +0200, D?vis K?avi?? wrote:
+> > Informing about Latvia-bot
+> > <https://wiki.openstreetmap.org/wiki/Automated_edits/Latvia-bot> which
+> uses
+> > open data from the State Land Service of Latvia. See bot's wiki page for
+> > more information.
+> > Posting post factum because Automated edits code of conduct
+> > <https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct>
+> > didn't clearly state that posting to imports mailing list is mandatory
+> > until a few months ago changes were made as a result of discussion on one
+> > of the changesets <https://www.openstreetmap.org/changeset/128629973>.
+>
+> Your use of addr:place is wrong. addr:place is to be used only in cases
+> where the housenumber does not refer to a street.  This may or may not
+> exist in Latvia but in the few instances I spot checked, addr:place
+> should have been addr:city.
+>
+> Kind regards
+>
+> Sarah
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230102/a823a4b7/attachment.htm>
+
+From matkoniecz at tutanota.com  Mon Jan  2 20:28:51 2023
+From: matkoniecz at tutanota.com (Mateusz Konieczny)
+Date: Mon, 2 Jan 2023 21:28:51 +0100 (CET)
+Subject: [Imports] Latvia-bot
+In-Reply-To: <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+Message-ID: <NKoA1zn--V-9@tutanota.com>
+
+
+
+
+Jan 2, 2023, 14:10 by davisklavins at gmail.com:
+
+> Thank you for the clarification! Updated everything as it makes sense to use one tag for all types of settlements and description of the tag matches the use case ("the name of the largest settlement (city / town / other) that is included in the address").
+>
+If you try to redefine tags then it should be clearly done, not hidden in a bot import proposal.
+
+> At the same time, tags addr:town, addr:village and addr:hamlet are used in OSM, but not all of them even have a wiki page in English.
+>
+https://wiki.openstreetmap.org/w/index.php?title=Key:addr:town&action=history
+https://wiki.openstreetmap.org/w/index.php?title=Key:addr:hamlet&action=history
+
+>  Originally, addr:place was chosen for the bot to avoid separate tags addr:village and addr:hamlet which also were not used as much.
+>
+https://wiki.openstreetmap.org/wiki/Key:addr:place has a documented meaning that is
+quite consistently used
+
+>
+>  Addr:city seemed to be misleading for some users due to its name indicating city. If I started from scratch defining address tags for OSM, I would use addr:place for all these cases as its name better indicates that various types of settlements are included.
+>
+And I would swap highway=road and highway=unclassified.
+See also 
+https://wiki.openstreetmap.org/wiki/Counterintuitive_keys_and_values
+
+But in case of redefinition attempt I would clearly propose it, rather than doing it as
+a part of bot edit.
+
+>
+>  For me, it doesn't seem logical to define separate tag only for cases when there is no street as using the same settlement tag when there is one seems fine. In Latvia, when there is no street, addr:housename is used instead of addr:housenumber.
+>
+https://wiki.openstreetmap.org/wiki/Key:addr:housename is for names, not for 
+housenumber without street name.
+
+Please, do not try to redefine tags if you would define them differently in case
+of you starting to create tag definitions without consulting others.
+It results in things being broken in affected area for anyone using standard tag
+definitions.
+Please, roll back that changes and do them again with standard tag meanings.
+If you want to redefine widely used tags used by many others please start from
+asking others rather than breaking geocoding, address display and all that.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230102/3fc26993/attachment.htm>
+
+From davisklavins at gmail.com  Tue Jan  3 06:29:03 2023
+From: davisklavins at gmail.com (=?UTF-8?B?RMSBdmlzIEvEvGF2acWGxaE=?=)
+Date: Tue, 3 Jan 2023 08:29:03 +0200
+Subject: [Imports] Latvia-bot
+In-Reply-To: <NKoA1zn--V-9@tutanota.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+Message-ID: <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+
+On Mon, 2 Jan 2023 at 22:32, Mateusz Konieczny via Imports <
+imports at openstreetmap.org> wrote:
+
+>
+> Jan 2, 2023, 14:10 by davisklavins at gmail.com:
+>
+> Thank you for the clarification! Updated everything as it makes sense to
+> use one tag for all types of settlements and description of the tag matches
+> the use case ("the name of the largest settlement (city / town / other)
+> that is included in the address").
+>
+> If you try to redefine tags then it should be clearly done, not hidden in
+> a bot import proposal.
+>
+
+Not sure what you mean by redefining tags. I corrected a mistake in a tag
+use that was pointed out earlier in this discussion. No existing tag
+definitions (wiki) were altered to fit bot's purpose.
+
+
+> At the same time, tags addr:town, addr:village and addr:hamlet are used in
+> OSM, but not all of them even have a wiki page in English.
+>
+>
+> https://wiki.openstreetmap.org/w/index.php?title=Key:addr:town&action=history
+>
+> https://wiki.openstreetmap.org/w/index.php?title=Key:addr:hamlet&action=history
+>
+
+And addr:village doesn't have one.
+
+
+> Originally, addr:place was chosen for the bot to avoid separate tags
+> addr:village and addr:hamlet which also were not used as much.
+>
+> https://wiki.openstreetmap.org/wiki/Key:addr:place has a documented
+> meaning that is quite consistently used
+>
+>
+> Addr:city seemed to be misleading for some users due to its name
+> indicating city. If I started from scratch defining address tags for OSM, I
+> would use addr:place for all these cases as its name better indicates that
+> various types of settlements are included.
+>
+> And I would swap highway=road and highway=unclassified.
+> See also
+> https://wiki.openstreetmap.org/wiki/Counterintuitive_keys_and_values
+>
+
+Thanks for the link! addr:city could be a good candidate for that list too.
+
+
+> But in case of redefinition attempt I would clearly propose it, rather
+> than doing it as
+> a part of bot edit.
+>
+
+This is not a redefinition attempt. Just some thoughts that would have been
+better to keep to myself.
+
+>
+> For me, it doesn't seem logical to define separate tag only for cases when
+> there is no street as using the same settlement tag when there is one seems
+> fine. In Latvia, when there is no street, addr:housename is used instead of
+> addr:housenumber.
+>
+> https://wiki.openstreetmap.org/wiki/Key:addr:housename is for names, not
+> for
+> housenumber without street name.
+>
+
+In the State Address Register of Latvia, both numbers and names are within
+one field. In address notations, when there is no street, all numbers and
+names are put in double quotes as per Articel 43.1. of the Regulation of
+the Cabinet of Ministers No. 455 of June 29, 2021
+<https://likumi.lv/ta/id/324387#p43>. Also note that in Article 40
+<https://likumi.lv/ta/id/324387#p40> on address notation in small villages
+without streets, no housenumbers are mentioned, only housenames. Thus, in
+Latvia, it makes sense to use addr:housename for all cases when there is no
+street. E.g.:
+https://www.openstreetmap.org/way/867801167 (name),
+https://www.openstreetmap.org/way/1001090030 (name consisting of name and
+number),
+https://www.openstreetmap.org/way/237853362 (number in a village),
+https://www.openstreetmap.org/node/9888037895 (number in a small village
+without streets).
+
+Even such cases exist when housename might look a streetname + housenumber
+for an inexperienced user (trying to separate it would create an erroneous
+address):
+https://www.openstreetmap.org/node/9888125453
+
+
+> Please, do not try to redefine tags if you would define them differently
+> in case
+> of you starting to create tag definitions without consulting others.
+> It results in things being broken in affected area for anyone using
+> standard tag
+> definitions.
+> Please, roll back that changes and do them again with standard tag
+> meanings.
+> If you want to redefine widely used tags used by many others please start
+> from
+> asking others rather than breaking geocoding, address display and all that.
+>
+
+Read my previous answers and rethink again your ideas about rolling back.
+
+
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230103/432e7467/attachment-0001.htm>
+
+From lonvia at denofr.de  Tue Jan  3 08:19:34 2023
+From: lonvia at denofr.de (Sarah Hoffmann)
+Date: Tue, 3 Jan 2023 09:19:34 +0100
+Subject: [Imports] Latvia-bot
+In-Reply-To: <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+Message-ID: <Y7PlFob6MpQfAhci@sao.topf.org>
+
+Unfortunately, you have now broken the addresses which do not have a
+street. These are the ones were you need addr:place.
+
+On Tue, Jan 03, 2023 at 08:29:03AM +0200, D?vis K?avi?? wrote:
+> In the State Address Register of Latvia, both numbers and names are within
+> one field. In address notations, when there is no street, all numbers and
+> names are put in double quotes as per Articel 43.1. of the Regulation of
+> the Cabinet of Ministers No. 455 of June 29, 2021
+> <https://likumi.lv/ta/id/324387#p43>. Also note that in Article 40
+> <https://likumi.lv/ta/id/324387#p40> on address notation in small villages
+> without streets, no housenumbers are mentioned, only housenames. Thus, in
+> Latvia, it makes sense to use addr:housename for all cases when there is no
+> street. E.g.:
+> https://www.openstreetmap.org/way/867801167 (name),
+
+Should be:
+
+  addr:housename=Ezerl??i
+  addr:place=Slesari
+
+> https://www.openstreetmap.org/way/1001090030 (name consisting of name and
+> number),
+
+Should probably be:
+
+  addr:housenumber=48
+  addr:place=Salenieki
+
+> https://www.openstreetmap.org/way/237853362 (number in a village),
+
+Should be:
+
+  addr:housenumber=1
+  addr:place=Feima?i
+
+Close by https://www.openstreetmap.org/node/9888034244 should be:
+
+  addr:housename=B?rnud?rzs
+  addr:place=Feima?i
+
+> https://www.openstreetmap.org/node/9888037895 (number in a small village
+> without streets).
+
+Should be:
+
+  addr:housenumber=1
+  addr:place=T?mu?i
+
+> Even such cases exist when housename might look a streetname + housenumber
+> for an inexperienced user (trying to separate it would create an erroneous
+> address):
+> https://www.openstreetmap.org/node/9888125453
+
+Should probably be:
+
+  addr:housenumber=3A k-1
+  addr:place=R?gas-Siguldas ?oseja
+
+
+This is just from looking at the data as is. Somebody with local
+knowledge might have further insides. And that's exactly, why we require
+imports being discussed before they are made. So that these issues can
+be spotted before the data gets into the database.
+
+Sarah
+
+
+From davisklavins at gmail.com  Tue Jan  3 08:58:30 2023
+From: davisklavins at gmail.com (=?UTF-8?B?RMSBdmlzIEvEvGF2acWGxaE=?=)
+Date: Tue, 3 Jan 2023 10:58:30 +0200
+Subject: [Imports] Latvia-bot
+In-Reply-To: <Y7PlFob6MpQfAhci@sao.topf.org>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+ <Y7PlFob6MpQfAhci@sao.topf.org>
+Message-ID: <CAA+yGhFQW6Q68ZzR1xAnw3AsFQ2Lq9w4UgE7t8yXAGGHf+ME8Q@mail.gmail.com>
+
+On Tue, 3 Jan 2023 at 10:19, Sarah Hoffmann <lonvia at denofr.de> wrote:
+
+> Unfortunately, you have now broken the addresses which do not have a
+> street. These are the ones were you need addr:place.
+>
+
+When you point to such a fact, I was able to find at Key:addr:place
+<https://wiki.openstreetmap.org/wiki/Key:addr:place> that "it is okay to
+have both addr:place=* and addr:city=* with the same value on the same
+object". Will fix it. At the same time, there is nothing written about it
+at Key:addr:city <https://wiki.openstreetmap.org/wiki/Key:addr:city>,
+although there should be.
+
+
+> On Tue, Jan 03, 2023 at 08:29:03AM +0200, D?vis K?avi?? wrote:
+> > In the State Address Register of Latvia, both numbers and names are
+> within
+> > one field. In address notations, when there is no street, all numbers and
+> > names are put in double quotes as per Articel 43.1. of the Regulation of
+> > the Cabinet of Ministers No. 455 of June 29, 2021
+> > <https://likumi.lv/ta/id/324387#p43>. Also note that in Article 40
+> > <https://likumi.lv/ta/id/324387#p40> on address notation in small
+> villages
+> > without streets, no housenumbers are mentioned, only housenames. Thus, in
+> > Latvia, it makes sense to use addr:housename for all cases when there is
+> no
+> > street. E.g.:
+> > https://www.openstreetmap.org/way/867801167 (name),
+>
+> Should be:
+>
+>   addr:housename=Ezerl??i
+>   addr:place=Slesari
+>
+
+To be changed as mentioned before. Keeping addr:city additionally.
+
+
+> > https://www.openstreetmap.org/way/1001090030 (name consisting of name
+> and
+> > number),
+>
+> Should probably be:
+>
+>   addr:housenumber=48
+>   addr:place=Salenieki
+>
+>
+No, in Latvia, housenames are not further separated in parts but treated as
+a whole. Per legislation. In full address notation, this would be
+"Salenieki 48", Salaspils pag., Salaspils nov., LV-2118.
+
+
+> > https://www.openstreetmap.org/way/237853362 (number in a village),
+>
+> Should be:
+>
+>   addr:housenumber=1
+>   addr:place=Feima?i
+>
+
+Although it looks like a number, it's a housename in the State Address
+Register. In full address notation, all housenames are put in double
+quotes. This one would be "1", Feima?i, Feima?u pag., R?zeknes nov.,
+LV-4623.
+
+
+> Close by https://www.openstreetmap.org/node/9888034244 should be:
+>
+>   addr:housename=B?rnud?rzs
+>   addr:place=Feima?i
+>
+
+To be changed as mentioned before. Keeping addr:city additionally.
+
+
+> > https://www.openstreetmap.org/node/9888037895 (number in a small village
+> > without streets).
+>
+> Should be:
+>
+>   addr:housenumber=1
+>   addr:place=T?mu?i
+>
+
+Add:place will be added additionally as mentioned before. Otherwise,
+although it looks like a number, it's a housename in the State Address
+Register. In full address notation, all housenames are put in double
+quotes. This one would be "1", T?mu?i, V?r?mu pag., R?zeknes nov., LV-4647.
+
+
+> > Even such cases exist when housename might look a streetname +
+> housenumber
+> > for an inexperienced user (trying to separate it would create an
+> erroneous
+> > address):
+> > https://www.openstreetmap.org/node/9888125453
+>
+> Should probably be:
+>
+>   addr:housenumber=3A k-1
+>   addr:place=R?gas-Siguldas ?oseja
+>
+
+No, in Latvia, housenames are not further separated in parts but treated as
+a whole. Per legislation. In full address notation, this would be
+"R?gas-Siguldas ?oseja 3A k-1", Ber?i, Garkalnes pag., Ropa?u nov., LV-1024.
+
+
+> This is just from looking at the data as is. Somebody with local
+> knowledge might have further insides. And that's exactly, why we require
+> imports being discussed before they are made. So that these issues can
+> be spotted before the data gets into the database.
+>
+
+As a person with a local knowledge, I'm explaining that tags should also
+follow local legislation instead of making up alternative addressing system
+leading to unexpected results.
+
+
+> Sarah
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230103/34c2ed6c/attachment.htm>
+
+From lonvia at denofr.de  Tue Jan  3 09:56:04 2023
+From: lonvia at denofr.de (Sarah Hoffmann)
+Date: Tue, 3 Jan 2023 10:56:04 +0100
+Subject: [Imports] Latvia-bot
+In-Reply-To: <CAA+yGhFQW6Q68ZzR1xAnw3AsFQ2Lq9w4UgE7t8yXAGGHf+ME8Q@mail.gmail.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+ <Y7PlFob6MpQfAhci@sao.topf.org>
+ <CAA+yGhFQW6Q68ZzR1xAnw3AsFQ2Lq9w4UgE7t8yXAGGHf+ME8Q@mail.gmail.com>
+Message-ID: <Y7P7tFj8pe8Bxwgh@sao.topf.org>
+
+I strongly recommend that you describe the exact changes you want to do
+before you do any further uploads to the database. The public database
+is not a playground for yo to toy around with until you get it right.
+
+On Tue, Jan 03, 2023 at 10:58:30AM +0200, D?vis K?avi?? wrote:
+> On Tue, 3 Jan 2023 at 10:19, Sarah Hoffmann <lonvia at denofr.de> wrote:
+> 
+> > Unfortunately, you have now broken the addresses which do not have a
+> > street. These are the ones were you need addr:place.
+> >
+> 
+> When you point to such a fact, I was able to find at Key:addr:place
+> <https://wiki.openstreetmap.org/wiki/Key:addr:place> that "it is okay to
+> have both addr:place=* and addr:city=* with the same value on the same
+> object". Will fix it. At the same time, there is nothing written about it
+> at Key:addr:city <https://wiki.openstreetmap.org/wiki/Key:addr:city>,
+> although there should be.
+
+addr:place and addr:city may appear together when they refer to
+different places which both would appear in the postal address. Do not
+duplicate them when they refer to the same place or datausers will
+interpret the address wrong.
+
+> > > https://www.openstreetmap.org/way/1001090030 (name consisting of name
+> > and
+> > > number),
+> >
+> > Should probably be:
+> >
+> >   addr:housenumber=48
+> >   addr:place=Salenieki
+> >
+> >
+> No, in Latvia, housenames are not further separated in parts but treated as
+> a whole. Per legislation. In full address notation, this would be
+> "Salenieki 48", Salaspils pag., Salaspils nov., LV-2118.
+
+The format used by the legislation is only marginally relevant in this
+discussion. The more important part is to get the format right, so OSM
+data users can interpret the address. If you leave the address as is
+with jus the addr:housename and no addr:street or addr:place, then the
+address will per convention be interpreted as a street address, i.e.
+addr:street will be derived from the nearest street. You'll see that
+when searching for the address:
+https://www.openstreetmap.org/search?query=Salenieki%2048
+
+> > > https://www.openstreetmap.org/way/237853362 (number in a village),
+> >
+> > Should be:
+> >
+> >   addr:housenumber=1
+> >   addr:place=Feima?i
+> >
+> 
+> Although it looks like a number, it's a housename in the State Address
+> Register. In full address notation, all housenames are put in double
+> quotes. This one would be "1", Feima?i, Feima?u pag., R?zeknes nov.,
+> LV-4623.
+
+There is a common misconception that an import source is wisely
+structured just because it is 'official'. It is not.
+Official database were made by humans, too. Somebody came up with a
+database schema on their desk based on the couple of examples they were
+familiar with. And then they hit reality, which didn't fit the neat
+schema at all. So they stuffed the data into the database anyways as best
+as it's possible without changing the schema and then put a complicated
+'legislation' on top to explain away the errors. There is no need to
+copy the errors 1:1 into OSM. We are in the fortunate position that we
+can change our schema when reality doesn't fit our preconceptions.
+This is how addr:place came to be. We started out with the assumption
+that every address has a street. When we found out that this is wrong,
+we adapted the schema instead of reassigning addr:housenumber a new
+function.
+
+In this address the "1" smells like a house number, looks like a house number,
+behaves like a house number, so addr:housenumber it should be. Not doing so
+will give you the strangest misbehaviour when the data is used.
+For example, as long as you insist on using addr:housename this address can only
+be found with '1 Feima?i, Latvia' but not with 'Feima?i 1, Latvia'.
+That is not a bug, it is a feature.
+
+
+Sarah
+
+
+From matkoniecz at tutanota.com  Tue Jan  3 11:38:22 2023
+From: matkoniecz at tutanota.com (Mateusz Konieczny)
+Date: Tue, 3 Jan 2023 12:38:22 +0100 (CET)
+Subject: [Imports] Latvia-bot
+In-Reply-To: <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+Message-ID: <NKrQCsB--3-9@tutanota.com>
+
+
+
+
+Jan 3, 2023, 07:29 by davisklavins at gmail.com:
+
+> On Mon, 2 Jan 2023 at 22:32, Mateusz Konieczny via Imports <> imports at openstreetmap.org> > wrote:
+>
+>>
+>>
+>> Jan 2, 2023, 14:10 by >> davisklavins at gmail.com>> :
+>>
+>>> Thank you for the clarification! Updated everything as it makes sense to use one tag for all types of settlements and description of the tag matches the use case ("the name of the largest settlement (city / town / other) that is included in the address").
+>>>
+>> If you try to redefine tags then it should be clearly done, not hidden in a bot import proposal.
+>>
+>
+> Not sure what you mean by redefining tags.
+>
+As I understand you started to used addr:place for cases where
+there is street-indexed housenumber and no place-indexed housenumber
+and it is not a conscription number.
+
+Also, it seems that your bot is using add:housename for numeric values
+that almost certainly are addr:housenumber
+
+> In the State Address Register of Latvia, both numbers and names are within one field. In address notations, when there is no street, all numbers and names are put in double quotes as per > Articel 43.1. of the Regulation of the Cabinet of Ministers No. 455 of June 29, 2021 <https://likumi.lv/ta/id/324387#p43>> . Also note that in > Article 40 <https://likumi.lv/ta/id/324387#p40>>  on address notation in small villages without streets, no housenumbers are mentioned, only housenames. 
+>
+OK
+
+> Thus, in Latvia, it makes sense to use addr:housename for all cases when there is no street
+>
+No. addr:housename is for house names (in this case tag is well named).
+It is not for house numbers in any case at all.
+Even if internal State Address Register of Latvia does not distinguish between names
+and numbers, that does not change that OSM distinguishes between them.
+
+For example https://www.openstreetmap.org/way/237853362 and
+https://www.openstreetmap.org/node/9888037895 have addr:housename=1is at least extremely suspicious.
+
+And if you mention that "both numbers and names are within one field" then it needs
+to split into proper fields during import.
+
+Rather than assume that OSM tagging follows Latvian legislation and 
+redefining addr:housename to "house names and whatever
+is stored in Latvian state databases in the same field as house names".
+
+> Read my previous answers and rethink again your ideas about rolling back.
+>
+I am still pretty sure that addr:housename=1 is a clear tagging mistake.
+
+"In the State Address Register of Latvia, both numbers and names are within one field"
+does not mean that they should or can be stored in the same OSM tag.
+
+(I would be more likely to classify it as "weird local traditions" if that would be discussed
+before edit and actually planned, now it looks like "it is feature not a bug")
+(I am not planning to make any rollbacks personally, but I expect that it will continue
+to break processing of OSM data in Latvia and sooner or later it will be fixed)
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230103/1b7d8740/attachment-0001.htm>
+
+From andy at pigsonthewing.org.uk  Tue Jan  3 11:52:00 2023
+From: andy at pigsonthewing.org.uk (Andy Mabbett)
+Date: Tue, 3 Jan 2023 11:52:00 +0000
+Subject: [Imports] Latvia-bot
+In-Reply-To: <Y7P7tFj8pe8Bxwgh@sao.topf.org>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+ <Y7PlFob6MpQfAhci@sao.topf.org>
+ <CAA+yGhFQW6Q68ZzR1xAnw3AsFQ2Lq9w4UgE7t8yXAGGHf+ME8Q@mail.gmail.com>
+ <Y7P7tFj8pe8Bxwgh@sao.topf.org>
+Message-ID: <CABiXOEmY6bBjGorEMAy95+SYMOz3e8nyX5n-M7LqVbthc8_GbA@mail.gmail.com>
+
+On Tue, 3 Jan 2023 at 09:56, Sarah Hoffmann via Imports
+<imports at openstreetmap.org> wrote:
+
+>The public database is not a playground for yo to toy around with until you get it right.
+
+Can discussion on this list be conducted in a more collegial tone,
+with assumption of good faith, please?
+
+-- 
+Andy Mabbett
+@pigsonthewing
+https://pigsonthewing.org.uk
+
+
+From davisklavins at gmail.com  Tue Jan  3 12:38:39 2023
+From: davisklavins at gmail.com (=?UTF-8?B?RMSBdmlzIEvEvGF2acWGxaE=?=)
+Date: Tue, 3 Jan 2023 14:38:39 +0200
+Subject: [Imports] Latvia-bot
+In-Reply-To: <Y7P7tFj8pe8Bxwgh@sao.topf.org>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+ <Y7PlFob6MpQfAhci@sao.topf.org>
+ <CAA+yGhFQW6Q68ZzR1xAnw3AsFQ2Lq9w4UgE7t8yXAGGHf+ME8Q@mail.gmail.com>
+ <Y7P7tFj8pe8Bxwgh@sao.topf.org>
+Message-ID: <CAA+yGhGV=qQTrcbMcFAy0bYc=v9DXiKqU=qwsb0u8J1YXMEQHA@mail.gmail.com>
+
+On Tue, 3 Jan 2023 at 11:56, Sarah Hoffmann <lonvia at denofr.de> wrote:
+
+> I strongly recommend that you describe the exact changes you want to do
+> before you do any further uploads to the database. The public database
+> is not a playground for yo to toy around with until you get it right.
+>
+> On Tue, Jan 03, 2023 at 10:58:30AM +0200, D?vis K?avi?? wrote:
+> > On Tue, 3 Jan 2023 at 10:19, Sarah Hoffmann <lonvia at denofr.de> wrote:
+> >
+> > > Unfortunately, you have now broken the addresses which do not have a
+> > > street. These are the ones were you need addr:place.
+> > >
+> >
+> > When you point to such a fact, I was able to find at Key:addr:place
+> > <https://wiki.openstreetmap.org/wiki/Key:addr:place> that "it is okay to
+> > have both addr:place=* and addr:city=* with the same value on the same
+> > object". Will fix it. At the same time, there is nothing written about it
+> > at Key:addr:city <https://wiki.openstreetmap.org/wiki/Key:addr:city>,
+> > although there should be.
+>
+> addr:place and addr:city may appear together when they refer to
+> different places which both would appear in the postal address. Do not
+> duplicate them when they refer to the same place or datausers will
+> interpret the address wrong.
+>
+
+Then why does the wiki state that "it is okay to have both addr:place=* and
+addr:city=* *with the same value on the same object*"? It's rather
+impossible to do things right when wiki says one thing, but some other user
+says the opposite.
+
+
+> > > > https://www.openstreetmap.org/way/1001090030 (name consisting of
+> name
+> > > and
+> > > > number),
+> > >
+> > > Should probably be:
+> > >
+> > >   addr:housenumber=48
+> > >   addr:place=Salenieki
+> > >
+> > >
+> > No, in Latvia, housenames are not further separated in parts but treated
+> as
+> > a whole. Per legislation. In full address notation, this would be
+> > "Salenieki 48", Salaspils pag., Salaspils nov., LV-2118.
+>
+> The format used by the legislation is only marginally relevant in this
+> discussion. The more important part is to get the format right, so OSM
+> data users can interpret the address. If you leave the address as is
+> with jus the addr:housename and no addr:street or addr:place, then the
+> address will per convention be interpreted as a street address, i.e.
+> addr:street will be derived from the nearest street. You'll see that
+> when searching for the address:
+> https://www.openstreetmap.org/search?query=Salenieki%2048
+>
+>
+For this particular address, the upper object is rural territory
+("Salaspils pag."), not a village or any other settlement. Although
+Salenieki looks like a village, interpreting it as such in context of an
+address would be wrong. Or should addr:place contain the value of
+addr:subdistrict ("Salaspils pagasts")? Then such an assumption I would
+like to see documented in wiki. Probably in such cases Nominatim should be
+improved not to add the nearest road and a bunch of nearest settlements
+(all of "C11, V?cu Kalni, Augstkalni, Salenieki" are erroneously added) in
+Latvia? Since address data is being updated with the bot, all necessary
+data to create an address notation, are within addr.* tags (except
+country), so there is no need to add anything else from other objects
+(street names, settlements etc.) in Latvia. Seems that country specific
+configuration exists (
+https://github.com/osm-search/Nominatim/blob/master/settings/address-levels.json).
+Ideally, results should match the address notation in the State Address
+Register (e.g., when searching for an address at kadastrs.lv
+<https://www.kadastrs.lv/> (National Address Register > Search address) or
+BalticMaps <https://balticmaps.eu/en/> (the latter visually excludes
+postcodes from search results and housenames aren't quoted)).
+
+
+> > > > https://www.openstreetmap.org/way/237853362 (number in a village),
+> > >
+> > > Should be:
+> > >
+> > >   addr:housenumber=1
+> > >   addr:place=Feima?i
+> > >
+> >
+> > Although it looks like a number, it's a housename in the State Address
+> > Register. In full address notation, all housenames are put in double
+> > quotes. This one would be "1", Feima?i, Feima?u pag., R?zeknes nov.,
+> > LV-4623.
+>
+> There is a common misconception that an import source is wisely
+> structured just because it is 'official'. It is not.
+> Official database were made by humans, too. Somebody came up with a
+> database schema on their desk based on the couple of examples they were
+> familiar with. And then they hit reality, which didn't fit the neat
+> schema at all. So they stuffed the data into the database anyways as best
+> as it's possible without changing the schema and then put a complicated
+> 'legislation' on top to explain away the errors. There is no need to
+> copy the errors 1:1 into OSM. We are in the fortunate position that we
+> can change our schema when reality doesn't fit our preconceptions.
+> This is how addr:place came to be. We started out with the assumption
+> that every address has a street. When we found out that this is wrong,
+> we adapted the schema instead of reassigning addr:housenumber a new
+> function.
+>
+> In this address the "1" smells like a house number, looks like a house
+> number,
+> behaves like a house number, so addr:housenumber it should be. Not doing so
+> will give you the strangest misbehaviour when the data is used.
+> For example, as long as you insist on using addr:housename this address
+> can only
+> be found with '1 Feima?i, Latvia' but not with 'Feima?i 1, Latvia'.
+> That is not a bug, it is a feature.
+>
+
+It's OK not to be found with "Feima?i 1, Latvia" because village comes
+after housename or streetname+housenumber. "Feima?i 1" would mean either
+housename, or name of village/town/city, none of which exist. Btw, if
+country isn't added, it's found even with "Feima?i 1".
+Interpreting on top of local legislation is necessary because it's used
+outside OSM. If somebody wants to find an address in OSM, he expects it to
+follow rules used elsewhere. Otherwise he might not be able to find an
+address.
+Technically, it's not hard to separate housenames that look like numbers
+(also with letters etc., e.g., 1A, 1/3) into addr:housenumber. As Mateusz
+also pointed out, I'll change it as it doesn't complicate the ability to
+construct proper address notation much and even in legislation it's called
+number in some (but not all) places as it looks like one (Articel 43.1.
+<https://likumi.lv/ta/id/324387#p43>).
+
+ Sarah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230103/f2a887a8/attachment.htm>
+
+From davisklavins at gmail.com  Tue Jan  3 13:29:07 2023
+From: davisklavins at gmail.com (=?UTF-8?B?RMSBdmlzIEvEvGF2acWGxaE=?=)
+Date: Tue, 3 Jan 2023 15:29:07 +0200
+Subject: [Imports] Latvia-bot
+In-Reply-To: <NKrQCsB--3-9@tutanota.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+ <NKrQCsB--3-9@tutanota.com>
+Message-ID: <CAA+yGhHS0VM3jj_Ect2JyL-=ZFH4SzJYEgHQYh6jwYK1_p4CDg@mail.gmail.com>
+
+On Tue, 3 Jan 2023 at 13:43, Mateusz Konieczny via Imports <
+imports at openstreetmap.org> wrote:
+
+> Jan 3, 2023, 07:29 by davisklavins at gmail.com:
+>
+> On Mon, 2 Jan 2023 at 22:32, Mateusz Konieczny via Imports <
+> imports at openstreetmap.org> wrote:
+> Not sure what you mean by redefining tags.
+>
+> As I understand you started to used addr:place for cases where
+> there is street-indexed housenumber and no place-indexed housenumber
+> and it is not a conscription number.
+>
+
+OK, different usage than documented in wiki. Yes, it was for all cases when
+an address was located within a village, either as a housenumber assigned
+to a street, or as a housename without a street. I changed addr:place to
+addr:city in all cases, but it might be that addr:place should have been
+retained for housenames without a street. Also, it's not clear in these
+cases, if addr:city can be retained, or not (wiki says it can be, but Sarah
+wrote the opposite).
+
+
+> Also, it seems that your bot is using add:housename for numeric values
+> that almost certainly are addr:housenumber
+>
+> In the State Address Register of Latvia, both numbers and names are within
+> one field. In address notations, when there is no street, all numbers and
+> names are put in double quotes as per Articel 43.1. of the Regulation of
+> the Cabinet of Ministers No. 455 of June 29, 2021
+> <https://likumi.lv/ta/id/324387#p43>. Also note that in Article 40
+> <https://likumi.lv/ta/id/324387#p40> on address notation in small
+> villages without streets, no housenumbers are mentioned, only housenames.
+>
+> OK
+>
+> Thus, in Latvia, it makes sense to use addr:housename for all cases when
+> there is no street
+>
+> No. addr:housename is for house names (in this case tag is well named).
+> It is not for house numbers in any case at all.
+> Even if internal State Address Register of Latvia does not distinguish
+> between names
+> and numbers, that does not change that OSM distinguishes between them.
+>
+> For example https://www.openstreetmap.org/way/237853362 and
+> https://www.openstreetmap.org/node/9888037895 have addr:housename=1
+> is at least extremely suspicious.
+>
+> And if you mention that "both numbers and names are within one field" then
+> it needs
+> to split into proper fields during import.
+>
+> Rather than assume that OSM tagging follows Latvian legislation and
+> redefining addr:housename to "house names and whatever
+> is stored in Latvian state databases in the same field as house names".
+>
+> Read my previous answers and rethink again your ideas about rolling back.
+>
+> I am still pretty sure that addr:housename=1 is a clear tagging mistake.
+>
+> "In the State Address Register of Latvia, both numbers and names are
+> within one field"
+> does not mean that they should or can be stored in the same OSM tag.
+>
+> (I would be more likely to classify it as "weird local traditions" if that
+> would be discussed
+> before edit and actually planned, now it looks like "it is feature not a
+> bug")
+> (I am not planning to make any rollbacks personally, but I expect that it
+> will continue
+> to break processing of OSM data in Latvia and sooner or later it will be
+> fixed)
+>
+
+OK, I'll separate housenames that look like numbers (also with letters
+etc., e.g., 1A, 1/3) into addr:housenumber as it doesn't complicate the
+ability to construct proper address notation much and even in legislation
+it's called number in some (but not all) places as it looks like one (Articel
+43.1. <https://likumi.lv/ta/id/324387#p43>).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230103/caa6073e/attachment-0001.htm>
+
+From matkoniecz at tutanota.com  Tue Jan  3 13:43:10 2023
+From: matkoniecz at tutanota.com (Mateusz Konieczny)
+Date: Tue, 3 Jan 2023 14:43:10 +0100 (CET)
+Subject: [Imports] Latvia-bot
+In-Reply-To: <CAA+yGhGV=qQTrcbMcFAy0bYc=v9DXiKqU=qwsb0u8J1YXMEQHA@mail.gmail.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+ <Y7PlFob6MpQfAhci@sao.topf.org>
+ <CAA+yGhFQW6Q68ZzR1xAnw3AsFQ2Lq9w4UgE7t8yXAGGHf+ME8Q@mail.gmail.com>
+ <Y7P7tFj8pe8Bxwgh@sao.topf.org>
+ <CAA+yGhGV=qQTrcbMcFAy0bYc=v9DXiKqU=qwsb0u8J1YXMEQHA@mail.gmail.com>
+Message-ID: <NKrrmDA--7-9@tutanota.com>
+
+
+
+
+Jan 3, 2023, 13:38 by davisklavins at gmail.com:
+
+>
+>
+> On Tue, 3 Jan 2023 at 11:56, Sarah Hoffmann <> lonvia at denofr.de> > wrote:
+>
+>> I strongly recommend that you describe the exact changes you want to do
+>>  before you do any further uploads to the database. The public database
+>>  is not a playground for yo to toy around with until you get it right.
+>>  
+>>  On Tue, Jan 03, 2023 at 10:58:30AM +0200, D?vis K?avi?? wrote:
+>>  > On Tue, 3 Jan 2023 at 10:19, Sarah Hoffmann <>> lonvia at denofr.de>> > wrote:
+>>  > 
+>>  > > Unfortunately, you have now broken the addresses which do not have a
+>>  > > street. These are the ones were you need addr:place.
+>>  > >
+>>  > 
+>>  > When you point to such a fact, I was able to find at Key:addr:place
+>>  > <>> https://wiki.openstreetmap.org/wiki/Key:addr:place>> > that "it is okay to
+>>  > have both addr:place=* and addr:city=* with the same value on the same
+>>  > object". Will fix it. At the same time, there is nothing written about it
+>>  > at Key:addr:city <>> https://wiki.openstreetmap.org/wiki/Key:addr:city>> >,
+>>  > although there should be.
+>>  
+>>  addr:place and addr:city may appear together when they refer to
+>>  different places which both would appear in the postal address. Do not
+>>  duplicate them when they refer to the same place or datausers will
+>>  interpret the address wrong.
+>>
+>
+> Then why does the wiki state that "it is okay to have both addr:place=* and addr:city=* > with the same value on the same object> "? It's rather impossible to do things right when wiki says one thing, but some other user says the opposite.
+>
+It is entirely normal to discover during such discussion that OSM Wiki had confusing/
+badly worded/misleading descriptions.
+
+Sometimes updating or extending OSM Wiki documentation takes large part of such
+effort (it happened to me few times when I was adding new functionality).
+
+Self-contradictory description at OSM Wiki is one of reasons why discussing very 
+large edits before doing them is a good idea.
+
+And yes, https://wiki.openstreetmap.org/wiki/Key:addr:place would benefit from clarifying
+what is claimed there.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230103/8129919c/attachment.htm>
+
+From davisklavins at gmail.com  Sun Jan  8 20:04:30 2023
+From: davisklavins at gmail.com (=?UTF-8?B?RMSBdmlzIEvEvGF2acWGxaE=?=)
+Date: Sun, 8 Jan 2023 22:04:30 +0200
+Subject: [Imports] Latvia-bot
+In-Reply-To: <NKrrmDA--7-9@tutanota.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+ <Y7PlFob6MpQfAhci@sao.topf.org>
+ <CAA+yGhFQW6Q68ZzR1xAnw3AsFQ2Lq9w4UgE7t8yXAGGHf+ME8Q@mail.gmail.com>
+ <Y7P7tFj8pe8Bxwgh@sao.topf.org>
+ <CAA+yGhGV=qQTrcbMcFAy0bYc=v9DXiKqU=qwsb0u8J1YXMEQHA@mail.gmail.com>
+ <NKrrmDA--7-9@tutanota.com>
+Message-ID: <CAA+yGhGZTX65faZHkNKKOcUoThfjCqcTUcR05+feZKbZvSTW6Q@mail.gmail.com>
+
+Changes regarding usage of addr:housename and addr:housenumber have been
+applied - if house name looks like a number, it's tagged as
+addr:housenumber and vice versa.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230108/cdbed985/attachment.htm>
+
+From davisklavins at gmail.com  Mon Jan  9 06:40:05 2023
+From: davisklavins at gmail.com (=?UTF-8?B?RMSBdmlzIEvEvGF2acWGxaE=?=)
+Date: Mon, 9 Jan 2023 08:40:05 +0200
+Subject: [Imports] Latvia-bot
+In-Reply-To: <CAA+yGhGZTX65faZHkNKKOcUoThfjCqcTUcR05+feZKbZvSTW6Q@mail.gmail.com>
+References: <CAA+yGhGN7fDui=_=noFr5FZ_qVME+vRMu1RCdioaAeZzPiXRVQ@mail.gmail.com>
+ <Y7HpoGZbT4d/OQsb@sao.topf.org>
+ <CAA+yGhHoCE1BoMb_PfDJmPmDDsHVcSZtSJWgsM_AKX_sKZzLZQ@mail.gmail.com>
+ <NKoA1zn--V-9@tutanota.com>
+ <CAA+yGhHpoM+AAML2prX6jK7ambqYP9gB1U3GBRoRKAO1b8_-=A@mail.gmail.com>
+ <Y7PlFob6MpQfAhci@sao.topf.org>
+ <CAA+yGhFQW6Q68ZzR1xAnw3AsFQ2Lq9w4UgE7t8yXAGGHf+ME8Q@mail.gmail.com>
+ <Y7P7tFj8pe8Bxwgh@sao.topf.org>
+ <CAA+yGhGV=qQTrcbMcFAy0bYc=v9DXiKqU=qwsb0u8J1YXMEQHA@mail.gmail.com>
+ <NKrrmDA--7-9@tutanota.com>
+ <CAA+yGhGZTX65faZHkNKKOcUoThfjCqcTUcR05+feZKbZvSTW6Q@mail.gmail.com>
+Message-ID: <CAA+yGhH9yqhNX0LN7ZaN6fa08Ke=WuWb=r64_EkqFJvjsOH93g@mail.gmail.com>
+
+Added questions about usage of addr:place to addr:place Talk page
+<https://wiki.openstreetmap.org/wiki/Talk:Key:addr:place>.
+
+Btw, also in Estonia, addr:place is not used at all, e.g.,
+https://www.openstreetmap.org/way/728803484.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230109/efe82a8c/attachment.htm>
+
+From stefano.losa at setesrl.it  Thu Jan 12 17:36:22 2023
+From: stefano.losa at setesrl.it (stefano.losa at setesrl.it)
+Date: Thu, 12 Jan 2023 18:36:22 +0100
+Subject: [Imports] Import Civic House Numbers in Sondrio
+Message-ID: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+
+Hello,
+
+I work for a company based near Sondrio, Italy, active in the cartography 
+industry.
+
+In the recent years, we have managed the street directories and the house 
+numbers for some Municipalities, in the Province of Sondrio, Como and 
+Lecco. 
+
+Because of new legal requirements, we also have made a new design of the 
+street directory and of the house numbers for several Municipalities, 
+usually using the metric numbering method (see a detailed explanation in 
+the wiki).
+
+House numbers were surveyed directly by us in the field. All data is 
+georeferenced with a high degree of accuracy. 
+
+When transitioning from the old to the new numbering scheme, one of the 
+greatest difficulties for delivery operators, emergency operators, postal 
+services and people in general is that they cannot no longer move around 
+these zones easily because their sat nav or their apps (especially Google 
+Maps) are not yet updated. This gap remains for several years, despite 
+having tried to contact these companies, with the willingness to provide 
+them the data.
+
+Knowing OpenStreetMap too, last year we imported the house numbers for 
+Montagna in Valtellina in OSM (Import/Catalogue/Montagna in Valtellina 
+House Numbers Import - OpenStreetMap Wiki) as a way to provide the 
+aforementioned users with a tool for searching and locating an address. 
+
+This work has attracted a lot of interest from other Municipalities.
+
+Therefore we'd like to import other house numbers in the near future, 
+starting with the nonurban part of the Municipality of Sondrio, where a 
+street directory did not exist. The municipality of Sondrio has already 
+approved to distribute the data with a license compatible with the one 
+used in OSM.
+
+This proposal has already been discussed in the Italian and Lombard 
+mailing list (Lombardy is the region where Sondrio is located), where no 
+one showed objections.
+
+More info about this proposal can be found on the wiki:
+https://wiki.openstreetmap.org/wiki/Import/Catalogue/Sondrio_House_Numbers_Street_Import
+
+The data format and the plan are much alike the previous import, so we 
+don't expect to find any relevant issue.
+
+Best regards,
+
+Stefano
+
+
+Stefano Losa 
+Settore cartografia tecnica, escursionistica, GIS senior
+E-mail: stefano.losa at setesrl.it
+Cell.: +39 339 22 45 295
+-
+SeTe Srl
+Via Pignotti, 14, 23020, Poggiridenti SO
+Tel.: 0342 200296
+-
+Sito:  www.setesrl.it - www.setemap.it - www.setetrack.it | Shop:
+https://store.setesrl.it
+-
+Questa e-mail e i relativi allegati possono contenere informazioni 
+riservate esclusivamente al DESTINATARIO specificato in indirizzo.
+Le informazioni trasmesse attraverso la presente e-mail ed i suoi allegati 
+sono diretti esclusivamente al destinatario e devono ritenersi riservati 
+con divieto di diffusione e di uso salva espressa autorizzazione. Se la 
+presente e-mail ed i suoi allegati fossero stati ricevuti per errore da 
+persona diversa dal destinatario siete pregati di distruggere tutto quanto 
+ricevuto e di informare il mittente con lo stesso mezzo. Qualunque 
+utilizzazione, divulgazione o copia non autorizzata di questa 
+comunicazione ? rigorosamente vietata e comporta violazione delle 
+disposizioni di Legge sulla tutela dei dati personali REGOLAMENTO EUROPEO 
+2016/679.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230112/18959a47/attachment.htm>
+
+From marc_marc at mailo.com  Thu Jan 12 20:55:32 2023
+From: marc_marc at mailo.com (Marc_marc)
+Date: Thu, 12 Jan 2023 21:55:32 +0100
+Subject: [Imports] Import Civic House Numbers in Sondrio
+In-Reply-To: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+Message-ID: <a17386c5-4c3e-d197-ee0d-53bbca23f33c@mailo.com>
+
+Hello,
+
+Thanks for working onn that.
+
+Le 12.01.23 ? 18:36, stefano.losa at setesrl.it a ?crit?:
+> /The data format and the plan are much alike the previous import, so we 
+> don't expect to find any relevant issue./
+
+I didn't find the changeset for the previous import but
+type=import is not a good pratice (type is used to describe a relation), 
+the more common tag is import=yes
+and also a good changeset comment, for ex the same as the subjet
+of your email "Import Civic House Numbers in Sondrio"
+
+Regards,
+Marc
+
+
+
+
+From sherbets at disroot.org  Tue Jan 17 16:31:01 2023
+From: sherbets at disroot.org (James Crawford)
+Date: Tue, 17 Jan 2023 10:31:01 -0600
+Subject: [Imports] Import Civic House Numbers in Sondrio
+In-Reply-To: <a17386c5-4c3e-d197-ee0d-53bbca23f33c@mailo.com>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+ <a17386c5-4c3e-d197-ee0d-53bbca23f33c@mailo.com>
+Message-ID: <CD00777F-8697-41C2-BE61-B3A92C43767D@disroot.org>
+
+Hi.
+
+I recommend to forgo the import tag in the changeset. if you're using your import account, and mention the import in the changeset comment, it's already implied that it's an import.
+
+--James Crawford (SherbetS)
+-- 
+Sent from my Android device with K-9 Mail. Please excuse my brevity.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230117/5b6a537e/attachment.htm>
+
+From dieterdreist at gmail.com  Tue Jan 17 16:39:09 2023
+From: dieterdreist at gmail.com (Martin Koppenhoefer)
+Date: Tue, 17 Jan 2023 17:39:09 +0100
+Subject: [Imports] Import Civic House Numbers in Sondrio
+In-Reply-To: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+Message-ID: <CABPTjTCZBk-E01gnZS+S3HwOU_YZAUdWu1srWKXoE4exoEgvoQ@mail.gmail.com>
+
+Am Do., 12. Jan. 2023 um 18:46 Uhr schrieb <stefano.losa at setesrl.it>:
+
+>
+> * Knowing OpenStreetMap too, last year we imported the house numbers for
+> Montagna in Valtellina in OSM (**Import/Catalogue/Montagna in Valtellina
+> House Numbers Import - OpenStreetMap Wiki*
+> <https://wiki.openstreetmap.org/wiki/Import/Catalogue/Montagna_in_Valtellina_House_Numbers_Import>*)
+> as a way to provide the aforementioned users with a tool for searching and
+> locating an address. *
+
+
+
+I have looked at the import plan how you intend to merge existing addresses
+and found this sentence: "In Italy, address data must be placed exclusively
+on nodes because the housenumber identifies the external access that leads
+from the street to the housing units (houses, stores, offices, etc).
+Therefore addresses placed on buildings will be removed."
+
+
+Please note that in OSM, the tag "addr:housenumber" is not only used for
+housenumbers (feature on its own), but also for the housenumber as part of
+an address (property of something), therefore I do not believe it is
+acceptable to remove these housenumbers when they are on a feature.
+
+
+Cheers,
+
+Martin
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230117/562e2fdb/attachment.htm>
+
+From dieterdreist at gmail.com  Tue Jan 17 18:08:03 2023
+From: dieterdreist at gmail.com (Martin Koppenhoefer)
+Date: Tue, 17 Jan 2023 19:08:03 +0100
+Subject: [Imports] Import Civic House Numbers in Sondrio
+In-Reply-To: <CABPTjTCZBk-E01gnZS+S3HwOU_YZAUdWu1srWKXoE4exoEgvoQ@mail.gmail.com>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+ <CABPTjTCZBk-E01gnZS+S3HwOU_YZAUdWu1srWKXoE4exoEgvoQ@mail.gmail.com>
+Message-ID: <CABPTjTBmwqdm8K8QuZ15T3vsaaxaGXDna3zbToxcVc7++bcdLg@mail.gmail.com>
+
+It seems this would affect currently 120 polygons
+e.g.
+https://www.openstreetmap.org/way/1018477062
+https://www.openstreetmap.org/way/358516358
+https://www.openstreetmap.org/way/163717877
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230117/b2a6ee4e/attachment.htm>
+
+From marc_marc at mailo.com  Tue Jan 17 19:15:50 2023
+From: marc_marc at mailo.com (Marc_marc)
+Date: Tue, 17 Jan 2023 20:15:50 +0100
+Subject: [Imports] Import Civic House Numbers in Sondrio
+In-Reply-To: <CD00777F-8697-41C2-BE61-B3A92C43767D@disroot.org>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+ <a17386c5-4c3e-d197-ee0d-53bbca23f33c@mailo.com>
+ <CD00777F-8697-41C2-BE61-B3A92C43767D@disroot.org>
+Message-ID: <4c248129-6eea-5602-0cb4-1b7f5f014f5b@mailo.com>
+
+Le 17.01.23 ? 17:31, James Crawford a ?crit?:
+> I recommend to forgo the import tag in the changeset. if you're using 
+> your import account, and mention the import in the changeset comment, 
+> it's already implied that it's an import.
+
+what is the added value of not following the import guideline?
+if you use osmcha or any other changeset tracking tool,
+it is easy to act according to the presence or not of an import=yes tag
+to say that it is useless when the account is dedicated doesn't make 
+sense. you could also say that the description is not necessary when 
+there is a link to the wiki or that no changeset tag is necessary if the 
+account has a description of the import... well no, that's not the good 
+practices included in the guideline imports
+
+
+
+
+From sherbets at disroot.org  Tue Jan 17 20:02:45 2023
+From: sherbets at disroot.org (James Crawford)
+Date: Tue, 17 Jan 2023 14:02:45 -0600
+Subject: [Imports] Import Civic House Numbers in Sondrio
+In-Reply-To: <4c248129-6eea-5602-0cb4-1b7f5f014f5b@mailo.com>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+ <a17386c5-4c3e-d197-ee0d-53bbca23f33c@mailo.com>
+ <CD00777F-8697-41C2-BE61-B3A92C43767D@disroot.org>
+ <4c248129-6eea-5602-0cb4-1b7f5f014f5b@mailo.com>
+Message-ID: <8B6DE733-B09C-4D92-8687-6759184F142E@disroot.org>
+
+where does it say to do this in the guidelines? changeset tagging seems extremely ambiguous to me. this import uses url=* whereas imports I've conducted use website=* in the changest tags to link the wiki.
+
+I don't see any guidance to use a tag like this.
+
+if you're trying to track this import through a validation tool, why not just use another tag that is uniform to all changesets in the import?
+
+On January 17, 2023 1:15:50 PM CST, Marc_marc <marc_marc at mailo.com> wrote:
+>Le 17.01.23 ? 17:31, James Crawford a ?crit?:
+>> I recommend to forgo the import tag in the changeset. if you're using your import account, and mention the import in the changeset comment, it's already implied that it's an import.
+>
+>what is the added value of not following the import guideline?
+>if you use osmcha or any other changeset tracking tool,
+>it is easy to act according to the presence or not of an import=yes tag
+>to say that it is useless when the account is dedicated doesn't make sense. you could also say that the description is not necessary when there is a link to the wiki or that no changeset tag is necessary if the account has a description of the import... well no, that's not the good practices included in the guideline imports
+>
+>
+
+-- 
+Sent from my Android device with K-9 Mail. Please excuse my brevity.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230117/06ab659c/attachment.htm>
+
+From Stefano.Losa at setesrl.it  Thu Jan 26 17:10:00 2023
+From: Stefano.Losa at setesrl.it (Stefano.Losa at setesrl.it)
+Date: Thu, 26 Jan 2023 18:10:00 +0100
+Subject: [Imports] Rif: Re:  Import Civic House Numbers in Sondrio
+In-Reply-To: <CD00777F-8697-41C2-BE61-B3A92C43767D@disroot.org>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+ <a17386c5-4c3e-d197-ee0d-53bbca23f33c@mailo.com>
+ <CD00777F-8697-41C2-BE61-B3A92C43767D@disroot.org>
+Message-ID: <OFFB9D3611.EF3226C1-ONC1258943.005DAA11-C1258943.005EED3E@setesrl.it>
+
+Thanks for response, I try to answer the various questions
+
+
+>    I didn't find the changeset for the previous import 
+https://www.openstreetmap.org/changeset/106777493
+> type=import is not a good pratice (type is used to describe a relation), 
+
+> the more common tag is import=yes
+
+I've seen many import projects in Italy used the type=import tag in the 
+past, so we used the same.
+
+Anyway I have no problem in using import=yes instead, but I really would 
+like evidence that it is used by some major QA tools, otherwise the use of 
+another tag does not provide any gain.
+
+> and also a good changeset comment, for ex the same as the subjet
+> of your email "Import Civic House Numbers in Sondrio"
+
+This is just so obvious we didn't specify it in the wiki page ;-)
+
+> I have looked at the import plan how you intend to merge existing 
+addresses
+> and found this sentence: "In Italy, address data must be placed 
+exclusively
+> on nodes because the housenumber identifies the external access that 
+leads
+> from the street to the housing units (houses, stores, offices, etc).
+> Therefore addresses placed on buildings will be removed."
+
+This topic has been discussed with you several times. In Italy, a 
+housenumber is "a unique number that identifies an external access that 
+from the road leads directly or indirectly to houses, shops, offices, 
+garages, etc". It's not a rule of OSM or an opinion, it's something that 
+derives from country legislation. I understand it's different from several 
+other countries, but we should take it for granted and consider it also 
+necessary e.g. an housenumber tag on a building outline will never 
+accommodate a building that has several entrances with different numbers, 
+as happens very frequently.
+
+> It seems this would affect currently 120 polygons
+> e.g.
+> https://www.openstreetmap.org/way/1018477062
+> https://www.openstreetmap.org/way/358516358
+> https://www.openstreetmap.org/way/163717877
+
+The wiki page was amended to make clear that the import data is only 
+related to the hamlets in the municipal area and not the main city. 
+
+Your examples are out of scope of this import because they are in Sondrio 
+and not in a hamlet. Even though they are clearly wrongly tagged.
+
+It seems to me the only building affected is the following one:
+https://www.openstreetmap.org/way/267833740
+
+Please also note that not only it is wrong that this building has an 
+address, but the address is also outdated.
+
+Best Regards,
+
+Stefano and support team
+
+
+Stefano Losa 
+Settore cartografia tecnica, escursionistica, GIS senior
+E-mail: stefano.losa at setesrl.it
+Cell.: +39 339 22 45 295
+-
+SeTe Srl
+Via Pignotti, 14, 23020, Poggiridenti SO
+Tel.: 0342 200296
+-
+Sito:  www.setesrl.it - www.setemap.it - www.setetrack.it | Shop:
+https://store.setesrl.it
+-
+Questa e-mail e i relativi allegati possono contenere informazioni 
+riservate esclusivamente al DESTINATARIO specificato in indirizzo.
+Le informazioni trasmesse attraverso la presente e-mail ed i suoi allegati 
+sono diretti esclusivamente al destinatario e devono ritenersi riservati 
+con divieto di diffusione e di uso salva espressa autorizzazione. Se la 
+presente e-mail ed i suoi allegati fossero stati ricevuti per errore da 
+persona diversa dal destinatario siete pregati di distruggere tutto quanto 
+ricevuto e di informare il mittente con lo stesso mezzo. Qualunque 
+utilizzazione, divulgazione o copia non autorizzata di questa 
+comunicazione ? rigorosamente vietata e comporta violazione delle 
+disposizioni di Legge sulla tutela dei dati personali REGOLAMENTO EUROPEO 
+2016/679.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230126/c01c9a76/attachment.htm>
+
+From dieterdreist at gmail.com  Thu Jan 26 20:46:10 2023
+From: dieterdreist at gmail.com (Martin Koppenhoefer)
+Date: Thu, 26 Jan 2023 21:46:10 +0100
+Subject: [Imports] Rif: Re:  Import Civic House Numbers in Sondrio
+In-Reply-To: <OFFB9D3611.EF3226C1-ONC1258943.005DAA11-C1258943.005EED3E@setesrl.it>
+References: <OFFB9D3611.EF3226C1-ONC1258943.005DAA11-C1258943.005EED3E@setesrl.it>
+Message-ID: <2B919E36-B757-4E09-A852-5AADF562EDEC@gmail.com>
+
+
+
+sent from a phone
+
+> On 26 Jan 2023, at 18:22, Stefano.Losa at setesrl.it wrote:
+> 
+> This topic has been discussed with you several times. In Italy, a housenumber is "a unique number that identifies an external access that from the road leads directly or indirectly to houses, shops, offices, garages, etc". It's not a rule of OSM or an opinion, it's something that derives from country legislation. I understand it's different from several other countries, but we should take it for granted and consider it also necessary e.g. an housenumber tag on a building outline will never accommodate a building that has several entrances with different numbers, as happens very frequently.
+
+
+it doesn?t matter, people use addresses like in most places in europe, street, housenumber, postcode, city. Many features have addresses tagged, it is useful information, particularly in Italy because in Italy housenumbers refer to points and you cannot infer them for businesses and  other features, as you could with polygons.
+
+Cheers Martin 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230126/033b59c6/attachment.htm>
+
+From lomastrolo at gmail.com  Sat Jan 28 23:59:50 2023
+From: lomastrolo at gmail.com (Lorenzo Mastrogiacomi)
+Date: Sun, 29 Jan 2023 00:59:50 +0100
+Subject: [Imports] Rif: Re:  Import Civic House Numbers in Sondrio
+In-Reply-To: <OFFB9D3611.EF3226C1-ONC1258943.005DAA11-C1258943.005EED3E@setesrl.it>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@setesrl.it>
+ <a17386c5-4c3e-d197-ee0d-53bbca23f33c@mailo.com>
+ <CD00777F-8697-41C2-BE61-B3A92C43767D@disroot.org>
+ <OFFB9D3611.EF3226C1-ONC1258943.005DAA11-C1258943.005EED3E@setesrl.it>
+Message-ID: <1e31596de73324948181e818793c5ac0fdacd55f.camel@gmail.com>
+
+Il giorno gio, 26/01/2023 alle 18.10 +0100, Stefano.Losa at setesrl.it ha
+scritto:
+> 
+> 
+> > I have looked at the import plan how you intend to merge existing
+> addresses
+> > and found this sentence: "In Italy, address data must be placed
+> exclusively
+> > on nodes because the housenumber identifies the external access
+> that leads
+> > from the street to the housing units (houses, stores, offices,
+> etc).
+> > Therefore addresses placed on buildings will be removed."
+> 
+> 
+> This topic has been discussed with you several times. In Italy, a
+> housenumber is "a unique number that identifies an external access
+> that from the road leads directly or indirectly to houses, shops,
+> offices, garages, etc". It's not a rule of OSM or an opinion, it's
+> something that derives from country legislation. I understand it's
+> different from several other countries, but we should take it for
+> granted and consider it also necessary e.g. an housenumber tag on a
+> building outline will never accommodate a building that has several
+> entrances with different numbers, as happens very frequently.
+> 
+> 
+> > It seems this would affect currently 120 polygons
+> > e.g.
+> > https://www.openstreetmap.org/way/1018477062
+> > https://www.openstreetmap.org/way/358516358
+> > https://www.openstreetmap.org/way/163717877
+> 
+> 
+> The wiki page was amended to make clear that the import data is only
+> related to the hamlets in the municipal area and not the main city. 
+> 
+> 
+> Your examples are out of scope of this import because they are in
+> Sondrio and not in a hamlet. Even though they are clearly wrongly
+> tagged.
+
+
+    Since it is being debated all the time this should be considered an
+open question even though current documentation states that addresses
+on areas are to be avoided at all costs. The Italian legislation on
+housembers does not meet the requirements in OSM, where addresses also
+apply to POIs like shops, which can be mapped as areas. There is some
+movement on this issue, such as the initiative to promote the Bremen
+schema, but it is an evolving subject. I feel the need to ask not to
+take advantage imports to do that. That said?
+
+
+> 
+> It seems to me the only building affected is the following one:
+> 
+> https://www.openstreetmap.org/way/267833740
+> 
+
+    That?s okay for me because this item doesn't carry POI information.
+
+
+
+> Please also note that not only it is wrong that this building has an
+> address, but the address is also outdated.
+
+
+    In this regard I suggest to adopt old_addr: instead of was:addr: for
+obsolete addresses:
+https://wiki.openstreetmap.org/wiki/Key%3Aold_addr%3Ahousenumber
+
+
+
+Cheers
+
+Lorenzo
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230129/91476df0/attachment.htm>
+

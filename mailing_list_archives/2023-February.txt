@@ -1,0 +1,1691 @@
+From james.subscription at yahoo.com.au  Wed Feb  1 08:32:43 2023
+From: james.subscription at yahoo.com.au (James)
+Date: Wed, 01 Feb 2023 18:32:43 +1000
+Subject: [Imports] Brisbane (Australia) Cycling Import
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+Message-ID: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+
+Hi All,
+
+This is a copy of the email I sent to talk-au.
+
+I'm relatively new at OSM and wanted to map the bike racks in Brisbane (AU), of which I am a resident. A few members on the osm discord graciously pointed out the CBD data is available at https://www.data.brisbane.qld.gov.au/data/dataset/bicycle-racks, is under CC BY 4.0, and there is a waiver to OSM https://wiki.openstreetmap.org/wiki/File:BCC_OSM_Waiver_-_Signed_30Aug2018.pdf. I have read the import guidelines, and I'm prepared to spend a lot of time making sure there are no duplicates and making sure the locations match up with the map.
+
+Does anyone have anything they'd like to add, any advice, or any reasons I shouldn't go ahead with this?
+
+Thanks,
+James
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230201/223ecc3a/attachment.htm>
+
+From matkoniecz at tutanota.com  Wed Feb  1 16:01:54 2023
+From: matkoniecz at tutanota.com (Mateusz Konieczny)
+Date: Wed, 1 Feb 2023 17:01:54 +0100 (CET)
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+Message-ID: <NNChd1W--B-9@tutanota.com>
+
+For start, try to map some of this bike racks.
+
+In my city such data was good enough to identify locations where bicycle parkings
+were missing in OSM but utterly useless for direct mapping due to errors in placement 
+reaching up to 500m.
+
+(if you have programming background I can dig out my script that I used for visualising
+conflicts between city data and OSM data, and script that I used to apply long list of errata
+to city data)
+
+Feb 1, 2023, 16:19 by imports at openstreetmap.org:
+
+> Hi All,
+>
+> This is a copy of the email I sent to talk-au.
+>
+> I'm relatively new at OSM and wanted to map the bike racks in Brisbane (AU), of which I am a resident. A few members on the osm discord graciously pointed out the CBD data is available at > https://www.data.brisbane.qld.gov.au/data/dataset/bicycle-racks,>  is under CC BY 4.0, and there is a waiver to OSM > https://wiki.openstreetmap.org/wiki/File:BCC_OSM_Waiver_-_Signed_30Aug2018.pdf> . I have read the import guidelines, and I'm prepared to spend a lot of time making sure there are no duplicates and making sure the locations match up with the map.
+>
+> Does anyone have anything they'd like to add, any advice, or any reasons I shouldn't go ahead with this?
+>
+> Thanks,
+> James
+>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230201/b75fc112/attachment.htm>
+
+From marc_marc at mailo.com  Wed Feb  1 16:50:13 2023
+From: marc_marc at mailo.com (Marc_marc)
+Date: Wed, 1 Feb 2023 17:50:13 +0100
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+Message-ID: <14978537-d668-2b50-2f71-eca23f96a3f9@mailo.com>
+
+Hello,
+
+Le 01.02.23 ? 09:32, James via Imports a ?crit?:
+> I'm relatively new at OSM
+> 
+> Does anyone have anything they'd like to add, any advice, or any reasons 
+> I shouldn't go ahead with this?
+
+starting a import when you describe yourself as "relatively new"
+is maybe not a good idea.
+
+it would be better to do the first additions classically, find out how 
+to deal with highway=* to divide, errors in existing data, poor location 
+in opendata, ...
+
+if you still want to do an import, you have probably read that
+the guideline asks you to make a wiki page describing your project
+
+Regards,
+Marc
+
+
+
+
+From sherbets at disroot.org  Wed Feb  1 17:16:20 2023
+From: sherbets at disroot.org (James Crawford)
+Date: Wed, 01 Feb 2023 11:16:20 -0600
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+Message-ID: <FA9323A9-D39F-4BEA-B5BF-4AAB8BAB91C0@disroot.org>
+
+Hi James,
+
+You mentioned that you were discussing this on the discord, so I went hunting for your messages and found your wiki page
+
+https://wiki.openstreetmap.org/wiki/Import/Catalogue/Brisbane_City_Council_CBD_Bike_Rack_Import
+
+I recommend linking this right away on the imports list because it helps others find more information about your import.
+
+My thoughts on the import so far:
+
+You should make a table for which tags you are translating from the dataset to openstreetmap so its easier to read.
+
+Additionally, I recommend not using the source=* and source:date=* tags on the objects, you should put them in the changeset instead of on the objects.
+
+The wiki page also seems a little half-baked, I'd like to see a little more work done describing your project before you get started.
+
+On February 1, 2023 2:32:43 AM CST, James via Imports <imports at openstreetmap.org> wrote:
+>Hi All,
+>
+>This is a copy of the email I sent to talk-au.
+>
+>I'm relatively new at OSM and wanted to map the bike racks in Brisbane (AU), of which I am a resident. A few members on the osm discord graciously pointed out the CBD data is available at https://www.data.brisbane.qld.gov.au/data/dataset/bicycle-racks, is under CC BY 4.0, and there is a waiver to OSM https://wiki.openstreetmap.org/wiki/File:BCC_OSM_Waiver_-_Signed_30Aug2018.pdf. I have read the import guidelines, and I'm prepared to spend a lot of time making sure there are no duplicates and making sure the locations match up with the map.
+>
+>Does anyone have anything they'd like to add, any advice, or any reasons I shouldn't go ahead with this?
+>
+>Thanks,
+>James
+-- 
+Sent from my Android device with K-9 Mail. Please excuse my brevity.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230201/98f0596d/attachment.htm>
+
+From james.subscription at yahoo.com.au  Wed Feb  1 17:20:43 2023
+From: james.subscription at yahoo.com.au (James)
+Date: Thu, 02 Feb 2023 03:20:43 +1000
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <14978537-d668-2b50-2f71-eca23f96a3f9@mailo.com>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+ <14978537-d668-2b50-2f71-eca23f96a3f9@mailo.com>
+Message-ID: <01D5EBA5-15F1-4B4C-9E2F-5946FDEF4FDE@yahoo.com.au>
+
+Since there are only ~100 bike parkings in the dataset, all in our CBD, I plan to check them all in person at the end of the import. The main reason I'm doing this is to get more experience with imports and josm. I have already added a few bike parking spots manually outside the CBD. Does this still seem worrying to you? 
+
+Also, I'm not sure what you mean by highway=* with respect to bike parking. 
+
+On 2 February 2023 2:50:13 am AEST, Marc_marc <marc_marc at mailo.com> wrote:
+>Hello,
+>
+>Le 01.02.23 ? 09:32, James via Imports a ?crit?:
+>> I'm relatively new at OSM
+>> 
+>> Does anyone have anything they'd like to add, any advice, or any reasons I shouldn't go ahead with this?
+>
+>starting a import when you describe yourself as "relatively new"
+>is maybe not a good idea.
+>
+>it would be better to do the first additions classically, find out how to deal with highway=* to divide, errors in existing data, poor location in opendata, ...
+>
+>if you still want to do an import, you have probably read that
+>the guideline asks you to make a wiki page describing your project
+>
+>Regards,
+>Marc
+>
+>
+>
+>_______________________________________________
+>Imports mailing list
+>Imports at openstreetmap.org
+>https://lists.openstreetmap.org/listinfo/imports
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230202/aabae22e/attachment-0001.htm>
+
+From jumbanho at gmail.com  Wed Feb  1 19:16:01 2023
+From: jumbanho at gmail.com (James Umbanhowar)
+Date: Wed, 1 Feb 2023 14:16:01 -0500
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <01D5EBA5-15F1-4B4C-9E2F-5946FDEF4FDE@yahoo.com.au>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+ <14978537-d668-2b50-2f71-eca23f96a3f9@mailo.com>
+ <01D5EBA5-15F1-4B4C-9E2F-5946FDEF4FDE@yahoo.com.au>
+Message-ID: <74b64e13-8282-749d-c009-682686b0d443@gmail.com>
+
+Please do not import inaccurate data with the intent of fixing it 
+later.? If you want to practice an import, correct your data first, then 
+import it later.? Too often imported data sets with errors gets 
+forgotten and then there is a bunch of poor data in the database.
+
+I recommend surveying all the points and to correct all the external 
+data, then importing, if you really want to practice importing.
+
+James
+
+On 2/1/23 12:20, James via Imports wrote:
+> Since there are only ~100 bike parkings in the dataset, all in our 
+> CBD, I plan to check them all in person at the end of the import. The 
+> main reason I'm doing this is to get more experience with imports and 
+> josm. I have already added a few bike parking spots manually outside 
+> the CBD. Does this still seem worrying to you?
+>
+> Also, I'm not sure what you mean by highway=* with respect to bike 
+> parking.
+>
+> On 2 February 2023 2:50:13 am AEST, Marc_marc <marc_marc at mailo.com> 
+> wrote:
+>
+>     Hello,
+>
+>     Le 01.02.23 ? 09:32, James via Imports a ?crit?:
+>
+>         I'm relatively new at OSM Does anyone have anything they'd
+>         like to add, any advice, or any reasons I shouldn't go ahead
+>         with this? 
+>
+>
+>     starting a import when you describe yourself as "relatively new"
+>     is maybe not a good idea.
+>
+>     it would be better to do the first additions classically, find out how to deal with highway=* to divide, errors in existing data, poor location in opendata, ...
+>
+>     if you still want to do an import, you have probably read that
+>     the guideline asks you to make a wiki page describing your project
+>
+>     Regards,
+>     Marc
+>     ------------------------------------------------------------------------
+>     Imports mailing list
+>     Imports at openstreetmap.org
+>     https://lists.openstreetmap.org/listinfo/imports
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230201/0647f162/attachment.htm>
+
+From matkoniecz at tutanota.com  Wed Feb  1 21:22:40 2023
+From: matkoniecz at tutanota.com (Mateusz Konieczny)
+Date: Wed, 1 Feb 2023 22:22:40 +0100 (CET)
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <01D5EBA5-15F1-4B4C-9E2F-5946FDEF4FDE@yahoo.com.au>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+ <14978537-d668-2b50-2f71-eca23f96a3f9@mailo.com>
+ <01D5EBA5-15F1-4B4C-9E2F-5946FDEF4FDE@yahoo.com.au>
+Message-ID: <NNDr2og--B-9@tutanota.com>
+
+
+
+
+Feb 1, 2023, 18:25 by imports at openstreetmap.org:
+
+> Since there are only ~100 bike parkings in the dataset, all in our CBD, I plan to check them all in person at the end of the import.
+>
+No. That does not work. Many people had such plans and left import debris behind.
+
+See top values of https://taginfo.openstreetmap.org/keys/fixme#values
+for some examples:
+
+https://taginfo.openstreetmap.org/tags/?key=fixme&value=Import%20CTR%20Veneto.%20Sostituire%20con%20building%3Dstable%20(stalla)%20o%20building%3Dbarn%20(fienile)#chronology
+
+https://taginfo.openstreetmap.org/tags/fixme=no%20population%20estimate%20available%2C%20defaulted%20to%20village#chronology
+
+https://taginfo.openstreetmap.org/tags/fixme=Revisar%3A%20este%20punto%20fue%20creado%20por%20importaci%C3%B3n%20directa#chronology
+
+
+In such case, I am strongly against import and recommend avoiding it.
+
+Either you can do such checks and they you can do and map things one by one
+or fix data in dataset and import them in one go.
+
+>
+>  The main reason I'm doing this is to get more experience with imports and josm.
+>
+You can use test server for that, or just do everything except uploading the edit.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230201/20cd2b3c/attachment.htm>
+
+From t at fust.us  Wed Feb  1 21:37:07 2023
+From: t at fust.us (Tyler Brown Cifu Shuster)
+Date: Wed, 1 Feb 2023 13:37:07 -0800
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <NNDr2og--B-9@tutanota.com>
+References: <NNDr2og--B-9@tutanota.com>
+Message-ID: <38E2AC78-66F9-4B22-A549-AC268BE9C27C@fust.us>
+
+Yeah, you could run the upload on the test server, go do the in-person verification using the test server (I like GoMap) and then adjust as necessary and upload to the live server. 
+
+T
+
+> On Feb 1, 2023, at 1:25 PM, Mateusz Konieczny via Imports <imports at openstreetmap.org> wrote:
+> 
+> ?
+> 
+> 
+> 
+> Feb 1, 2023, 18:25 by imports at openstreetmap.org:
+> Since there are only ~100 bike parkings in the dataset, all in our CBD, I plan to check them all in person at the end of the import.
+> No. That does not work. Many people had such plans and left import debris behind.
+> 
+> See top values of https://taginfo.openstreetmap.org/keys/fixme#values
+> for some examples:
+> 
+> https://taginfo.openstreetmap.org/tags/?key=fixme&value=Import%20CTR%20Veneto.%20Sostituire%20con%20building%3Dstable%20(stalla)%20o%20building%3Dbarn%20(fienile)#chronology
+> 
+> https://taginfo.openstreetmap.org/tags/fixme=no%20population%20estimate%20available%2C%20defaulted%20to%20village#chronology
+> 
+> https://taginfo.openstreetmap.org/tags/fixme=Revisar%3A%20este%20punto%20fue%20creado%20por%20importaci%C3%B3n%20directa#chronology
+> 
+> 
+> In such case, I am strongly against import and recommend avoiding it.
+> 
+> Either you can do such checks and they you can do and map things one by one
+> or fix data in dataset and import them in one go.
+> 
+> The main reason I'm doing this is to get more experience with imports and josm.
+> You can use test server for that, or just do everything except uploading the edit.
+> 
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230201/86f82382/attachment.htm>
+
+From james.subscription at yahoo.com.au  Thu Feb  2 00:09:55 2023
+From: james.subscription at yahoo.com.au (James)
+Date: Thu, 02 Feb 2023 10:09:55 +1000
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <74b64e13-8282-749d-c009-682686b0d443@gmail.com>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+ <14978537-d668-2b50-2f71-eca23f96a3f9@mailo.com>
+ <01D5EBA5-15F1-4B4C-9E2F-5946FDEF4FDE@yahoo.com.au>
+ <74b64e13-8282-749d-c009-682686b0d443@gmail.com>
+Message-ID: <5C6754B4-8CA7-4948-9CAC-45B2B0A66175@yahoo.com.au>
+
+I am sorry, I think there has been some confusion. When I said "at the end of the import", I meant "in the final stages of the importing process", before I upload the data, to check the integrity.
+
+On 2 February 2023 5:16:01 am AEST, James Umbanhowar <jumbanho at gmail.com> wrote:
+>Please do not import inaccurate data with the intent of fixing it later.? If you want to practice an import, correct your data first, then import it later.? Too often imported data sets with errors gets forgotten and then there is a bunch of poor data in the database.
+>
+>I recommend surveying all the points and to correct all the external data, then importing, if you really want to practice importing.
+>
+>James
+>
+>On 2/1/23 12:20, James via Imports wrote:
+>> Since there are only ~100 bike parkings in the dataset, all in our CBD, I plan to check them all in person at the end of the import. The main reason I'm doing this is to get more experience with imports and josm. I have already added a few bike parking spots manually outside the CBD. Does this still seem worrying to you?
+>> 
+>> Also, I'm not sure what you mean by highway=* with respect to bike parking.
+>> 
+>> On 2 February 2023 2:50:13 am AEST, Marc_marc <marc_marc at mailo.com> wrote:
+>> 
+>>     Hello,
+>> 
+>>     Le 01.02.23 ? 09:32, James via Imports a ?crit?:
+>> 
+>>         I'm relatively new at OSM Does anyone have anything they'd
+>>         like to add, any advice, or any reasons I shouldn't go ahead
+>>         with this? 
+>> 
+>>     starting a import when you describe yourself as "relatively new"
+>>     is maybe not a good idea.
+>> 
+>>     it would be better to do the first additions classically, find out how to deal with highway=* to divide, errors in existing data, poor location in opendata, ...
+>> 
+>>     if you still want to do an import, you have probably read that
+>>     the guideline asks you to make a wiki page describing your project
+>> 
+>>     Regards,
+>>     Marc
+>>     ------------------------------------------------------------------------
+>>     Imports mailing list
+>>     Imports at openstreetmap.org
+>>     https://lists.openstreetmap.org/listinfo/imports
+>> 
+>> 
+>> _______________________________________________
+>> Imports mailing list
+>> Imports at openstreetmap.org
+>> https://lists.openstreetmap.org/listinfo/imports
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230202/e38796a3/attachment-0001.htm>
+
+From matkoniecz at tutanota.com  Thu Feb  2 22:23:25 2023
+From: matkoniecz at tutanota.com (Mateusz Konieczny)
+Date: Thu, 2 Feb 2023 23:23:25 +0100 (CET)
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <5C6754B4-8CA7-4948-9CAC-45B2B0A66175@yahoo.com.au>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+ <14978537-d668-2b50-2f71-eca23f96a3f9@mailo.com>
+ <01D5EBA5-15F1-4B4C-9E2F-5946FDEF4FDE@yahoo.com.au>
+ <74b64e13-8282-749d-c009-682686b0d443@gmail.com>
+ <5C6754B4-8CA7-4948-9CAC-45B2B0A66175@yahoo.com.au>
+Message-ID: <NNJDYb4--B-9@tutanota.com>
+
+Oh, that makes far more sense!
+
+Sorry for jumping on you but it sounded exactly like "lets import known bad things and
+fix it later" which is a common mistake that almost never goes well.
+
+
+Feb 2, 2023, 01:11 by imports at openstreetmap.org:
+
+> I am sorry, I think there has been some confusion. When I said "at the end of the import", I meant "in the final stages of the importing process", before I upload the data, to check the integrity.
+>
+> On 2 February 2023 5:16:01 am AEST, James Umbanhowar <jumbanho at gmail.com> wrote:
+>
+>>
+>> Please do not import inaccurate data with the intent of fixing it      later.? If you want to practice an import, correct your data      first, then import it later.? Too often imported data sets with      errors gets forgotten and then there is a bunch of poor data in      the database.
+>>
+>>
+>> I recommend surveying all the points and to correct all the      external data, then importing, if you really want to practice      importing.
+>>
+>>
+>> James
+>>
+>> On 2/1/23 12:20, James via Imports      wrote:
+>>
+>>> Since there are only ~100 bike parkings in the dataset, all in our      CBD, I plan to check them all in person at the end of the import.      The main reason I'm doing this is to get more experience with      imports and josm. I have already added a few bike parking spots      manually outside the CBD. Does this still seem worrying to you? 
+>>>  
+>>>  Also, I'm not sure what you mean by highway=* with respect to bike      parking. 
+>>>  
+>>>  
+>>> On 2 February 2023 2:50:13 am AEST,        Marc_marc >>> <marc_marc at mailo.com> <mailto:marc_marc at mailo.com>>>>  wrote: 
+>>>
+>>>> Hello,Le 01.02.23 ? 09:32, James via Imports a ?crit?:
+>>>>
+>>>>> I'm relatively new at OSMDoes anyone have anything they'd like to add, any advice, or any reasons I shouldn't go ahead with this?
+>>>>>
+>>>> starting a import when you describe yourself as "relatively new"is maybe not a good idea.it would be better to do the first additions classically, find out how to deal with highway=* to divide, errors in existing data, poor location in opendata, ...if you still want to do an import, you have probably read thatthe guideline asks you to make a wiki page describing your projectRegards,Marc
+>>>> Imports mailing list>>>> Imports at openstreetmap.org>>>> https://lists.openstreetmap.org/listinfo/imports
+>>>>
+>>>
+>>> _______________________________________________Imports mailing list>>> Imports at openstreetmap.org>>> https://lists.openstreetmap.org/listinfo/imports
+>>>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230202/80cc2ba2/attachment.htm>
+
+From jumbanho at gmail.com  Fri Feb  3 13:35:58 2023
+From: jumbanho at gmail.com (James Umbanhowar)
+Date: Fri, 3 Feb 2023 08:35:58 -0500
+Subject: [Imports] Brisbane (Australia) Cycling Import
+In-Reply-To: <NNJDYb4--B-9@tutanota.com>
+References: <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4.ref@yahoo.com.au>
+ <2CEB4180-D4F6-4B28-9F3D-E98090AB71E4@yahoo.com.au>
+ <14978537-d668-2b50-2f71-eca23f96a3f9@mailo.com>
+ <01D5EBA5-15F1-4B4C-9E2F-5946FDEF4FDE@yahoo.com.au>
+ <74b64e13-8282-749d-c009-682686b0d443@gmail.com>
+ <5C6754B4-8CA7-4948-9CAC-45B2B0A66175@yahoo.com.au>
+ <NNJDYb4--B-9@tutanota.com>
+Message-ID: <fb3e60f7-27ad-31df-63dc-6badc2213c8d@gmail.com>
+
+Yes, I second this!? Good luck!
+
+On 2/2/23 17:23, Mateusz Konieczny via Imports wrote:
+> Oh, that makes far more sense!
+>
+> Sorry for jumping on you but it sounded exactly like "lets import 
+> known bad things and
+> fix it later" which is a common mistake that almost never goes well.
+>
+>
+> Feb 2, 2023, 01:11 by imports at openstreetmap.org:
+>
+>     I am sorry, I think there has been some confusion. When I said "at
+>     the end of the import", I meant "in the final stages of the
+>     importing process", before I upload the data, to check the integrity.
+>
+>     On 2 February 2023 5:16:01 am AEST, James Umbanhowar
+>     <jumbanho at gmail.com> wrote:
+>
+>         Please do not import inaccurate data with the intent of fixing
+>         it later.? If you want to practice an import, correct your
+>         data first, then import it later.? Too often imported data
+>         sets with errors gets forgotten and then there is a bunch of
+>         poor data in the database.
+>
+>         I recommend surveying all the points and to correct all the
+>         external data, then importing, if you really want to practice
+>         importing.
+>
+>         James
+>
+>         On 2/1/23 12:20, James via Imports wrote:
+>>         Since there are only ~100 bike parkings in the dataset, all
+>>         in our CBD, I plan to check them all in person at the end of
+>>         the import. The main reason I'm doing this is to get more
+>>         experience with imports and josm. I have already added a few
+>>         bike parking spots manually outside the CBD. Does this still
+>>         seem worrying to you?
+>>
+>>         Also, I'm not sure what you mean by highway=* with respect to
+>>         bike parking.
+>>
+>>
+>>         On 2 February 2023 2:50:13 am AEST, Marc_marc
+>>         <marc_marc at mailo.com> <mailto:marc_marc at mailo.com> wrote:
+>>
+>>             Hello, Le 01.02.23 ? 09:32, James via Imports a ?crit?:
+>>
+>>                 I'm relatively new at OSM Does anyone have anything
+>>                 they'd like to add, any advice, or any reasons I
+>>                 shouldn't go ahead with this? 
+>>
+>>             starting a import when you describe yourself as
+>>             "relatively new" is maybe not a good idea. it would be
+>>             better to do the first additions classically, find out
+>>             how to deal with highway=* to divide, errors in existing
+>>             data, poor location in opendata, ... if you still want to
+>>             do an import, you have probably read that the guideline
+>>             asks you to make a wiki page describing your project
+>>             Regards, Marc
+>>             ------------------------------------------------------------------------
+>>             Imports mailing list Imports at openstreetmap.org
+>>             https://lists.openstreetmap.org/listinfo/imports
+>>
+>>
+>>         _______________________________________________
+>>         Imports mailing list
+>>         Imports at openstreetmap.org
+>>         https://lists.openstreetmap.org/listinfo/imports
+>>
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230203/9bf2a89a/attachment.htm>
+
+From coolmule0 at hotmail.co.uk  Sun Feb  5 15:03:02 2023
+From: coolmule0 at hotmail.co.uk (John Charlton)
+Date: Sun, 5 Feb 2023 15:03:02 +0000
+Subject: [Imports] Import proposal: Global ML Building Footprints for
+ Nottinghamshire, UK
+Message-ID: <PR3P191MB12165EB3168E1608680F77EBBCD59@PR3P191MB1216.EURP191.PROD.OUTLOOK.COM>
+
+Hello,
+
+I am interested in using Microsoft's "Global ML Building Footprints (https://github.com/microsoft/GlobalMLBuildingFootprints)" for import. It is a huge dataset, but I am interested in importing parts locally. Specifically around Nottingham, UK.
+Where
+---
+Nottinghamshire, UK. https://www.openstreetmap.org/relation/181040. (https://www.openstreetmap.org/relation/181040)
+Strictly within the bounds of this relation
+The import will target built up zones such as residential areas, villages, and larger settlements.
+It will not import any building that may overlap with one currently in the database, or that may duplicate anything currently within OSM.
+
+What
+---
+Building footprints. I.e. building shapes in 2D.
+It will not contain any tag data other than buidling:yes
+
+Why
+---
+There are various places within Nottinghamshire that are without buildings. I would like to use this dataset to quickly add missing buildings into OSM.
+I feel that it a more efficient use of my time to perform quality assurance on the imported data, rather than manually create the building footprints from aerial imagery myself.
+
+Accuracy
+---
+It is a state-of-the-art machine learning database. This does not entail that the data should be entire trusted. I have visually examined cases around Nottingham to see how this dataset compares to both aerial imagery and current building in OSM. I feel that it is to a good quality, accurate, and does not have many false-positives within built up areas.
+I will manually check and go through every area imported to ensure that the import is sane, looks like it should match with both aerial imagery, and with the OSM database with regards to road layout, and any buildings that may already be in OSM.
+
+License
+---
+It uses the Open Data Commons Open Database License (ODbL). (https://opendatacommons.org/licenses/odbl/) This is compatible with the OSM license. Microsoft have a section in the Readme (https://github.com/microsoft/GlobalMLBuildingFootprints#should-we-import-the-data-into-openstreetmap) about importing into OSM.
+
+The import process
+---
+The dataset in available within JOSM with the RapiD plugin. It provides an easy way to copy & import data from the dataset into the OSM database.
+The import, if the proposal is accepted, will use a new user, whose purpose will be for this import project only. (username: ms-glftp-nottinghamshire)
+
+My Questions
+---
+Has the Global ML Building Footprints been imported in another project? I have been unable to find any.
+
+Are there other mailing lists I should reach out on to talk to the community about this?
+
+Closing Remarks
+---
+I have not made an import before, but I am following the guidlines (https://wiki.openstreetmap.org/wiki/Import/Guidelines) closely. I appreciate I may make mistakes, and look forward to working with the community on this.
+
+Kind regards,
+John
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230205/8260bab1/attachment.htm>
+
+From matheus.gomes03 at hotmail.com  Sun Feb  5 19:58:36 2023
+From: matheus.gomes03 at hotmail.com (Matheus Gomes)
+Date: Sun, 5 Feb 2023 19:58:36 +0000
+Subject: [Imports] Rio Branco (Brazil) addresses import
+Message-ID: <SA1PR14MB5281F3DF08F1340A4A00B476E2D59@SA1PR14MB5281.namprd14.prod.outlook.com>
+
+Hello all,
+
+We checked that we can use data from the City of Rio Branco-Brazil (Public Domain with express consent), so we have plans to import addresses.
+
+It's well documented on the wiki [1]. It is a quite extensive document with all the information needed to perform the import. We are prepared to start as soon as possible.
+
+In short the city council provides a SHP of most addresses in the city. We did some tests and the data is good, but it will not be possible, in my understanding, a massive import without first processing the data. It is necessary attention and adjustments before uploading them to OSM.
+
+We are basically cleaning and reviewing every address before uploading. Luckily, there are not many mapped address on OSM (less than a thousand), so we can conflate manually without much trouble.
+
+A sample of converted and cleaned .osm file is available here [2].
+
+Anyway, this was discussed and approved by some users in Brazilian community previously, and those responsible for this import (PlayzinhoAgro and I) have experience in imports and mapping. We've already made some cautious imports in Brazil, so I don't think there would be any problems in this one either.
+
+Please let me know if you have any doubts!
+
+Best regards,
+Matheus
+(user: matheusgomesms)
+
+[1] https://wiki.openstreetmap.org/wiki/Rio_Branco,_Acre/Addresses_Import
+[2] https://github.com/Playzinho/osm_projects/tree/main/Brazil%20Data/AC/Prefeitura%20de%20Rio%20Branco
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230205/35591286/attachment.htm>
+
+From matthew.whilden at gmail.com  Sun Feb  5 21:33:29 2023
+From: matthew.whilden at gmail.com (Matthew Whilden)
+Date: Sun, 5 Feb 2023 13:33:29 -0800
+Subject: [Imports] Rio Branco (Brazil) addresses import
+In-Reply-To: <SA1PR14MB5281F3DF08F1340A4A00B476E2D59@SA1PR14MB5281.namprd14.prod.outlook.com>
+References: <SA1PR14MB5281F3DF08F1340A4A00B476E2D59@SA1PR14MB5281.namprd14.prod.outlook.com>
+Message-ID: <CAD7uiQdSQTzj-sdGCrCHHeQsD+ttuhj6qL7S4zMsCAwrTsg-XA@mail.gmail.com>
+
+Hello!
+
+You may wish to consider adding the MapWithAI plugin to your list of JOSM
+plugins on the import page. I found its validation quite useful for my
+address additions [1] for a similar United States dataset. In particular,
+it has validation trying to match addr:street data with the names of
+streets nearby. It ended up catching a decent amount of things that were
+worth reviewing.
+
+Matt
+
+[1] https://www.openstreetmap.org/user/watmildon/diary/400812
+
+On Sun, Feb 5, 2023 at 12:01 PM Matheus Gomes <matheus.gomes03 at hotmail.com>
+wrote:
+
+> Hello all,
+>
+> We checked that we can use data from the City of Rio Branco-Brazil (Public
+> Domain with express consent), so we have plans to import addresses.
+>
+> It's well documented on the wiki [1]. It is a quite extensive document
+> with all the information needed to perform the import. We are prepared to
+> start as soon as possible.
+>
+> In short the city council provides a SHP of most addresses in the city. We
+> did some tests and the data is good, but it will not be possible, in my
+> understanding, a massive import without first processing the data. It is
+> necessary attention and adjustments before uploading them to OSM.
+>
+> We are basically cleaning and reviewing every address before uploading.
+> Luckily, there are not many mapped address on OSM (less than a thousand),
+> so we can conflate manually without much trouble.
+>
+> A sample of converted and cleaned .osm file is available here [2].
+>
+> Anyway, this was discussed and approved by some users in Brazilian
+> community previously, and those responsible for this import (PlayzinhoAgro
+> and I) have experience in imports and mapping. We've already made some
+> cautious imports in Brazil, so I don't think there would be any problems in
+> this one either.
+>
+> Please let me know if you have any doubts!
+>
+> Best regards,
+> Matheus
+> (user: matheusgomesms)
+>
+> [1] https://wiki.openstreetmap.org/wiki/Rio_Branco,_Acre/Addresses_Import
+> [2]
+> https://github.com/Playzinho/osm_projects/tree/main/Brazil%20Data/AC/Prefeitura%20de%20Rio%20Branco
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230205/2753ea77/attachment-0001.htm>
+
+From Charles.Belov at sfmta.com  Thu Feb  9 21:50:04 2023
+From: Charles.Belov at sfmta.com (Belov, Charles)
+Date: Thu, 9 Feb 2023 21:50:04 +0000
+Subject: [Imports] Proposed import of San Francisco addresses
+Message-ID: <BY3PR09MB7859D9BFA2BDA9C305977595E6D99@BY3PR09MB7859.namprd09.prod.outlook.com>
+
+I am proposing importing all San Francisco addresses with their corresponding latitude and longitude, as served by DataSF at Addresses - Enterprise Addressing System<https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p> (https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p) as open data. Specifically, I am seeking to import the columns Address, Latitude, and Longitude. This is because not all San Francisco addresses are in OpenStreetMap, leading to unsuccessful matches when trying to retrieve missing addresses.
+
+My concern is that many San Francisco addresses are already in OpenStreetMap, and there may be a conflict as to the Latitude and Longitude between those existing addresses and the San Francisco address data, leading to duplicate and mismatched data.
+
+I note there is an OpenStreetMap wiki page San Francisco Address Import<https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import> (https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import) which was last updated in 2020 and noted as ready for review. I?ve requested access to the review.
+
+That said, we now presumably have three more years of data and would want to re-generate the review data.
+
+Please advise. I am cross-posting this proposal to the Imports and Talk-US-SFBay mailing lists.
+
+
+Hope this helps,
+
+Charles Belov
+he/him
+Acting Webmaster
+Communications & Marketing
+
+[cid:image001.png at 01D93C88.91A097A0]
+
+
+
+San Francisco Municipal Transportation Agency
+1 South Van Ness Avenue, 3rd floor
+San Francisco, CA 94103
+[cid:image002.jpg at 01D93C88.91A097A0]<https://www.instagram.com/sfmtaphoto/>[cid:image003.jpg at 01D93C88.91A097A0]<https://www.facebook.com/SFMTA.Muni/>[cid:image004.jpg at 01D93C88.91A097A0]<https://twitter.com/sfmta_muni>[cid:image005.png at 01D93C88.91A097A0]<https://www.sfmta.com/>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230209/1ce8561c/attachment-0001.htm>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image001.png
+Type: image/png
+Size: 4802 bytes
+Desc: image001.png
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230209/1ce8561c/attachment-0002.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image002.jpg
+Type: image/jpeg
+Size: 998 bytes
+Desc: image002.jpg
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230209/1ce8561c/attachment-0003.jpg>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image003.jpg
+Type: image/jpeg
+Size: 968 bytes
+Desc: image003.jpg
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230209/1ce8561c/attachment-0004.jpg>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image004.jpg
+Type: image/jpeg
+Size: 984 bytes
+Desc: image004.jpg
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230209/1ce8561c/attachment-0005.jpg>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image005.png
+Type: image/png
+Size: 3271 bytes
+Desc: image005.png
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230209/1ce8561c/attachment-0003.png>
+
+From t at fust.us  Thu Feb  9 22:33:09 2023
+From: t at fust.us (Tyler Brown Cifu Shuster)
+Date: Thu, 9 Feb 2023 14:33:09 -0800
+Subject: [Imports] Proposed import of San Francisco addresses
+In-Reply-To: <BY3PR09MB7859D9BFA2BDA9C305977595E6D99@BY3PR09MB7859.namprd09.prod.outlook.com>
+References: <BY3PR09MB7859D9BFA2BDA9C305977595E6D99@BY3PR09MB7859.namprd09.prod.outlook.com>
+Message-ID: <E9D09EEB-D7C4-4D48-BC33-20DAE54914EF@fust.us>
+
+Hi Chas, good to see you on here.
+
+The most important thing to note is that addresses should be applied to buildings and not as points. The "Materials (inputs, code, output)? link on the import page doesn?t work so I can?t see how they?re being applied.
+
+Please let me know if you?d like any help with the application of house numbers to buildings in bulk as I?ve done this elsewhere.
+
+Tyler Brown Cifu Shuster
+
+> On Feb 9, 2023, at 1:50 PM, Belov, Charles <Charles.Belov at sfmta.com> wrote:
+> 
+> I am proposing importing all San Francisco addresses with their corresponding latitude and longitude, as served by DataSF at Addresses - Enterprise Addressing System <https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p> (https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p) as open data. Specifically, I am seeking to import the columns Address, Latitude, and Longitude. This is because not all San Francisco addresses are in OpenStreetMap, leading to unsuccessful matches when trying to retrieve missing addresses.
+>  
+> My concern is that many San Francisco addresses are already in OpenStreetMap, and there may be a conflict as to the Latitude and Longitude between those existing addresses and the San Francisco address data, leading to duplicate and mismatched data.
+>  
+> I note there is an OpenStreetMap wiki page San Francisco Address Import <https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import>(https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import) which was last updated in 2020 and noted as ready for review. I?ve requested access to the review.
+>  
+> That said, we now presumably have three more years of data and would want to re-generate the review data.
+>  
+> Please advise. I am cross-posting this proposal to the Imports and Talk-US-SFBay mailing lists.
+>  
+>  
+> Hope this helps,
+>  
+> Charles Belov
+> he/him
+> Acting Webmaster
+> Communications & Marketing
+>  
+> <image001.png>
+>  
+>  
+>  
+> San Francisco Municipal Transportation Agency
+> 1 South Van Ness Avenue, 3rd floor
+> San Francisco, CA 94103
+> <image002.jpg> <https://www.instagram.com/sfmtaphoto/><image003.jpg> <https://www.facebook.com/SFMTA.Muni/><image004.jpg> <https://twitter.com/sfmta_muni><image005.png> <https://www.sfmta.com/>
+>  
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org <mailto:Imports at openstreetmap.org>
+> https://lists.openstreetmap.org/listinfo/imports
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230209/2a150aa5/attachment.htm>
+
+From ewblen at e.email  Fri Feb 10 01:27:08 2023
+From: ewblen at e.email (Eliot)
+Date: Fri, 10 Feb 2023 14:27:08 +1300
+Subject: [Imports] Proposed import of San Francisco addresses
+In-Reply-To: <BY3PR09MB7859D9BFA2BDA9C305977595E6D99@BY3PR09MB7859.namprd09.prod.outlook.com>
+References: <BY3PR09MB7859D9BFA2BDA9C305977595E6D99@BY3PR09MB7859.namprd09.prod.outlook.com>
+Message-ID: <50b8a6cf-3e0d-88b8-e2b0-53169d773263@e.email>
+
+On 10/02/23 10:50, Belov, Charles wrote:
+> I am proposing importing all San Francisco addresses with their corresponding latitude and longitude, as served by DataSF at Addresses - Enterprise Addressing System <https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p> (https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p <https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p>) as open data. Specifically, I am seeking to import the columns Address, Latitude, and Longitude. This is because not all San Francisco addresses are in OpenStreetMap, leading to unsuccessful matches when trying to retrieve missing addresses.
+> 
+> My concern is that many San Francisco addresses are already in OpenStreetMap, and there may be a conflict as to the Latitude and Longitude between those existing addresses and the San Francisco address data, leading to duplicate and mismatched data.
+
+An import that creates duplicate data must not happen.
+
+The most obvious solution to this is to remove all addresses that are already in OSM from your import dataset. I.e. import only the missing addresses.
+The process of finding existing addresses that are wrong (location,  name, number etc) and fixing them could be considered as a separate project.
+
+  
+> I note there is an OpenStreetMap wiki page San Francisco Address Import <https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import> (https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import <https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import>) which was last updated in 2020 and noted as ready for review. I?ve requested access to the review.
+> 
+
+The files linked from the wiki page are not publicly accessible (requires google login).  They probably should be made publicly readable.
+
+Tyler also said
+> The most important thing to note is that addresses should be applied to buildings and not as points
+
+Food for thought (I'm not local, so no opinions on what is right for you)
+Does this imply that every building has at most one address?  An OSM object can't have more than one address.
+How are units/apartments within multi-unit buildings addressed?
+
+-- 
+Eliot
+
+
+
+From t at fust.us  Fri Feb 10 02:18:02 2023
+From: t at fust.us (Tyler Brown Cifu Shuster)
+Date: Thu, 9 Feb 2023 18:18:02 -0800
+Subject: [Imports] Proposed import of San Francisco addresses
+In-Reply-To: <50b8a6cf-3e0d-88b8-e2b0-53169d773263@e.email>
+References: <50b8a6cf-3e0d-88b8-e2b0-53169d773263@e.email>
+Message-ID: <004AAE7B-9CB3-45B5-AB08-DF17F666DC72@fust.us>
+
+Buildings with multiple addresses use semicolons to separate their addresses in the field, like any field with multiple values. 
+
+T
+
+> On Feb 9, 2023, at 5:38 PM, Eliot via Imports <imports at openstreetmap.org> wrote:
+> 
+> ?On 10/02/23 10:50, Belov, Charles wrote:
+>> I am proposing importing all San Francisco addresses with their corresponding latitude and longitude, as served by DataSF at Addresses - Enterprise Addressing System <https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p> (https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p <https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p>) as open data. Specifically, I am seeking to import the columns Address, Latitude, and Longitude. This is because not all San Francisco addresses are in OpenStreetMap, leading to unsuccessful matches when trying to retrieve missing addresses.
+>> My concern is that many San Francisco addresses are already in OpenStreetMap, and there may be a conflict as to the Latitude and Longitude between those existing addresses and the San Francisco address data, leading to duplicate and mismatched data.
+> 
+> An import that creates duplicate data must not happen.
+> 
+> The most obvious solution to this is to remove all addresses that are already in OSM from your import dataset. I.e. import only the missing addresses.
+> The process of finding existing addresses that are wrong (location,  name, number etc) and fixing them could be considered as a separate project.
+> 
+> 
+>> I note there is an OpenStreetMap wiki page San Francisco Address Import <https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import> (https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import <https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import>) which was last updated in 2020 and noted as ready for review. I?ve requested access to the review.
+> 
+> The files linked from the wiki page are not publicly accessible (requires google login).  They probably should be made publicly readable.
+> 
+> Tyler also said
+>> The most important thing to note is that addresses should be applied to buildings and not as points
+> 
+> Food for thought (I'm not local, so no opinions on what is right for you)
+> Does this imply that every building has at most one address?  An OSM object can't have more than one address.
+> How are units/apartments within multi-unit buildings addressed?
+> 
+> -- 
+> Eliot
+> 
+> 
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+
+
+
+From matthew.whilden at gmail.com  Fri Feb 10 02:47:42 2023
+From: matthew.whilden at gmail.com (Matthew Whilden)
+Date: Thu, 9 Feb 2023 18:47:42 -0800
+Subject: [Imports] Proposed import of San Francisco addresses
+In-Reply-To: <004AAE7B-9CB3-45B5-AB08-DF17F666DC72@fust.us>
+References: <50b8a6cf-3e0d-88b8-e2b0-53169d773263@e.email>
+ <004AAE7B-9CB3-45B5-AB08-DF17F666DC72@fust.us>
+Message-ID: <CAD7uiQfbRhEEE8PNL0PT6duLgvhRabbeN_fdbKdnPQm9vcY3Tw@mail.gmail.com>
+
+Are there any buildings that have more than one addr:street in addresses
+for that building? Or addr:unit numbers for different addr:housenumbers?
+This happened for the Indianapolis data set. Delimiting works great until
+you have to delimit more than one field. Maybe this doesn't happen in
+practice in your area.
+
+However, it's also nice to have addresses on nodes for buildings with
+sizable footprints because you can then get the node closer to where the
+address goes (ex: strip mall). I don't know how your dataset handles that.
+The Indy dataset had addresses more or less where each tenant would be
+located.
+
+Matt
+
+On Thu, Feb 9, 2023 at 6:22 PM Tyler Brown Cifu Shuster <t at fust.us> wrote:
+
+> Buildings with multiple addresses use semicolons to separate their
+> addresses in the field, like any field with multiple values.
+>
+> T
+>
+> > On Feb 9, 2023, at 5:38 PM, Eliot via Imports <imports at openstreetmap.org>
+> wrote:
+> >
+> > ?On 10/02/23 10:50, Belov, Charles wrote:
+> >> I am proposing importing all San Francisco addresses with their
+> corresponding latitude and longitude, as served by DataSF at Addresses -
+> Enterprise Addressing System <
+> https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p>
+> (
+> https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p
+> <
+> https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p>)
+> as open data. Specifically, I am seeking to import the columns Address,
+> Latitude, and Longitude. This is because not all San Francisco addresses
+> are in OpenStreetMap, leading to unsuccessful matches when trying to
+> retrieve missing addresses.
+> >> My concern is that many San Francisco addresses are already in
+> OpenStreetMap, and there may be a conflict as to the Latitude and Longitude
+> between those existing addresses and the San Francisco address data,
+> leading to duplicate and mismatched data.
+> >
+> > An import that creates duplicate data must not happen.
+> >
+> > The most obvious solution to this is to remove all addresses that are
+> already in OSM from your import dataset. I.e. import only the missing
+> addresses.
+> > The process of finding existing addresses that are wrong (location,
+> name, number etc) and fixing them could be considered as a separate project.
+> >
+> >
+> >> I note there is an OpenStreetMap wiki page San Francisco Address Import
+> <https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import> (
+> https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import <
+> https://wiki.openstreetmap.org/wiki/San_Francisco_Address_Import>) which
+> was last updated in 2020 and noted as ready for review. I?ve requested
+> access to the review.
+> >
+> > The files linked from the wiki page are not publicly accessible
+> (requires google login).  They probably should be made publicly readable.
+> >
+> > Tyler also said
+> >> The most important thing to note is that addresses should be applied to
+> buildings and not as points
+> >
+> > Food for thought (I'm not local, so no opinions on what is right for you)
+> > Does this imply that every building has at most one address?  An OSM
+> object can't have more than one address.
+> > How are units/apartments within multi-unit buildings addressed?
+> >
+> > --
+> > Eliot
+> >
+> >
+> > _______________________________________________
+> > Imports mailing list
+> > Imports at openstreetmap.org
+> > https://lists.openstreetmap.org/listinfo/imports
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230209/305e4540/attachment.htm>
+
+From Charles.Belov at sfmta.com  Fri Feb 10 05:24:10 2023
+From: Charles.Belov at sfmta.com (Belov, Charles)
+Date: Fri, 10 Feb 2023 05:24:10 +0000
+Subject: [Imports] Proposed import of San Francisco addresses
+In-Reply-To: <E9D09EEB-D7C4-4D48-BC33-20DAE54914EF@fust.us>
+References: <BY3PR09MB7859D9BFA2BDA9C305977595E6D99@BY3PR09MB7859.namprd09.prod.outlook.com>
+ <E9D09EEB-D7C4-4D48-BC33-20DAE54914EF@fust.us>
+Message-ID: <BY3PR09MB7859FC2B0F7D1B84214562CAE6DE9@BY3PR09MB7859.namprd09.prod.outlook.com>
+
+Thank you to everyone for your input. Alas, based on your comments, it appears the database I seek to use may not be a suitable choice for the intended purpose of an import to OpenStreetMap.
+
+Chief issues are inconsistency as to where the lat/longs point to; difficulty automatically detecting buildings with more than one address per building, particularly if two street names are involved; and at least one case of a wildly inaccurate lat/long out of six lat/longs I looked at.
+
+Details follow:
+
+In response to people's various responses:
+
+On Thu, Feb 9, 2023 at 6:48 PM Matthew Whilden <matthew.whilden at gmail.com> wrote:
+
+> Are there any buildings that have more than one addr:street in addresses for that building? Or addr:unit 
+> numbers for different addr:housenumbers? This happened for the Indianapolis data set. Delimiting works 
+> great until you have to delimit more than one field. Maybe this doesn't happen in practice in your area. 
+
+> However, it's also nice to have addresses on nodes for buildings with sizable footprints because you can then 
+> get the node closer to where the address goes (ex: strip mall). I don't know how your dataset handles that. 
+> The Indy dataset had addresses more or less where each tenant would be located. 
+
+The building on the southeast corner of Market & Van Ness has three addresses: 1525 Market Street (the bank branch on the ground floor), 11 South Van Ness Avenue (the SFMTA Customer Service Center), and 1 South Van Ness Avenue (the office lobby on the first floor, as well as the entire basement and 2nd and higher floors, which are also above or below the bank branch and the SFMTA Customer Service Center) . 
+
+In the City data from https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p:
+
+1525 Market Street has lat/long of 37.77514082, -122.4189106. This points to the entrance.
+1 South Van Ness Avenue has lat/long of 37.75385644, -122.4161123. Bad data. See below.
+11 South Van Ness Avenue has lat/long of 37.77450185, -122.4188237. This points to the entrance.
+
+Since the building is in the same place for each of these, it's clear that the lat/long does not refer to the building, but to the respective entrances. 
+
+It appears that the lat/long given for 1 South Van Ness Avenue is wrong; Google Maps is giving me a location at South Van Ness and 23rd Street, over a mile away from the actual South Van Ness and Market. If we can't trust the data, then bulk importing is not going to work. (I've reported the 1 South Van Ness issue to the DataSF dataset owner.)
+
+The building on the northwest corner of Geary and Presidio has at least four addresses, 949 Presidio Avenue, and 2620, 2630 and 2640 Geary. 949 Presidio is both behind and above the other addresses.
+
+949 Presidio: 37.78312314, -122.4460813 points to the entrance.
+2620 Geary is not in the data. I'm not necessarily concerned with missing addresses as they will at least do no harm.
+2630 Geary: 37.78285206, -122.4463834 points to within the building.
+2640 Geary: 37.78283298, -122.4465738 points to within the building.
+
+I'm thinking that there might be a way to run a sanity check on lat/longs within a particular hundred block, for example that 1 South Van Ness is reasonably close to 11 South Van Ness (which in this case the data isn't even though the addresses are close in real life). San Francisco generally has 100 numbers per block counting from the beginning of the street. We might need to separate odd and even, as on the 700 block of Duboce.
+
+That said, the inconsistency as to whether an entrance or a building is used sounds like it would be problematic with regard to OpenStreetMap's practices.
+
+> On Thu, Feb 9, 2023 at 6:22 PM Tyler Brown Cifu Shuster <t at fust.us> wrote:
+> Buildings with multiple addresses use semicolons to separate their addresses in the field, like any field with 
+> multiple values. 
+
+This would handle the simple case, if we have a way to detect it. Many buildings in San Francisco have more than one address. Two-unit houses will often have one address for each unit, for example 191 Example Street and 193 Example Street. 
+
+Tyler Brown Cifu Shuster wrote:
+
+> The most important thing to note is that addresses should be applied to buildings and not as points. 
+
+> The 
+> "Materials (inputs, code, output)? link on the import page doesn?t work so I can?t see how they?re being applied.
+
+I didn't post that file. It was apparently posted to that page three years ago. I don't know why it might be protected. I've requested access and will update the list if I gain it.
+
+> Please let me know if you?d like any help with the application of house numbers to buildings in bulk as I?ve done 
+> this elsewhere.
+
+Thank you! For further discussion.
+
+On Thu, Feb 9, 2023 at 5:34 PM Jack Pearson <jack at pearson.onl> wrote:
+
+> Be careful when you do this automatically. Address nodes are often beside the building they describe 
+> rather than inside the building. But when you add any sort of tolerance for that error you can introduce a lot 
+> of false positives. If there are 2 physical buildings A and B, and only B has an address, and only A has been 
+> traced into OpenStreetMap, and the B address node has just a little error, then the address node will bind 
+> to the wrong building.
+
+> I've made this mistake before and affected many buldings, which is why I'm commenting.
+
+Noted. This is beyond my knowledge to handle.
+
+On Thu, Feb 9, 2023 at 5:27 PM Eliot <ewblen at e.email> wrote:
+
+> An import that creates duplicate data must not happen.
+
+Agreed, even as I'm not sure how to accomplish this.
+
+> The most obvious solution to this is to remove all addresses that are already in OSM from your import 
+> dataset. I.e. import only the missing addresses.
+
+Again agreed. Tedious and necessary.
+
+> The process of finding existing addresses that are wrong (location,  name, number etc) and fixing them 
+> could be considered as a separate project.
+
+Again agreed.
+
+> Does this imply that every building has at most one address?  An OSM object can't have more than 
+> one address.
+
+
+> How are units/apartments within multi-unit buildings addressed?
+
+Unit numbers that don't have unique street addresses beyond the unit number are outside of the scope I seek.
+
+Hope this helps,
+
+Charles Belov
+he/him
+Acting Webmaster 
+Communications & Marketing
+
+
+
+
+
+San Francisco Municipal Transportation Agency
+1 South Van Ness Avenue, 3rd floor
+San Francisco, CA 94103
+
+
+
+
+From minh at nguyen.cincinnati.oh.us  Fri Feb 10 06:10:00 2023
+From: minh at nguyen.cincinnati.oh.us (Minh Nguyen)
+Date: Thu, 9 Feb 2023 22:10:00 -0800
+Subject: [Imports] [Talk-us-sfbay] Proposed import of San Francisco
+ addresses
+In-Reply-To: <BY3PR09MB7859FC2B0F7D1B84214562CAE6DE9@BY3PR09MB7859.namprd09.prod.outlook.com>
+References: <BY3PR09MB7859D9BFA2BDA9C305977595E6D99@BY3PR09MB7859.namprd09.prod.outlook.com>
+ <E9D09EEB-D7C4-4D48-BC33-20DAE54914EF@fust.us>
+ <BY3PR09MB7859FC2B0F7D1B84214562CAE6DE9@BY3PR09MB7859.namprd09.prod.outlook.com>
+Message-ID: <6d3b3808-4023-52e4-35cc-03ab7f7d0bc6@nguyen.cincinnati.oh.us>
+
+(Resending to the imports list)
+
+V?o l?c 21:24 2023-02-09, Belov, Charles ?? vi?t:
+
+>> However, it's also nice to have addresses on nodes for buildings with 
+>> sizable footprints because you can then
+>> get the node closer to where the address goes (ex: strip mall). I 
+>> don't know how your dataset handles that.
+>> The Indy dataset had addresses more or less where each tenant would 
+>> be located.
+> The building on the southeast corner of Market & Van Ness has three 
+> addresses: 1525 Market Street (the bank branch on the ground floor), 
+> 11 South Van Ness Avenue (the SFMTA Customer Service Center), and 1 
+> South Van Ness Avenue (the office lobby on the first floor, as well as 
+> the entire basement and 2nd and higher floors, which are also above or 
+> below the bank branch and the SFMTA Customer Service Center) .
+>
+> In the City data from 
+> https://data.sfgov.org/Geographic-Locations-and-Boundaries/Addresses-Enterprise-Addressing-System/3mea-di5p:
+>
+> 1525 Market Street has lat/long of 37.77514082, -122.4189106. This 
+> points to the entrance.
+> 1 South Van Ness Avenue has lat/long of 37.75385644, -122.4161123. Bad 
+> data. See below.
+> 11 South Van Ness Avenue has lat/long of 37.77450185, -122.4188237. 
+> This points to the entrance.
+>
+> Since the building is in the same place for each of these, it's clear 
+> that the lat/long does not refer to the building, but to the 
+> respective entrances.
+>
+> It appears that the lat/long given for 1 South Van Ness Avenue is 
+> wrong; Google Maps is giving me a location at South Van Ness and 23rd 
+> Street, over a mile away from the actual South Van Ness and Market. If 
+> we can't trust the data, then bulk importing is not going to work. 
+> (I've reported the 1 South Van Ness issue to the DataSF dataset owner.)
+>
+> The building on the northwest corner of Geary and Presidio has at 
+> least four addresses, 949 Presidio Avenue, and 2620, 2630 and 2640 
+> Geary. 949 Presidio is both behind and above the other addresses.
+>
+> 949 Presidio: 37.78312314, -122.4460813 points to the entrance.
+> 2620 Geary is not in the data. I'm not necessarily concerned with 
+> missing addresses as they will at least do no harm.
+> 2630 Geary: 37.78285206, -122.4463834 points to within the building.
+> 2640 Geary: 37.78283298, -122.4465738 points to within the building.
+>
+> I'm thinking that there might be a way to run a sanity check on 
+> lat/longs within a particular hundred block, for example that 1 South 
+> Van Ness is reasonably close to 11 South Van Ness (which in this case 
+> the data isn't even though the addresses are close in real life). San 
+> Francisco generally has 100 numbers per block counting from the 
+> beginning of the street. We might need to separate odd and even, as on 
+> the 700 block of Duboce.
+>
+> That said, the inconsistency as to whether an entrance or a building 
+> is used sounds like it would be problematic with regard to 
+> OpenStreetMap's practices.
+
+I believe the discrepancy has been overstated. While it?s true that 
+buildings are often tagged with addresses, it?s very common for 
+addresses to be mapped as standalone point features whenever they don?t 
+correspond one-for-one to buildings, such as with duplex houses or 
+downtown office blocks. Various imports in the U.S. have made exceptions 
+for address points within condominiums, duplex houses, strip malls, and 
+downtown office blocks.
+
+For example, the building/address imports in nearby San Jos? [1] and 
+Cupertino [2] even included sometimes very dense arrangements of address 
+points for individual units within apartment complexes when available. 
+This mapping style is also common inside retail buildings, since each 
+address point might get upgraded a point of interest later on. We?re 
+actively upgrading these points while manually mapping points of 
+interest in Santa Clara County. [3] The address data we?re working with 
+generally correlates to parcels or units, rather than entrances per se, 
+but it could be different in the data you?re working with.
+
+Conflating addresses that may or may not be tied to buildings can be 
+more challenging. Popular QA tools like JOSM?s validator will warn 
+whenever they detect multiple identical addresses within a certain 
+distance. While this heuristic easily flags false positives in certain 
+situations, it could still be a good starting point for planning your 
+import.
+
+>> The
+>> "Materials (inputs, code, output)? link on the import page doesn?t 
+>> work so I can?t see how they?re being applied.
+> I didn't post that file. It was apparently posted to that page three 
+> years ago. I don't know why it might be protected. I've requested 
+> access and will update the list if I gain it.
+
+I?ve reached out to the mappers who coordinated that original import, 
+some of whom are still active in OSM. Hopefully you?ll be able to 
+coordinate an update of this data with them. Down here in the South Bay, 
+we?re going to need to update some of our older imports before long, so 
+any solution you come up with could help us as well.
+
+[1] 
+https://wiki.openstreetmap.org/wiki/Santa_Clara_County,_California/San_Jose_building_import
+[2] https://wiki.openstreetmap.org/wiki/Cupertino_import
+[3] 
+https://wiki.openstreetmap.org/wiki/Santa_Clara_County,_California/Social_distancing_protocol_import
+
+-- 
+Minh Nguyen <minh at nguyen.cincinnati.oh.us>
+
+
+
+From matheus.gomes03 at hotmail.com  Mon Feb 13 00:30:01 2023
+From: matheus.gomes03 at hotmail.com (Matheus Gomes)
+Date: Mon, 13 Feb 2023 00:30:01 +0000
+Subject: [Imports] Rio Branco (Brazil) addresses import
+In-Reply-To: <CAD7uiQdSQTzj-sdGCrCHHeQsD+ttuhj6qL7S4zMsCAwrTsg-XA@mail.gmail.com>
+References: <SA1PR14MB5281F3DF08F1340A4A00B476E2D59@SA1PR14MB5281.namprd14.prod.outlook.com>
+ <CAD7uiQdSQTzj-sdGCrCHHeQsD+ttuhj6qL7S4zMsCAwrTsg-XA@mail.gmail.com>
+Message-ID: <SA1PR14MB528158CC263E7976397C5599E2DD9@SA1PR14MB5281.namprd14.prod.outlook.com>
+
+Hi Matt,
+
+Thanks a lot! I checked it and it is indeed useful. I will add it to our workflow!
+
+The style Coloured Streets are also useful, for some type of visual and quick validation as well (I recommend!).
+
+Best,
+Matheus
+________________________________
+De: Matthew Whilden <matthew.whilden at gmail.com>
+Enviado: domingo, 5 de fevereiro de 2023 21:33
+Para: Matheus Gomes <matheus.gomes03 at hotmail.com>
+Cc: Imports OpenStreetMap.org <imports at openstreetmap.org>
+Assunto: Re: [Imports] Rio Branco (Brazil) addresses import
+
+Hello!
+
+You may wish to consider adding the MapWithAI plugin to your list of JOSM plugins on the import page. I found its validation quite useful for my address additions [1] for a similar United States dataset. In particular, it has validation trying to match addr:street data with the names of streets nearby. It ended up catching a decent amount of things that were worth reviewing.
+
+Matt
+
+[1] https://www.openstreetmap.org/user/watmildon/diary/400812
+
+On Sun, Feb 5, 2023 at 12:01 PM Matheus Gomes <matheus.gomes03 at hotmail.com<mailto:matheus.gomes03 at hotmail.com>> wrote:
+Hello all,
+
+We checked that we can use data from the City of Rio Branco-Brazil (Public Domain with express consent), so we have plans to import addresses.
+
+It's well documented on the wiki [1]. It is a quite extensive document with all the information needed to perform the import. We are prepared to start as soon as possible.
+
+In short the city council provides a SHP of most addresses in the city. We did some tests and the data is good, but it will not be possible, in my understanding, a massive import without first processing the data. It is necessary attention and adjustments before uploading them to OSM.
+
+We are basically cleaning and reviewing every address before uploading. Luckily, there are not many mapped address on OSM (less than a thousand), so we can conflate manually without much trouble.
+
+A sample of converted and cleaned .osm file is available here [2].
+
+Anyway, this was discussed and approved by some users in Brazilian community previously, and those responsible for this import (PlayzinhoAgro and I) have experience in imports and mapping. We've already made some cautious imports in Brazil, so I don't think there would be any problems in this one either.
+
+Please let me know if you have any doubts!
+
+Best regards,
+Matheus
+(user: matheusgomesms)
+
+[1] https://wiki.openstreetmap.org/wiki/Rio_Branco,_Acre/Addresses_Import
+[2] https://github.com/Playzinho/osm_projects/tree/main/Brazil%20Data/AC/Prefeitura%20de%20Rio%20Branco
+_______________________________________________
+Imports mailing list
+Imports at openstreetmap.org<mailto:Imports at openstreetmap.org>
+https://lists.openstreetmap.org/listinfo/imports
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230213/c26a5578/attachment.htm>
+
+From hubaishan at outlook.sa  Sat Feb 18 15:45:04 2023
+From: hubaishan at outlook.sa (Saeed Hubaishan)
+Date: Sat, 18 Feb 2023 15:45:04 +0000
+Subject: [Imports] A lot of nodes imported from GEOnet Names Server (GNS) were deleted in Yemen, KSA, Egypt Iraq and other countries
+Message-ID: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+
+Sorry for being late in replying, I was on a long medical trip.
+I am continue talking about https://lists.openstreetmap.org/pipermail/imports/2022-May/006842.html
+
+> giving examples would be helpful, checked some random ones and it was not true for them
+
+
+
+These are some examples of towns:
+
+1218202166
+
+1219278705
+
+1221864043
+
+1222183763
+
+1222503410
+
+1222655324
+
+1223234739
+
+1223247432
+
+1223287523
+
+Saeed Hubaishan
+https://github.com/hubaishan
+https://www.openstreetmap.org/user/??????
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230218/c8311a4c/attachment.htm>
+
+From hubaishan at outlook.sa  Sat Feb 25 19:24:37 2023
+From: hubaishan at outlook.sa (Saeed Hubaishan)
+Date: Sat, 25 Feb 2023 19:24:37 +0000
+Subject: [Imports] =?iso8859-6?q?=D1=CF=3A__A_lot_of_nodes_imported_from_?=
+ =?iso8859-6?q?GEOnet_Names_Server_=28GNS_=29_were_deleted_in_Yemen=2C_KSA?=
+ =?iso8859-6?q?=2C_Egypt_Iraq_and_other_countries?=
+In-Reply-To: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+References: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+Message-ID: <BY5PR02MB6962B188F0C9067A194586E4CCA99@BY5PR02MB6962.namprd02.prod.outlook.com>
+
+For nodes in Yemen, should I restore deleted nodes manually or DWG will restore it?
+
+Saeed Hubaishan
+https://github.com/hubaishan
+https://www.openstreetmap.org/user/??????
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230225/fa768167/attachment.htm>
+
+From ajt1047 at gmail.com  Sun Feb 26 01:20:34 2023
+From: ajt1047 at gmail.com (Andy Townsend)
+Date: Sun, 26 Feb 2023 01:20:34 +0000
+Subject: [Imports] 
+ =?utf-8?q?=D8=B1=D8=AF=3A_A_lot_of_nodes_imported_from?=
+ =?utf-8?q?_GEOnet_Names_Server_=28GNS_=29_were_deleted_in_Yemen=2C_KSA=2C?=
+ =?utf-8?q?_Egypt_Iraq_and_other_countries?=
+In-Reply-To: <BY5PR02MB6962B188F0C9067A194586E4CCA99@BY5PR02MB6962.namprd02.prod.outlook.com>
+References: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <BY5PR02MB6962B188F0C9067A194586E4CCA99@BY5PR02MB6962.namprd02.prod.outlook.com>
+Message-ID: <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+
+On 25/02/2023 19:24, Saeed Hubaishan wrote:
+>
+> For nodes in Yemen, should I restore deleted nodes manually or DWG 
+> will restore it?
+>
+> Saeed Hubaishan
+>
+>
+Hello Saeed,
+
+Details of the deletion can be seen on changesets such as 
+https://www.openstreetmap.org/changeset/119556694 .
+
+The DWG received a complaint that this import was of particularly poor 
+quality.? Various people tried to contact the imported, with no luck: 
+http://resultmaps.neis-one.org/osm-discussion-comments?uid=11567 .
+
+If you believe that this data (or perhaps some of this data) is of good 
+enough quality to import, you'll need to follow the procedure at 
+https://wiki.openstreetmap.org/wiki/Import/Guidelines , which includes 
+making a case for the import (looking at licence, data quality, etc.) 
+including messages to this list.
+
+If you'd like to email the DWG about this ticket please email 
+data at openstreetmap.org with a subject of "Re: [Ticket#2020112810000282] 
+Yemen".
+
+Best Regards,
+
+Andy Townsend
+
+(from the DWG, although not the DWG person actually dealing with this 
+ticket)
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230226/0824a3fc/attachment.htm>
+
+From ze.ev.stadler at gmail.com  Sun Feb 26 07:33:30 2023
+From: ze.ev.stadler at gmail.com (Zeev Stadler)
+Date: Sun, 26 Feb 2023 09:33:30 +0200
+Subject: [Imports] 
+	=?utf-8?q?=D8=B1=D8=AF=3A_A_lot_of_nodes_imported_from?=
+	=?utf-8?q?_GEOnet_Names_Server_=28GNS_=29_were_deleted_in_Yemen=2C?=
+	=?utf-8?q?_KSA=2C_Egypt_Iraq_and_other_countries?=
+In-Reply-To: <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+References: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <BY5PR02MB6962B188F0C9067A194586E4CCA99@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+Message-ID: <CADpQNb9uS6kp3S7A-6t4j-Kc_hRxJ3MrH0+3FEEut6DqhgSXuw@mail.gmail.com>
+
+All,
+
+Names and acronyms can be confusing. Here is what I've learned:
+
+The "GNS" acronym has also been used for imports from the GEOnet Names
+Server run by the US government. As far as the wiki says, such imports are
+legitimate. See https://wiki.openstreetmap.org/wiki/GEOnet_Names_Server
+
+This import's dairy clearly says it was done from another "GNS" source -
+Geonames.
+
+There was another "GEOnet" service from ESRI. In 2012 it was renamed "ESRI
+Community". See
+https://community.esri.com/t5/community-blog/geonet-the-esri-community-name-change-to-esri/ba-p/1028806.
+
+
+On Sun, Feb 26, 2023 at 3:26 AM Andy Townsend <ajt1047 at gmail.com> wrote:
+
+> On 25/02/2023 19:24, Saeed Hubaishan wrote:
+>
+> For nodes in Yemen, should I restore deleted nodes manually or DWG will
+> restore it?
+>
+>
+>
+> Saeed Hubaishan
+>
+> Hello Saeed,
+>
+> Details of the deletion can be seen on changesets such as
+> https://www.openstreetmap.org/changeset/119556694 .
+>
+> The DWG received a complaint that this import was of particularly poor
+> quality.  Various people tried to contact the imported, with no luck:
+> http://resultmaps.neis-one.org/osm-discussion-comments?uid=11567 .
+>
+> If you believe that this data (or perhaps some of this data) is of good
+> enough quality to import, you'll need to follow the procedure at
+> https://wiki.openstreetmap.org/wiki/Import/Guidelines , which includes
+> making a case for the import (looking at licence, data quality, etc.)
+> including messages to this list.
+>
+> If you'd like to email the DWG about this ticket please email
+> data at openstreetmap.org with a subject of "Re: [Ticket#2020112810000282]
+> Yemen".
+>
+> Best Regards,
+>
+> Andy Townsend
+>
+> (from the DWG, although not the DWG person actually dealing with this
+> ticket)
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230226/adc9dcd0/attachment.htm>
+
+From abdullahOSM at outlook.com  Sun Feb 26 18:53:34 2023
+From: abdullahOSM at outlook.com (=?utf-8?B?2LnYqNiv2KfZhNmE2Ycg2LnYqNiv2KfZhNix2K3ZhdmG?=)
+Date: Sun, 26 Feb 2023 18:53:34 +0000
+Subject: [Imports] 
+ =?utf-8?q?=D8=B1=D8=AF=3A_A_lot_of_nodes_imported_from?=
+ =?utf-8?q?_GEOnet_Names_Server_=28GNS_=29_were_deleted_in_Yemen=2C_KSA=2C?=
+ =?utf-8?q?_Egypt_Iraq_and_other_countries?=
+In-Reply-To: <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+References: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <BY5PR02MB6962B188F0C9067A194586E4CCA99@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+Message-ID: <AS1P195MB1595A86BB03AFEA4C7692600BCAE9@AS1P195MB1595.EURP195.PROD.OUTLOOK.COM>
+
+Hello ??Andy
+Regarding these notes (which the community did not notice and the user did not send to the local community on Telegram or the mailing list), and his caused the loss of many points on the map that had existed for more than ten years and no one had complained about them!.
+And if the community had been alerted about any note, it would have been possible to fix what needs to be fixed without the need for the huge and affecting deletion on the map!!!
+As for the names, a point must be clarified, which is that we in Arab countries live in vast desert spaces And we name everything in it and it is documented and preserved even in ancient Arabic poetry, And we have many references for verification, and the names may be repeated a lot, for example (and this is a lot) a valley may be called after the type of trees spread in it, so you find the same name repeated 25 times in Saudi Arabia and in different regions, A village may be called by a specific name that has the same name as another village that is far away from it (this is confusing for contributors who are inexperienced with geographical names locally, so he searches for his village and discovers another, then deletes it or comments that it is incorrect!!) This applies to the user you mentioned:
+https://www.openstreetmap.org/user/samams
+http://resultmaps.neis-one.org/osm-discussion-comments?uid=6980925&commented
+
+Where he removed the peak with the same name of his village, even though the place is correct and the name of the peak is correct, and there is no problem except that the name of the peak is similar to the name of his village!, Also he is very fanatical about his village to the point that he falsifies the population number and changes the classification frequently:
+peak:
+https://www.openstreetmap.org/node/1237557680/history
+the village:
+https://www.openstreetmap.org/node/747667494/history
+
+Another example of a user deleting a place because he wants no other village with the same name as his village to be on the map!:
+https://www.openstreetmap.org/node/7650532028/history
+https://www.openstreetmap.org/node/6775946496/history
+https://www.openstreetmap.org/way/766523203/history
+
+In conclusion, Mr. Hubaishan and I will re-import the GNS points and wil follow https://wiki.openstreetmap.org/wiki/Import/Guidelines and we will review them thoroughly before uploading them in order to avoid any errors.
+
+my regards
+Abdullah Abdulrhman
+https://www.openstreetmap.org/user/Abdullah%20Abdulrhman
+
+
+________________________________
+From: Andy Townsend <ajt1047 at gmail.com>
+Sent: Sunday, February 26, 2023 4:20 AM
+To: imports at openstreetmap.org <imports at openstreetmap.org>
+Subject: Re: [Imports] ??: A lot of nodes imported from GEOnet Names Server (GNS ) were deleted in Yemen, KSA, Egypt Iraq and other countries
+
+On 25/02/2023 19:24, Saeed Hubaishan wrote:
+
+For nodes in Yemen, should I restore deleted nodes manually or DWG will restore it?
+
+
+
+Saeed Hubaishan
+
+
+Hello Saeed,
+
+Details of the deletion can be seen on changesets such as https://www.openstreetmap.org/changeset/119556694 .
+
+The DWG received a complaint that this import was of particularly poor quality.  Various people tried to contact the imported, with no luck: http://resultmaps.neis-one.org/osm-discussion-comments?uid=11567 .
+
+If you believe that this data (or perhaps some of this data) is of good enough quality to import, you'll need to follow the procedure at https://wiki.openstreetmap.org/wiki/Import/Guidelines , which includes making a case for the import (looking at licence, data quality, etc.) including messages to this list.
+
+If you'd like to email the DWG about this ticket please email data at openstreetmap.org<mailto:data at openstreetmap.org> with a subject of "Re: [Ticket#2020112810000282] Yemen".
+
+Best Regards,
+
+Andy Townsend
+
+(from the DWG, although not the DWG person actually dealing with this ticket)
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230226/3c9f2bbd/attachment-0001.htm>
+
+From privatemajory at gmail.com  Tue Feb 28 10:32:42 2023
+From: privatemajory at gmail.com (Dolly Andriatsiferana)
+Date: Tue, 28 Feb 2023 13:32:42 +0300
+Subject: [Imports] Possible import of buildings in Antananarivo, Madagascar?
+Message-ID: <CABzN_KLSk3NdWw5W=MvoFeynjKRAw2ZUtNUwvNmzJfza8B2-xQ@mail.gmail.com>
+
+Hello list,
+
+I am possibly wrong, but there is likely an undiscussed import of buildings
+happening in Antananarivo, Madagascar. Please see this changeset that I
+commented and all previous and following changesets by the same user:
+https://www.openstreetmap.org/changeset/133061376
+
+What makes me think those buildings are from a certain source:
+
+- They don't align with any of the imageries available on OSM editors, so
+they were likely drawn from some third party imagery (although the source
+tag of the changesets says Bing).
+
+- The attribute table is consistent and all added buildings have the same
+keys addr:suburb, addr:secteur, addr:lot, addr:housenumber, and addr:city
+
+- The values of addr:lot=* are not valid house addresses like we use here
+(As per the comment on https://www.openstreetmap.org/changeset/132331988 it
+looks like it was initially added to OSM as addr:ilot but then changed to
+addr:lot)
+
+- Every house has addr:housenumber=* which is very rarely used here (only
+in downtowns where streets are named). We use a lot-based address system
+and I am not sure what these numbers on each building are supposed to
+represent (even gas station canopies are numbered).
+
+I put a comment on one of the changesets (first link) but haven't had a
+response yet.
+
+I hope I am wrong and this is not an import at all. And if this is an
+import and has been discussed here but I missed it, sorry too.
+
+Have a nice day!
+
+--
+Dolly Andriatsiferana
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230228/a5411d84/attachment.htm>
+
+From frederik at remote.org  Tue Feb 28 11:04:02 2023
+From: frederik at remote.org (Frederik Ramm)
+Date: Tue, 28 Feb 2023 12:04:02 +0100
+Subject: [Imports] Possible import of buildings in Antananarivo,
+ Madagascar?
+In-Reply-To: <CABzN_KLSk3NdWw5W=MvoFeynjKRAw2ZUtNUwvNmzJfza8B2-xQ@mail.gmail.com>
+References: <CABzN_KLSk3NdWw5W=MvoFeynjKRAw2ZUtNUwvNmzJfza8B2-xQ@mail.gmail.com>
+Message-ID: <23ebba7c-5db7-62f8-d5f4-0850ca04d4b7@remote.org>
+
+Hi,
+
+I have placed a temporary block on the user account to make them aware 
+of the issues: https://www.openstreetmap.org/user_blocks/6904
+
+Bye
+Frederik
+
+
+On 28.02.23 11:32, Dolly Andriatsiferana wrote:
+> Hello list,
+> 
+> I am possibly wrong, but there is likely an undiscussed import of 
+> buildings happening in Antananarivo, Madagascar. Please see this 
+> changeset that I commented and all previous and following changesets by 
+> the same user: https://www.openstreetmap.org/changeset/133061376 
+> <https://www.openstreetmap.org/changeset/133061376>
+> 
+> What makes me think those buildings are from a certain source:
+> 
+> - They don't align with any of the imageries available on OSM editors, 
+> so they were likely drawn from some third party imagery (although the 
+> source tag of the changesets says Bing).
+> 
+> - The attribute table is consistent and all added buildings have the 
+> same keys addr:suburb, addr:secteur, addr:lot, addr:housenumber, and 
+> addr:city
+> 
+> - The values of addr:lot=* are not valid house addresses like we use 
+> here (As per the comment on 
+> https://www.openstreetmap.org/changeset/132331988 
+> <https://www.openstreetmap.org/changeset/132331988> it looks like it was 
+> initially added to OSM as addr:ilot but then changed to addr:lot)
+> 
+> - Every house has addr:housenumber=* which is very rarely used here 
+> (only in downtowns where streets are named). We use a lot-based address 
+> system and I am not sure what these numbers on each building are 
+> supposed to represent (even gas station canopies are numbered).
+> 
+> I put a comment on one of the changesets (first link) but haven't had a 
+> response yet.
+> 
+> I hope I am wrong and this is not an import at all. And if this is an 
+> import and has been discussed here but I missed it, sorry too.
+> 
+> Have a nice day!
+> 
+> --
+> Dolly Andriatsiferana
+> 
+> 
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+
+-- 
+Frederik Ramm  ##  eMail frederik at remote.org  ##  N49?00'09" E008?23'33"
+
+

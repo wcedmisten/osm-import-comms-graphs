@@ -1,0 +1,1344 @@
+From wcedmisten at gmail.com  Wed May  3 23:17:41 2023
+From: wcedmisten at gmail.com (William Edmisten)
+Date: Wed, 3 May 2023 19:17:41 -0400
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+Message-ID: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+
+Hello,
+
+My name is William Edmisten (wcedmisten). I've been mapping in OSM for
+almost a year, but have no relevant affiliation with any other
+organizations.
+
+I am writing to propose an import of the HIDFL Hospital dataset
+<https://hifld-geoplatform.opendata.arcgis.com/datasets/hospitals/explore>
+(8,013 records), and to discuss possible ways in which this dataset could
+be used.
+
+I've documented some details about the Hospital dataset and how it might be
+applied on this wiki page
+<https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>.
+
+Looking at the archives, the entire HIDFL dataset was previously discussed
+here in October 2022, but I would like to specifically focus on the
+Hospitals dataset. One of the previous concerns was that the scope of HIDFL
+overall was too broad, so I would like to narrow the discussion to this
+single dataset for now.
+
+I believe this data is appropriate for OSM, and can be verified
+independently of the dataset, making it a good choice for import or for
+reference while mapping. In particular, hospitals' websites can be used to
+verify most or all of the data aggregated here.
+
+Another prior concern related to the license, which is stated as:
+> None (Public Use). Users are advised to read the data set's metadata
+thoroughly to understand appropriate use and data limitations.
+
+I emailed the support team at HIFLD at hq.dhs.gov to clarify the terms of the
+license, and they clarified that the data is indeed available freely for
+public use.
+> Thank you for your inquiry, William. The dataset you are referring to is
+being provided for public use.
+> Best regards,
+> HIFLD Support Team | Geospatial Management Office (GMO) | Office of the
+Chief Data Officer (OCDO)
+
+Best,
+
+William Edmisten (wcedmisten)
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230503/e651be97/attachment.htm>
+
+From marc_marc at mailo.com  Thu May  4 01:33:13 2023
+From: marc_marc at mailo.com (Marc_marc)
+Date: Thu, 4 May 2023 03:33:13 +0200
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+Message-ID: <0b394e07-ad41-8d04-b76a-b625c4d37e07@mailo.com>
+
+Hello,
+
+Le 04.05.23 ? 01:17, William Edmisten a ?crit?:
+> this wiki page <https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>.
+
+thanks for the time you spend on it.
+
+addr:full : may I sugest an improved wording :
+when I start reading this section, it looks like you are
+going to import addr:full in addition to the others.
+at the end you say you erase it.
+suggestion : in addotion to addr:full, using the usaddress library 
+parsed into addr:housenumber and addr:street,
+after manually check, addr:housenumber addr:street are imported
+if the parsing worked as expected, if not addr:full is imported
+
+addr:state usually ? decide if you import it or not :)
+
+zip4 appended to addr:postcode with a hyphen :
+do this match does this correspond to local use ?
+
+disused:amenity=hospital : i don't see the added value
+to import disued hospital
+
+beds : On conflict : it is common practice that an import never 
+overwrites the values that a contributor has entered in osm.
+maybe it would be better to do this kind of conflict management 
+separately from the import, especially since nothing says that
+the hospital site is more up to date than osm: sometimes yes,
+sometimes no
+
+healthcare=psychiatry -> healthcare:speciality=psychiatry ?
+because for an hospital healthcare is set to hospital too
+or keep empty
+healthcare=rehabilitation : same issue
+
+trauma: you ask : "Does being a certified trauma center
+imply emergency=yes?"
+I don't think so. trauma is very vague, post-traumatic stress
+is probably not an emergency=yes (in the sense that it is not
+a sudden event that occurs and will be resolved during the day,
+it is rather a long-term accompaniment duration outside the emergency 
+department even if the first crisis can probably lead to the emergency 
+department to stabilize the patient and avoid danger to others
+and to himself
+
+Progress by State : it's already ongoing ?
+may I ask to have the review before the import ?
+not importing then receving/readding any review.
+
+missing info : changeset tag, for ex:
+comment=importing missing hospital from HIFLD
+import=yes
+source=HIFLD
+source:url=https://hifld-geoplatform.opendata.arcgis.com/maps/hospitals
+url=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health
+
+Regards,
+Marc
+
+
+
+
+From matthew.whilden at gmail.com  Thu May  4 06:50:38 2023
+From: matthew.whilden at gmail.com (Matthew Whilden)
+Date: Wed, 3 May 2023 23:50:38 -0700
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <0b394e07-ad41-8d04-b76a-b625c4d37e07@mailo.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <0b394e07-ad41-8d04-b76a-b625c4d37e07@mailo.com>
+Message-ID: <CAD7uiQfrFaBkAPpFegKB-kDysV7ZoSz3uKtTkiH3nejdWQ3e=Q@mail.gmail.com>
+
+Hello! (dropped the import group on my initial reply. sorry for the double
+mail Marc!)
+
+A few comments from my perspective as a US mapper.
+
+A "trauma center" has a very specific meaning in the United States and it
+is specifically about treating serious ailment and injury. (Ex:
+https://www.ptsf.org/become-a-trauma-center/what-is-a-trauma-center/) The
+lowest level trauma center PA certifies (
+https://www.ptsf.org/wp-content/uploads/2021/02/PTSF-Adult-Level-IV-Standards-1.pdf)
+would handle what OSM considers emergency=yes. Here's the certification
+application for Washington state and the first question about services
+(page 16
+https://doh.wa.gov/sites/default/files/2022-02/530190.pdf?uid=6453161ed88ce)
+is whether there's 24/7 emergency care available.
+
+Addresses in the states very commonly have the "full" nine digit postcode
+nnnnn-nnnn (https://overpass-turbo.eu/s/1uwP) as well as addr:state.
+
+Matt
+
+On Wed, May 3, 2023 at 6:37?PM Marc_marc <marc_marc at mailo.com> wrote:
+
+> Hello,
+>
+> Le 04.05.23 ? 01:17, William Edmisten a ?crit :
+> > this wiki page <https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health
+> >.
+>
+> thanks for the time you spend on it.
+>
+> addr:full : may I sugest an improved wording :
+> when I start reading this section, it looks like you are
+> going to import addr:full in addition to the others.
+> at the end you say you erase it.
+> suggestion : in addotion to addr:full, using the usaddress library
+> parsed into addr:housenumber and addr:street,
+> after manually check, addr:housenumber addr:street are imported
+> if the parsing worked as expected, if not addr:full is imported
+>
+> addr:state usually ? decide if you import it or not :)
+>
+> zip4 appended to addr:postcode with a hyphen :
+> do this match does this correspond to local use ?
+>
+> disused:amenity=hospital : i don't see the added value
+> to import disued hospital
+>
+> beds : On conflict : it is common practice that an import never
+> overwrites the values that a contributor has entered in osm.
+> maybe it would be better to do this kind of conflict management
+> separately from the import, especially since nothing says that
+> the hospital site is more up to date than osm: sometimes yes,
+> sometimes no
+>
+> healthcare=psychiatry -> healthcare:speciality=psychiatry ?
+> because for an hospital healthcare is set to hospital too
+> or keep empty
+> healthcare=rehabilitation : same issue
+>
+> trauma: you ask : "Does being a certified trauma center
+> imply emergency=yes?"
+> I don't think so. trauma is very vague, post-traumatic stress
+> is probably not an emergency=yes (in the sense that it is not
+> a sudden event that occurs and will be resolved during the day,
+> it is rather a long-term accompaniment duration outside the emergency
+> department even if the first crisis can probably lead to the emergency
+> department to stabilize the patient and avoid danger to others
+> and to himself
+>
+> Progress by State : it's already ongoing ?
+> may I ask to have the review before the import ?
+> not importing then receving/readding any review.
+>
+> missing info : changeset tag, for ex:
+> comment=importing missing hospital from HIFLD
+> import=yes
+> source=HIFLD
+> source:url=https://hifld-geoplatform.opendata.arcgis.com/maps/hospitals
+> url=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health
+> <https://hifld-geoplatform.opendata.arcgis.com/maps/hospitalsurl=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>
+>
+> Regards,
+> Marc
+>
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230503/35e3cfda/attachment.htm>
+
+From wcedmisten at gmail.com  Thu May  4 12:21:29 2023
+From: wcedmisten at gmail.com (William Edmisten)
+Date: Thu, 4 May 2023 08:21:29 -0400
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <0b394e07-ad41-8d04-b76a-b625c4d37e07@mailo.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <0b394e07-ad41-8d04-b76a-b625c4d37e07@mailo.com>
+Message-ID: <CAGF1K-QCjD4DPsX73P7YwX5jgtCpu5FH9ZWDQQ0n7=395RNcXw@mail.gmail.com>
+
+Regarding addr:full and addr:state: I probably should have phrased that
+better. These were useful for my own work using HIFDL as reference (but not
+primary source), but would be redundant for an import.
+
+> disused:amenity=hospital : i don't see the added value to import disued
+hospital
+I believe there is still value in adding disused hospitals, because they
+can provide additional information about other features. For example, they
+still imply `building=hospital`, and in some cases the building is still
+used for other (outpatient) medical purposes, just not as a hospital
+providing inpatient care.
+
+> healthcare=psychiatry -> healthcare:speciality=psychiatry ?
+> because for an hospital healthcare is set to hospital too
+> or keep empty
+> healthcare=rehabilitation : same issue
+This could also use some clarification from the US community. Currently, my
+proposal tags psychiatric hospitals as "amenity=hospital,
+healthcare=hospital, healthcare:speciality=psychiatry". However, I feel
+like psychiatric hospitals are a distinct category from regular hospitals.
+Is there a better tagging scheme for this?
+
+I also think there's some overlap between healthcare=rehabilitation and
+social_facility=nursing_home. It would be good to clarify the distinction.
+
+> Progress by State : it's already ongoing ?
+> may I ask to have the review before the import ?
+> not importing then receving/readding any review.
+I should probably move this to another section, since it's not really an
+import. This is more of a mechanical edit where I'm manually using
+individual hospitals' websites to verify the reference info from HIFDL.
+
+> missing info : changeset tag, for ex:
+> comment=importing missing hospital from HIFLD
+> import=yes
+> source=HIFLD
+> source:url=https://hifld-geoplatform.opendata.arcgis.com/maps/hospitals
+url=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health
+<https://hifld-geoplatform.opendata.arcgis.com/maps/hospitalsurl=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>
+Are these still required if an informative changeset comment is provided?
+I was under the impression the info could be provided either in the
+changeset or in these tags.
+
+On Wed, May 3, 2023 at 9:38?PM Marc_marc <marc_marc at mailo.com> wrote:
+
+> Hello,
+>
+> Le 04.05.23 ? 01:17, William Edmisten a ?crit :
+> > this wiki page <https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health
+> >.
+>
+> thanks for the time you spend on it.
+>
+> addr:full : may I sugest an improved wording :
+> when I start reading this section, it looks like you are
+> going to import addr:full in addition to the others.
+> at the end you say you erase it.
+> suggestion : in addotion to addr:full, using the usaddress library
+> parsed into addr:housenumber and addr:street,
+> after manually check, addr:housenumber addr:street are imported
+> if the parsing worked as expected, if not addr:full is imported
+>
+> addr:state usually ? decide if you import it or not :)
+>
+> zip4 appended to addr:postcode with a hyphen :
+> do this match does this correspond to local use ?
+>
+> disused:amenity=hospital : i don't see the added value
+> to import disued hospital
+>
+> beds : On conflict : it is common practice that an import never
+> overwrites the values that a contributor has entered in osm.
+> maybe it would be better to do this kind of conflict management
+> separately from the import, especially since nothing says that
+> the hospital site is more up to date than osm: sometimes yes,
+> sometimes no
+>
+> healthcare=psychiatry -> healthcare:speciality=psychiatry ?
+> because for an hospital healthcare is set to hospital too
+> or keep empty
+> healthcare=rehabilitation : same issue
+>
+> trauma: you ask : "Does being a certified trauma center
+> imply emergency=yes?"
+> I don't think so. trauma is very vague, post-traumatic stress
+> is probably not an emergency=yes (in the sense that it is not
+> a sudden event that occurs and will be resolved during the day,
+> it is rather a long-term accompaniment duration outside the emergency
+> department even if the first crisis can probably lead to the emergency
+> department to stabilize the patient and avoid danger to others
+> and to himself
+>
+> Progress by State : it's already ongoing ?
+> may I ask to have the review before the import ?
+> not importing then receving/readding any review.
+>
+> missing info : changeset tag, for ex:
+> comment=importing missing hospital from HIFLD
+> import=yes
+> source=HIFLD
+> source:url=https://hifld-geoplatform.opendata.arcgis.com/maps/hospitals
+> url=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health
+> <https://hifld-geoplatform.opendata.arcgis.com/maps/hospitalsurl=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>
+>
+> Regards,
+> Marc
+>
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230504/a16eb14d/attachment.htm>
+
+From marc_marc at mailo.com  Thu May  4 12:42:34 2023
+From: marc_marc at mailo.com (Marc_marc)
+Date: Thu, 4 May 2023 14:42:34 +0200
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CAGF1K-QCjD4DPsX73P7YwX5jgtCpu5FH9ZWDQQ0n7=395RNcXw@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <0b394e07-ad41-8d04-b76a-b625c4d37e07@mailo.com>
+ <CAGF1K-QCjD4DPsX73P7YwX5jgtCpu5FH9ZWDQQ0n7=395RNcXw@mail.gmail.com>
+Message-ID: <207cb897-8d9e-6cc7-e4f9-d2fb19a45d55@mailo.com>
+
+Le 04.05.23 ? 14:21, William Edmisten a ?crit?:
+>  > missing info : changeset tag, for ex:
+>  > comment=importing missing hospital from HIFLD
+>  > import=yes
+>  > source=HIFLD
+>  > source:url=https://hifld-geoplatform.opendata.arcgis.com/maps/hospitals
+> url=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health 
+> <https://hifld-geoplatform.opendata.arcgis.com/maps/hospitalsurl=https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>
+> Are these still required if an informative changeset comment is provided?
+> I was under the impression the info could be provided either in the 
+> changeset or in these tags.
+
+Import Guideline doesn't required it
+https://wiki.openstreetmap.org/wiki/Import/Guidelines
+
+but imho, it's a good pratice, this allow
+user to find for ex the website of the source
+with one clic in stead of going to the wiki,
+search it, read the page, find the url and clic on it
+the same for the url to the wiki
+
+the import=yes tag is also very useful if someone wants to select 
+imports (e.g. in osmcha) without having to write a rule detecting
+the import word in all the languages of the world, which would
+be impossible in practice, without counting all the possible 
+formulations of comment=* without this word
+
+in a practical way, with josm, put them in a notepad,
+copy it once and in one click in the windows "uploading",
+all tags are added as changeset tag
+
+Regards,
+Marc
+
+
+
+
+From gdt at lexort.com  Thu May  4 12:47:12 2023
+From: gdt at lexort.com (Greg Troxel)
+Date: Thu, 04 May 2023 08:47:12 -0400
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ (William Edmisten's message of "Wed, 3 May 2023 19:17:41 -0400")
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+Message-ID: <rmi4jos5kmn.fsf@s1.lexort.com>
+
+William Edmisten <wcedmisten at gmail.com> writes:
+
+> My name is William Edmisten (wcedmisten). I've been mapping in OSM for
+> almost a year, but have no relevant affiliation with any other
+> organizations.
+>
+> I am writing to propose an import of the HIDFL Hospital dataset
+> <https://hifld-geoplatform.opendata.arcgis.com/datasets/hospitals/explore>
+> (8,013 records), and to discuss possible ways in which this dataset could
+> be used.
+
+As someone who has worked on a successful import, a word of caution:
+doing an import is almost certainly 10x harder than anyone who hasn't
+been all the way through it thinks.  I don't mean to discourage you, but
+to calibrate expectations.
+
+It's not formally part of the norms, but I think imports should be done
+with code, basically a program that takes the OSM db as it is and the
+import db and produces a set of proposed editing actions
+(additions/conflations) and things to inspect (object in OSM but not in
+import).  That can then be debugged before any changes are made.  It is
+critical that it be automated so that it can be re-run with little
+effort.
+
+I wonder what quality checking you have done on the database.  An
+example might be to look at a county and the contents of OSM vs the
+contents of the DHS database, and check that that everything in the DHS
+database that is in OSM matches, and that things not in OSM actually
+exist.  This should be the output of the program I described in the
+previous paragraph.
+
+Greg
+
+
+From miketho16 at gmail.com  Thu May  4 13:53:45 2023
+From: miketho16 at gmail.com (Mike Thompson)
+Date: Thu, 4 May 2023 07:53:45 -0600
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+Message-ID: <CALJoUktMbyjX5qORXu=km23x00-hvUKi_o2oVVP5Km3PTKT0bQ@mail.gmail.com>
+
+On Wed, May 3, 2023 at 6:27?PM William Edmisten <wcedmisten at gmail.com>
+wrote:
+
+> Hello,
+>
+> My name is William Edmisten (wcedmisten). I've been mapping in OSM for
+> almost a year, but have no relevant affiliation with any other
+> organizations.
+>
+> Hi William, thanks for engaging with the community!
+
+
+> I am writing to propose an import of the HIDFL Hospital dataset
+> <https://hifld-geoplatform.opendata.arcgis.com/datasets/hospitals/explore>
+> (8,013 records), and to discuss possible ways in which this dataset could
+> be used.
+>
+
+> I've documented some details about the Hospital dataset and how it might
+> be applied on this wiki page
+> <https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>.
+>
+It appears, as I think Marc has pointed out, that you have already started
+this import.  You need to get community buy-in *before* starting to
+actually load data into OSM via an import.  If this is the case, please
+stop the import until the community has had a chance to comment on your
+proposal.
+
+Also, I don't see this import listed in the Import Catalog:
+https://wiki.openstreetmap.org/wiki/Import/Catalogue
+
+You, and others who participate in the import, must use an account other
+than their regular OSM account, e.g. for you that might be
+wcedmisten_imports
+
+>
+> Looking at the archives, the entire HIDFL dataset was previously discussed
+> here in October 2022, but I would like to specifically focus on the
+> Hospitals dataset. One of the previous concerns was that the scope of HIDFL
+> overall was too broad, so I would like to narrow the discussion to this
+> single dataset for now.
+>
+> I believe this data is appropriate for OSM, and can be verified
+> independently of the dataset, making it a good choice for import or for
+> reference while mapping. In particular, hospitals' websites can be used to
+> verify most or all of the data aggregated here.
+>
+I have some serious concerns about the likely quality of this dataset.  The
+metadata says that the dataset was "geocoded", while
+that can have different meanings, what it means here is likely that a list
+of hospitals with addresses was fed to a computer program that matched them
+up with an address (reference) database to obtain coordinates.  While this
+seems simple, a lot can go wrong.  For example, a transposition of a digit
+in a hospital's zip code can cause it to be placed 100's of miles away
+from its true location.
+
+Duplicates are another problem, I have checked a few hospitals in my local
+area, and I have already found two sets of duplicates (cases where one
+entity purchased another, and now they both show up in the dataset at
+essentially the same location).
+
+While the metadata says that the dataset was updated in January of 2023, I
+don't think that means that a complete update was done, just that those
+maintaining the data changed something at that time.  Thus, large parts of
+this dataset could be out of date. Some of the validation dates (VAL_DATE)
+are from 2013, 10 years ago! Also, the VAL_METHOD for many records is
+listed simply as "IMAGERY", and while a large general hospital is probably
+obvious from imagery, this is not necessarily true for a smaller facility.
+
+I would like to see at least a sample of the data converted to the OSM
+schema.
+
+Mike
+
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230504/71dd9abe/attachment-0001.htm>
+
+From miketho16 at gmail.com  Fri May  5 17:09:41 2023
+From: miketho16 at gmail.com (Mike Thompson)
+Date: Fri, 5 May 2023 11:09:41 -0600
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CALJoUktMbyjX5qORXu=km23x00-hvUKi_o2oVVP5Km3PTKT0bQ@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <CALJoUktMbyjX5qORXu=km23x00-hvUKi_o2oVVP5Km3PTKT0bQ@mail.gmail.com>
+Message-ID: <CALJoUku6TJzaZyCF+vVWZ-UeQna2xfDhLiax63xCeLLeuGwvCA@mail.gmail.com>
+
+Hello William,
+
+It appears that you are continuing with this import[0] even after Marc's
+message and my message pointing out that you need to wait to get "community
+buy-in" before proceeding with an import[1].  Further, you seem to be doing
+so using your regular OSM username rather than an account dedicated to
+imports as specified by the import guidelines[2].  I questioned the quality
+of the HIFLD dataset, and it looks like you have added a hospital[0] near
+where I live that no longer exists (or you could say exists under a
+different name). You did add it as "disused", but that is not quite correct
+as it has been purchased and renamed[3]. The facility with the new name,
+Johnstown Heights Behavioral Health, is in the HIFLD dataset (with the same
+address and number of beds), but has not been added to OSM as far as I can
+tell.  I also noticed that you deleted the "Progress by State" section of
+your wiki page, if you really have done some importing already, that
+probably should be left in there, unless you - or someone else - has
+reverted your edits.
+
+Mike
+
+[0] https://www.openstreetmap.org/changeset/135720280
+[1] https://wiki.openstreetmap.org/wiki/Import/Guidelines
+[2] https://wiki.openstreetmap.org/wiki/Import/Guidelines#Step_6_-_Uploading
+[3]
+https://www.greeleytribune.com/2020/12/10/clear-view-behavioral-health-sold-to-new-mental-health-group/
+
+On Thu, May 4, 2023 at 7:53?AM Mike Thompson <miketho16 at gmail.com> wrote:
+
+>
+>
+> On Wed, May 3, 2023 at 6:27?PM William Edmisten <wcedmisten at gmail.com>
+> wrote:
+>
+>> Hello,
+>>
+>> My name is William Edmisten (wcedmisten). I've been mapping in OSM for
+>> almost a year, but have no relevant affiliation with any other
+>> organizations.
+>>
+>> Hi William, thanks for engaging with the community!
+>
+>
+>> I am writing to propose an import of the HIDFL Hospital dataset
+>> <https://hifld-geoplatform.opendata.arcgis.com/datasets/hospitals/explore>
+>> (8,013 records), and to discuss possible ways in which this dataset could
+>> be used.
+>>
+>
+>> I've documented some details about the Hospital dataset and how it might
+>> be applied on this wiki page
+>> <https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>.
+>>
+> It appears, as I think Marc has pointed out, that you have already started
+> this import.  You need to get community buy-in *before* starting to
+> actually load data into OSM via an import.  If this is the case, please
+> stop the import until the community has had a chance to comment on your
+> proposal.
+>
+> Also, I don't see this import listed in the Import Catalog:
+> https://wiki.openstreetmap.org/wiki/Import/Catalogue
+>
+> You, and others who participate in the import, must use an account other
+> than their regular OSM account, e.g. for you that might be
+> wcedmisten_imports
+>
+>>
+>> Looking at the archives, the entire HIDFL dataset was previously
+>> discussed here in October 2022, but I would like to specifically focus on
+>> the Hospitals dataset. One of the previous concerns was that the scope of
+>> HIDFL overall was too broad, so I would like to narrow the discussion to
+>> this single dataset for now.
+>>
+>> I believe this data is appropriate for OSM, and can be verified
+>> independently of the dataset, making it a good choice for import or for
+>> reference while mapping. In particular, hospitals' websites can be used to
+>> verify most or all of the data aggregated here.
+>>
+> I have some serious concerns about the likely quality of this dataset.
+> The metadata says that the dataset was "geocoded", while
+> that can have different meanings, what it means here is likely that a list
+> of hospitals with addresses was fed to a computer program that matched them
+> up with an address (reference) database to obtain coordinates.  While this
+> seems simple, a lot can go wrong.  For example, a transposition of a digit
+> in a hospital's zip code can cause it to be placed 100's of miles away
+> from its true location.
+>
+> Duplicates are another problem, I have checked a few hospitals in my local
+> area, and I have already found two sets of duplicates (cases where one
+> entity purchased another, and now they both show up in the dataset at
+> essentially the same location).
+>
+> While the metadata says that the dataset was updated in January of 2023, I
+> don't think that means that a complete update was done, just that those
+> maintaining the data changed something at that time.  Thus, large parts of
+> this dataset could be out of date. Some of the validation dates (VAL_DATE)
+> are from 2013, 10 years ago! Also, the VAL_METHOD for many records is
+> listed simply as "IMAGERY", and while a large general hospital is probably
+> obvious from imagery, this is not necessarily true for a smaller facility.
+>
+> I would like to see at least a sample of the data converted to the OSM
+> schema.
+>
+> Mike
+>
+>>
+>>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230505/4b7ad62d/attachment.htm>
+
+From matthew.whilden at gmail.com  Fri May  5 18:15:45 2023
+From: matthew.whilden at gmail.com (Matthew Whilden)
+Date: Fri, 5 May 2023 11:15:45 -0700
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CALJoUku6TJzaZyCF+vVWZ-UeQna2xfDhLiax63xCeLLeuGwvCA@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <CALJoUktMbyjX5qORXu=km23x00-hvUKi_o2oVVP5Km3PTKT0bQ@mail.gmail.com>
+ <CALJoUku6TJzaZyCF+vVWZ-UeQna2xfDhLiax63xCeLLeuGwvCA@mail.gmail.com>
+Message-ID: <CAD7uiQe0KgsRUgXNOhcGpvToXuju=g7AOD7tSiLR3Xnn7XF1pw@mail.gmail.com>
+
+Hello Mike!
+
+Excellent catch on the renamed hospital. That's another good data point
+about what to be cautious about in this set. GNIS has similar traps in the
+various feature types and it can be hard to know until you start digging.
+
+Could you expand on why you think the process currently being followed
+counts as an import? There was similar confusion when I was asking about
+National Address Database additions. I had said "import" in my initial mail
+but the consensus seemed to be that so long as I was reviewing things as I
+went, I had satisfied my obligation as a good community member.
+
+Presuming William is following along with the diary entry (
+https://www.openstreetmap.org/user/watmildon/diary/401371) in the wiki as
+originally posted, my understanding is that's not an import. He's reviewing
+each item and editing in the same way a MapRoulette mapper given a list of
+websites and lat/long coordinates would. Mistakes will happen. The edits
+aren't all perfect. But for example, we don't make MR folks have import
+accounts so I don't know how to articulate the dividing line.
+
+Matt
+
+On Fri, May 5, 2023 at 10:16?AM Mike Thompson <miketho16 at gmail.com> wrote:
+
+> Hello William,
+>
+> It appears that you are continuing with this import[0] even after Marc's
+> message and my message pointing out that you need to wait to get "community
+> buy-in" before proceeding with an import[1].  Further, you seem to be doing
+> so using your regular OSM username rather than an account dedicated to
+> imports as specified by the import guidelines[2].  I questioned the quality
+> of the HIFLD dataset, and it looks like you have added a hospital[0] near
+> where I live that no longer exists (or you could say exists under a
+> different name). You did add it as "disused", but that is not quite correct
+> as it has been purchased and renamed[3]. The facility with the new name,
+> Johnstown Heights Behavioral Health, is in the HIFLD dataset (with the same
+> address and number of beds), but has not been added to OSM as far as I can
+> tell.  I also noticed that you deleted the "Progress by State" section of
+> your wiki page, if you really have done some importing already, that
+> probably should be left in there, unless you - or someone else - has
+> reverted your edits.
+>
+> Mike
+>
+> [0] https://www.openstreetmap.org/changeset/135720280
+> [1] https://wiki.openstreetmap.org/wiki/Import/Guidelines
+> [2]
+> https://wiki.openstreetmap.org/wiki/Import/Guidelines#Step_6_-_Uploading
+> [3]
+> https://www.greeleytribune.com/2020/12/10/clear-view-behavioral-health-sold-to-new-mental-health-group/
+>
+> On Thu, May 4, 2023 at 7:53?AM Mike Thompson <miketho16 at gmail.com> wrote:
+>
+>>
+>>
+>> On Wed, May 3, 2023 at 6:27?PM William Edmisten <wcedmisten at gmail.com>
+>> wrote:
+>>
+>>> Hello,
+>>>
+>>> My name is William Edmisten (wcedmisten). I've been mapping in OSM for
+>>> almost a year, but have no relevant affiliation with any other
+>>> organizations.
+>>>
+>>> Hi William, thanks for engaging with the community!
+>>
+>>
+>>> I am writing to propose an import of the HIDFL Hospital dataset
+>>> <https://hifld-geoplatform.opendata.arcgis.com/datasets/hospitals/explore>
+>>> (8,013 records), and to discuss possible ways in which this dataset could
+>>> be used.
+>>>
+>>
+>>> I've documented some details about the Hospital dataset and how it might
+>>> be applied on this wiki page
+>>> <https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health>.
+>>>
+>> It appears, as I think Marc has pointed out, that you have already
+>> started this import.  You need to get community buy-in *before* starting to
+>> actually load data into OSM via an import.  If this is the case, please
+>> stop the import until the community has had a chance to comment on your
+>> proposal.
+>>
+>> Also, I don't see this import listed in the Import Catalog:
+>> https://wiki.openstreetmap.org/wiki/Import/Catalogue
+>>
+>> You, and others who participate in the import, must use an account other
+>> than their regular OSM account, e.g. for you that might be
+>> wcedmisten_imports
+>>
+>>>
+>>> Looking at the archives, the entire HIDFL dataset was previously
+>>> discussed here in October 2022, but I would like to specifically focus on
+>>> the Hospitals dataset. One of the previous concerns was that the scope of
+>>> HIDFL overall was too broad, so I would like to narrow the discussion to
+>>> this single dataset for now.
+>>>
+>>> I believe this data is appropriate for OSM, and can be verified
+>>> independently of the dataset, making it a good choice for import or for
+>>> reference while mapping. In particular, hospitals' websites can be used to
+>>> verify most or all of the data aggregated here.
+>>>
+>> I have some serious concerns about the likely quality of this dataset.
+>> The metadata says that the dataset was "geocoded", while
+>> that can have different meanings, what it means here is likely that a list
+>> of hospitals with addresses was fed to a computer program that matched them
+>> up with an address (reference) database to obtain coordinates.  While this
+>> seems simple, a lot can go wrong.  For example, a transposition of a digit
+>> in a hospital's zip code can cause it to be placed 100's of miles away
+>> from its true location.
+>>
+>> Duplicates are another problem, I have checked a few hospitals in my
+>> local area, and I have already found two sets of duplicates (cases where
+>> one entity purchased another, and now they both show up in the dataset at
+>> essentially the same location).
+>>
+>> While the metadata says that the dataset was updated in January of 2023,
+>> I don't think that means that a complete update was done, just that those
+>> maintaining the data changed something at that time.  Thus, large parts of
+>> this dataset could be out of date. Some of the validation dates (VAL_DATE)
+>> are from 2013, 10 years ago! Also, the VAL_METHOD for many records is
+>> listed simply as "IMAGERY", and while a large general hospital is probably
+>> obvious from imagery, this is not necessarily true for a smaller facility.
+>>
+>> I would like to see at least a sample of the data converted to the OSM
+>> schema.
+>>
+>> Mike
+>>
+>>>
+>>> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230505/95fa52f6/attachment-0001.htm>
+
+From miketho16 at gmail.com  Fri May  5 19:01:01 2023
+From: miketho16 at gmail.com (Mike Thompson)
+Date: Fri, 5 May 2023 13:01:01 -0600
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CAD7uiQe0KgsRUgXNOhcGpvToXuju=g7AOD7tSiLR3Xnn7XF1pw@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <CALJoUktMbyjX5qORXu=km23x00-hvUKi_o2oVVP5Km3PTKT0bQ@mail.gmail.com>
+ <CALJoUku6TJzaZyCF+vVWZ-UeQna2xfDhLiax63xCeLLeuGwvCA@mail.gmail.com>
+ <CAD7uiQe0KgsRUgXNOhcGpvToXuju=g7AOD7tSiLR3Xnn7XF1pw@mail.gmail.com>
+Message-ID: <CALJoUksdOjscY08FqddT2uTq3Y9Ra-apU6DGUWpKNGbO5JsU+w@mail.gmail.com>
+
+Hi Matt!
+
+Thanks for joining the conversation.
+
+
+
+On Fri, May 5, 2023 at 12:15?PM Matthew Whilden <matthew.whilden at gmail.com>
+wrote:
+
+>
+>
+> Could you expand on why you think the process currently being followed
+> counts as an import?
+>
+I am not sure what the process is after having read the wiki page for this
+activity (other than how the fields in the HIFLD dataset are going to be
+translated to OSM tags) .[0]
+1) William's original email said "I am writing to propose an import..."
+2) The wiki page he cites in his email states "The purpose of this page is
+to document the import of the data in the Public Health category of the
+HIFLD"[0]
+3) William has added this activity to the "Import Catalogue" on the OSM
+wiki[1] (perhaps at my suggestion - but if it isn't an import, it probably
+should not be added to that page)
+
+Regardless of whether this is an import or not, we should be very careful
+when using this data because of the potential quality issues cited in my
+first email.  Smaller facilities may be located in buildings that are not
+obviously hospitals, and per the example I cited (and the wiki entry for
+this activity), facilities are purchased, or otherwise change their names
+quite frequently.
+
+
+> He's reviewing each item and editing in the same way a MapRoulette mapper
+> given a list of websites and lat/long coordinates would.
+>
+That is not stated in the wiki page for this activity.
+
+Mike
+
+[0] https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health
+[1] https://wiki.openstreetmap.org/wiki/Import/Catalogue
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230505/fed9395c/attachment.htm>
+
+From wcedmisten at gmail.com  Fri May  5 19:03:56 2023
+From: wcedmisten at gmail.com (William Edmisten)
+Date: Fri, 5 May 2023 15:03:56 -0400
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CALJoUksdOjscY08FqddT2uTq3Y9Ra-apU6DGUWpKNGbO5JsU+w@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <CALJoUktMbyjX5qORXu=km23x00-hvUKi_o2oVVP5Km3PTKT0bQ@mail.gmail.com>
+ <CALJoUku6TJzaZyCF+vVWZ-UeQna2xfDhLiax63xCeLLeuGwvCA@mail.gmail.com>
+ <CAD7uiQe0KgsRUgXNOhcGpvToXuju=g7AOD7tSiLR3Xnn7XF1pw@mail.gmail.com>
+ <CALJoUksdOjscY08FqddT2uTq3Y9Ra-apU6DGUWpKNGbO5JsU+w@mail.gmail.com>
+Message-ID: <CAGF1K-TLuF6C-4y9WpvJbhSyp0O-yD41Me8Oymr0BKkUg1VCAQ@mail.gmail.com>
+
+Hello! Apologies for the confusion.
+
+I hope to distinguish two different projects which I may have conflated in
+my initial Wiki page: 1) using HIFDL Hospitals as reference material, but
+not primary source, to find missing hospitals in OSM and 2) the actual
+import of the HIFDL Hospitals dataset, which would rely on HIFDL as the
+primary source rather than as reference.
+
+For this reason, I've moved the wiki page on my progress of 1) to my own
+page [0].
+
+I do not believe 1) constitutes an import, because it is only using the
+dataset as reference to find missing POIs, but using objectively verifiable
+sources (each hospitals' website), similar to the workflow of many
+"armchair" mappers. I believe this is a widely accepted practice in the OSM
+community.
+
+For this same reason, I am not using an import account.
+
+This also addresses the concern about duplicate entries, because I am
+manually de-duplicating them with the latest correct entry (as determined
+from the hospital website), rather than relying on a program to
+intelligently sort out duplication within the dataset or with OSM.
+
+To the point on VAL_DATE, I believe checking the hospital website mitigates
+this issue also.
+
+In the case mentioned above, I used this news article [1] announcing the
+hospital closure as my primary source. As you said, there is now a new
+owner, which can also be verified from their website [2]. I will make sure
+to check for new owners with this approach going forward.
+
+Hope this clarifies things,
+
+Best,
+
+William Edmisten (wcedmisten)
+
+[0]: https://wiki.openstreetmap.org/wiki/User:Wcedmisten/HIFLD
+[1]:
+https://www.denver7.com/news/investigations/clear-view-investigation/colorado-shuts-down-clear-view-behavioral-health-monday-will-seek-to-revoke-license-permanently
+[2]: https://johnstownheights.com
+
+On Fri, May 5, 2023 at 3:01?PM Mike Thompson <miketho16 at gmail.com> wrote:
+
+> Hi Matt!
+>
+> Thanks for joining the conversation.
+>
+>
+>
+> On Fri, May 5, 2023 at 12:15?PM Matthew Whilden <matthew.whilden at gmail.com>
+> wrote:
+>
+>>
+>>
+>> Could you expand on why you think the process currently being followed
+>> counts as an import?
+>>
+> I am not sure what the process is after having read the wiki page for this
+> activity (other than how the fields in the HIFLD dataset are going to be
+> translated to OSM tags) .[0]
+> 1) William's original email said "I am writing to propose an import..."
+> 2) The wiki page he cites in his email states "The purpose of this page is
+> to document the import of the data in the Public Health category of the
+> HIFLD"[0]
+> 3) William has added this activity to the "Import Catalogue" on the OSM
+> wiki[1] (perhaps at my suggestion - but if it isn't an import, it probably
+> should not be added to that page)
+>
+> Regardless of whether this is an import or not, we should be very careful
+> when using this data because of the potential quality issues cited in my
+> first email.  Smaller facilities may be located in buildings that are not
+> obviously hospitals, and per the example I cited (and the wiki entry for
+> this activity), facilities are purchased, or otherwise change their names
+> quite frequently.
+>
+>
+>> He's reviewing each item and editing in the same way a MapRoulette mapper
+>> given a list of websites and lat/long coordinates would.
+>>
+> That is not stated in the wiki page for this activity.
+>
+> Mike
+>
+> [0] https://wiki.openstreetmap.org/wiki/HIFLD/Public_Health
+> [1] https://wiki.openstreetmap.org/wiki/Import/Catalogue
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230505/1cf47c37/attachment.htm>
+
+From miketho16 at gmail.com  Fri May  5 21:37:28 2023
+From: miketho16 at gmail.com (Mike Thompson)
+Date: Fri, 5 May 2023 15:37:28 -0600
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CAGF1K-TLuF6C-4y9WpvJbhSyp0O-yD41Me8Oymr0BKkUg1VCAQ@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <CALJoUktMbyjX5qORXu=km23x00-hvUKi_o2oVVP5Km3PTKT0bQ@mail.gmail.com>
+ <CALJoUku6TJzaZyCF+vVWZ-UeQna2xfDhLiax63xCeLLeuGwvCA@mail.gmail.com>
+ <CAD7uiQe0KgsRUgXNOhcGpvToXuju=g7AOD7tSiLR3Xnn7XF1pw@mail.gmail.com>
+ <CALJoUksdOjscY08FqddT2uTq3Y9Ra-apU6DGUWpKNGbO5JsU+w@mail.gmail.com>
+ <CAGF1K-TLuF6C-4y9WpvJbhSyp0O-yD41Me8Oymr0BKkUg1VCAQ@mail.gmail.com>
+Message-ID: <CALJoUktp9=KhrLaDqGt+2hpmgd8WyAT05zwpYEDvSMN4KZH32w@mail.gmail.com>
+
+Thanks for the additional information William!
+
+On Fri, May 5, 2023 at 1:08?PM William Edmisten <wcedmisten at gmail.com>
+wrote:
+
+> I hope to distinguish two different projects which I may have conflated in
+> my initial Wiki page: 1) using HIFDL Hospitals as reference material, but
+> not primary source, to find missing hospitals in OSM and 2) the actual
+> import of the HIFDL Hospitals dataset, which would rely on HIFDL as the
+> primary source rather than as reference.
+>
+Are you therefore dropping the proposal for an import?  It seems that if
+you are going to do all of this manually, there is no reason for an
+import.
+
+>
+>
+> I do not believe 1) constitutes an import, because it is only using the
+> dataset as reference to find missing POIs, but using objectively verifiable
+> sources (each hospitals' website), similar to the workflow of many
+> "armchair" mappers. I believe this is a widely accepted practice in the OSM
+> community.
+>
+Your original email, and the wiki page that it cited, led me to believe
+that you intended to do an import, and thus the rules for imports would
+apply, and thus my comments.
+
+>
+>
+> To the point on VAL_DATE, I believe checking the hospital website
+> mitigates this issue also.
+>
+You might consider going to each state and getting its current list of
+licensed hospitals, this is what HIFLD does to build/maintain this
+dataset.  This would avoid the issue of old data in the HIFLD dataset.
+
+Mike
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230505/9d92780e/attachment.htm>
+
+From wcedmisten at gmail.com  Sat May  6 13:57:49 2023
+From: wcedmisten at gmail.com (William Edmisten)
+Date: Sat, 6 May 2023 09:57:49 -0400
+Subject: [Imports] US - HIDFL (DHS) Hospital Import
+In-Reply-To: <CALJoUktp9=KhrLaDqGt+2hpmgd8WyAT05zwpYEDvSMN4KZH32w@mail.gmail.com>
+References: <CAGF1K-TUnzwvJb22EXkaq4UR5US8HLO5eOSGcZB7Uh=RYgYiiw@mail.gmail.com>
+ <CALJoUktMbyjX5qORXu=km23x00-hvUKi_o2oVVP5Km3PTKT0bQ@mail.gmail.com>
+ <CALJoUku6TJzaZyCF+vVWZ-UeQna2xfDhLiax63xCeLLeuGwvCA@mail.gmail.com>
+ <CAD7uiQe0KgsRUgXNOhcGpvToXuju=g7AOD7tSiLR3Xnn7XF1pw@mail.gmail.com>
+ <CALJoUksdOjscY08FqddT2uTq3Y9Ra-apU6DGUWpKNGbO5JsU+w@mail.gmail.com>
+ <CAGF1K-TLuF6C-4y9WpvJbhSyp0O-yD41Me8Oymr0BKkUg1VCAQ@mail.gmail.com>
+ <CALJoUktp9=KhrLaDqGt+2hpmgd8WyAT05zwpYEDvSMN4KZH32w@mail.gmail.com>
+Message-ID: <CAGF1K-R4mgACUrwFrmiD_JYWn2vtu9YjPZMswZ_UJPV6BQ_iXw@mail.gmail.com>
+
+I would still like to propose an import. Manually going through the data
+and each hospital's website is fine to find missing hospitals in OSM, but
+it's less feasible for the full 8,000 records.
+
+Based on the feedback in this thread, it sounds like we'll need to better
+assess the quality of the data first. I've seen a previous approach of
+comparing 100 random records to OSM and measuring the accuracy based on
+that.
+This would also require a separate wcedmisten_imports account.
+
+I think this would still need to be a semi-automated import - where the
+HIFLD data is used as primary source, but a human still verifies every
+proposed change.
+
+Addressing Greg's point about a fully automated script:
+> It's not formally part of the norms, but I think imports should be done
+> with code, basically a program that takes the OSM db as it is and the
+> import db and produces a set of proposed editing actions
+> (additions/conflations) and things to inspect (object in OSM but not in
+> import).  That can then be debugged before any changes are made.  It is
+> critical that it be automated so that it can be re-run with little effort.
+
+I'm a bit unclear how this would work in practice. I feel like there are so
+many edge cases in OSM tagging styles that it would be quite difficult to
+ensure the program handles everything appropriately without checking
+everything.
+Do you have any prior examples of successful fully automated import
+programs that have been run?
+
+This is why I'm only proposing a semi-automated import, just to have human
+eyes on things.
+
+Best,
+
+William Edmisten (wcedmisten)
+
+On Fri, May 5, 2023 at 5:37?PM Mike Thompson <miketho16 at gmail.com> wrote:
+
+> Thanks for the additional information William!
+>
+> On Fri, May 5, 2023 at 1:08?PM William Edmisten <wcedmisten at gmail.com>
+> wrote:
+>
+>> I hope to distinguish two different projects which I may have conflated
+>> in my initial Wiki page: 1) using HIFDL Hospitals as reference material,
+>> but not primary source, to find missing hospitals in OSM and 2) the actual
+>> import of the HIFDL Hospitals dataset, which would rely on HIFDL as the
+>> primary source rather than as reference.
+>>
+> Are you therefore dropping the proposal for an import?  It seems that if
+> you are going to do all of this manually, there is no reason for an
+> import.
+>
+>>
+>>
+>> I do not believe 1) constitutes an import, because it is only using the
+>> dataset as reference to find missing POIs, but using objectively verifiable
+>> sources (each hospitals' website), similar to the workflow of many
+>> "armchair" mappers. I believe this is a widely accepted practice in the OSM
+>> community.
+>>
+> Your original email, and the wiki page that it cited, led me to believe
+> that you intended to do an import, and thus the rules for imports would
+> apply, and thus my comments.
+>
+>>
+>>
+>> To the point on VAL_DATE, I believe checking the hospital website
+>> mitigates this issue also.
+>>
+> You might consider going to each state and getting its current list of
+> licensed hospitals, this is what HIFLD does to build/maintain this
+> dataset.  This would avoid the issue of old data in the HIFLD dataset.
+>
+> Mike
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230506/e44f205d/attachment.htm>
+
+From michalgw98 at gmail.com  Sun May 28 10:15:08 2023
+From: michalgw98 at gmail.com (Michal Gwozdz)
+Date: Sun, 28 May 2023 12:15:08 +0200
+Subject: [Imports] Delikatesy Centrum - Polish supermarket chain
+Message-ID: <CAF=YXJwUuTRPR9Ca4FyzBu6qyxOjJhJ4cUW3BckUbo8K-b=uwA@mail.gmail.com>
+
+Hello,
+I'm looking to import a Delikatesy Centrum - a Polish supermarket chain.
+I obtained permission from the data owner by email to import data from
+their website https://www.delikatesy.pl/sklepy. It's been discussed
+within the Polish community and there is interest in it, few people
+offered help with importing data:
+https://community.openstreetmap.org/t/import-delikatesow-centrum/99385
+
+We have 1478 supermarkets, 1181 of which are already in OSM, to those
+that are already in OSM, we want to add opening hours.
+
+Wiki page of the import with all the details:
+https://wiki.openstreetmap.org/wiki/Pl:Import_Delikates%C3%B3w_Centrum
+
+
+From marc_marc at mailo.com  Sun May 28 13:51:26 2023
+From: marc_marc at mailo.com (Marc_marc)
+Date: Sun, 28 May 2023 15:51:26 +0200
+Subject: [Imports] Delikatesy Centrum - Polish supermarket chain
+In-Reply-To: <CAF=YXJwUuTRPR9Ca4FyzBu6qyxOjJhJ4cUW3BckUbo8K-b=uwA@mail.gmail.com>
+References: <CAF=YXJwUuTRPR9Ca4FyzBu6qyxOjJhJ4cUW3BckUbo8K-b=uwA@mail.gmail.com>
+Message-ID: <71a3939b-492a-9633-ee1d-31fbf095ba6e@mailo.com>
+
+Hello,
+
+Thanks for spending time on it
+
+Le 28.05.23 ? 12:15, Michal Gwozdz a ?crit?:
+> Wiki page of the import with all the details:
+> https://wiki.openstreetmap.org/wiki/Pl:Import_Delikates%C3%B3w_Centrum
+
+for ppl not reading polski, an ugly translation
+https://wiki-openstreetmap-org.translate.goog/wiki/Pl:Import_Delikates%C3%B3w_Centrum?_x_tr_sl=auto&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=wapp
+
+source tag on object : I don't see why an object created by a 
+contributor and to which you add an opening time should have a source 
+tag suggesting that the information comes from the POI.
+add a changeset tag to describe that only your modification has the POI 
+as its source
+I'd also advise you to describe the few changeset tags you can use 
+(comment, url to the wiki page, import=yes, etc.).
+
+Regards,
+Marc
+
+
+
+From michalgw98 at gmail.com  Sun May 28 16:18:07 2023
+From: michalgw98 at gmail.com (Michal Gwozdz)
+Date: Sun, 28 May 2023 18:18:07 +0200
+Subject: [Imports] Delikatesy Centrum - Polish supermarket chain
+In-Reply-To: <71a3939b-492a-9633-ee1d-31fbf095ba6e@mailo.com>
+References: <CAF=YXJwUuTRPR9Ca4FyzBu6qyxOjJhJ4cUW3BckUbo8K-b=uwA@mail.gmail.com>
+ <71a3939b-492a-9633-ee1d-31fbf095ba6e@mailo.com>
+Message-ID: <CAF=YXJz9LsrKyi_C6CTjrFTQe_Fuypt1u3FPS6_BO9UB1f4vmw@mail.gmail.com>
+
+Thank you for your answer! I updated the file and page according to
+your suggestions.
+
+niedz., 28 maj 2023 o 16:05 Marc_marc <marc_marc at mailo.com> napisa?(a):
+>
+> Hello,
+>
+> Thanks for spending time on it
+>
+> Le 28.05.23 ? 12:15, Michal Gwozdz a ?crit :
+> > Wiki page of the import with all the details:
+> > https://wiki.openstreetmap.org/wiki/Pl:Import_Delikates%C3%B3w_Centrum
+>
+> for ppl not reading polski, an ugly translation
+> https://wiki-openstreetmap-org.translate.goog/wiki/Pl:Import_Delikates%C3%B3w_Centrum?_x_tr_sl=auto&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=wapp
+>
+> source tag on object : I don't see why an object created by a
+> contributor and to which you add an opening time should have a source
+> tag suggesting that the information comes from the POI.
+> add a changeset tag to describe that only your modification has the POI
+> as its source
+> I'd also advise you to describe the few changeset tags you can use
+> (comment, url to the wiki page, import=yes, etc.).
+>
+> Regards,
+> Marc
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+
+
+From matkoniecz at tutanota.com  Sun May 28 16:41:04 2023
+From: matkoniecz at tutanota.com (Mateusz Konieczny)
+Date: Sun, 28 May 2023 18:41:04 +0200 (CEST)
+Subject: [Imports] Delikatesy Centrum - Polish supermarket chain
+In-Reply-To: <CAF=YXJwUuTRPR9Ca4FyzBu6qyxOjJhJ4cUW3BckUbo8K-b=uwA@mail.gmail.com>
+References: <CAF=YXJwUuTRPR9Ca4FyzBu6qyxOjJhJ4cUW3BckUbo8K-b=uwA@mail.gmail.com>
+Message-ID: <NWYE1-K--3-9@tutanota.com>
+
+Thanks for doing this, it seems to be (as far as I can see) OK from the license
+side and may get us a bit closer to good shop coverage.
+"Zgoda mailowa:?https://drive.google.com/file/d/1Xge3tUJJTvys33fBq0GgBXvnHH3ymGMr/view?usp=sharing"
+
+Can you upload this to OSM Wiki? Either as a new page or as a file?
+
+(this will be more durable, Google Drive file can disappear for many reasons)
+I worry a bit about low data resolution - in case of tricky situations it would be
+better top open a note.
+
+-----------
+
+Achieving better OH translation quality would be especially useful for
+future updates of opening hours (if their website has better quality for?
+their own shop than OSM, what seems very likely)
+May 28, 2023, 14:56 by michalgw98 at gmail.com:
+
+> Hello,
+> I'm looking to import a Delikatesy Centrum - a Polish supermarket chain.
+> I obtained permission from the data owner by email to import data from
+> their website https://www.delikatesy.pl/sklepy. It's been discussed
+> within the Polish community and there is interest in it, few people
+> offered help with importing data:
+> https://community.openstreetmap.org/t/import-delikatesow-centrum/99385
+>
+> We have 1478 supermarkets, 1181 of which are already in OSM, to those
+> that are already in OSM, we want to add opening hours.
+>
+> Wiki page of the import with all the details:
+> https://wiki.openstreetmap.org/wiki/Pl:Import_Delikates%C3%B3w_Centrum
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230528/bcdb7ebf/attachment.htm>
+
+From michalgw98 at gmail.com  Sun May 28 18:04:19 2023
+From: michalgw98 at gmail.com (Michal Gwozdz)
+Date: Sun, 28 May 2023 20:04:19 +0200
+Subject: [Imports] Delikatesy Centrum - Polish supermarket chain
+In-Reply-To: <NWYE1-K--3-9@tutanota.com>
+References: <CAF=YXJwUuTRPR9Ca4FyzBu6qyxOjJhJ4cUW3BckUbo8K-b=uwA@mail.gmail.com>
+ <NWYE1-K--3-9@tutanota.com>
+Message-ID: <CAF=YXJx9LhVp_aHQpBm_KhtEXOGtQpxJmV2_3eRtrRgV5ug=0w@mail.gmail.com>
+
+File uploaded to the wiki. About the low data resolution, I suppose
+you mean inaccurate coordinates? That's why we will be checking every
+single shop before adding it to OSM and comparing with the address -
+if some cases won't be clear of course we won't add those, and we can
+leave a note instead.
+
+niedz., 28 maj 2023 o 18:48 Mateusz Konieczny via Imports
+<imports at openstreetmap.org> napisa?(a):
+>
+> Thanks for doing this, it seems to be (as far as I can see) OK from the license
+> side and may get us a bit closer to good shop coverage.
+>
+> "Zgoda mailowa: https://drive.google.com/file/d/1Xge3tUJJTvys33fBq0GgBXvnHH3ymGMr/view?usp=sharing"
+>
+> Can you upload this to OSM Wiki? Either as a new page or as a file?
+>
+> (this will be more durable, Google Drive file can disappear for many reasons)
+>
+> I worry a bit about low data resolution - in case of tricky situations it would be
+> better top open a note.
+>
+> -----------
+>
+> Achieving better OH translation quality would be especially useful for
+> future updates of opening hours (if their website has better quality for
+> their own shop than OSM, what seems very likely)
+>
+> May 28, 2023, 14:56 by michalgw98 at gmail.com:
+>
+> Hello,
+> I'm looking to import a Delikatesy Centrum - a Polish supermarket chain.
+> I obtained permission from the data owner by email to import data from
+> their website https://www.delikatesy.pl/sklepy. It's been discussed
+> within the Polish community and there is interest in it, few people
+> offered help with importing data:
+> https://community.openstreetmap.org/t/import-delikatesow-centrum/99385
+>
+> We have 1478 supermarkets, 1181 of which are already in OSM, to those
+> that are already in OSM, we want to add opening hours.
+>
+> Wiki page of the import with all the details:
+> https://wiki.openstreetmap.org/wiki/Pl:Import_Delikates%C3%B3w_Centrum
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+
+
+From yessi_f14 at hotmail.com  Mon May 29 20:22:29 2023
+From: yessi_f14 at hotmail.com (=?iso-8859-1?Q?Y=E9ssica_De_los_r=EDos_olarte?=)
+Date: Mon, 29 May 2023 20:22:29 +0000
+Subject: [Imports] =?iso-8859-1?q?Data_import_at_Universidad_de_Antioquia?=
+ =?iso-8859-1?q?_=28Colombia=2C_Medell=EDn=29?=
+Message-ID: <BN7PR10MB24682A195AD69B63C610D975864A9@BN7PR10MB2468.namprd10.prod.outlook.com>
+
+
+Good afternoon everyone, I hope you are doing well.
+
+I am writing to tell you that we want to perform the import of about 791 tree records of the University of Antioquia (Sede Medellin, Antioquia) to the OSM platform. These data were taken in 2017 in an Ecology course. The students and the professor in charge agree with the publication of the data.
+
+You can review this information in this Wikipedia link<https://wiki.openstreetmap.org/w/index.php?title=ES:Colombia/Proyectos/Importaci%C3%B3n_de_%C3%A1rboles_de_la_Universidad_de_Antioquia&veaction=edit#Muestra_de_datos_a_importar>
+
+Any questions or suggestions, I am attentive to answer them.
+
+
+Thanks for your attention
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230529/d322fc17/attachment.htm>
+

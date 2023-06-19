@@ -1,0 +1,55 @@
+From rob at hubris.org.uk  Tue Apr 11 12:14:12 2023
+From: rob at hubris.org.uk (Robert Skedgell)
+Date: Tue, 11 Apr 2023 13:14:12 +0100
+Subject: [Imports] Conflation of London Cycle Infrastructure Database
+In-Reply-To: <PA4PR07MB872074C8321ED381E2378DD3C1AA9@PA4PR07MB8720.eurprd07.prod.outlook.com>
+References: <PA4PR07MB872074C8321ED381E2378DD3C1AA9@PA4PR07MB8720.eurprd07.prod.outlook.com>
+Message-ID: <4b51fa84-80dc-b57d-bf07-32e3dacb0ba0@hubris.org.uk>
+
+As the last edit related to this project was on 2023-01-19, can we 
+assume that it has now been abandoned, incomplete and without any 
+serious attempt to fix earlier errors?
+
+Even the last changeset replaced an already surveyed 
+traffic_calming=choker with traffic_calming=yes.
+https://www.openstreetmap.org/changeset/131474738
+
+On 14/06/2022 17:20, Whittaker, Ed via Imports wrote:
+> Hello,
+> 
+> We are looking to import assets from the Transport for London's (TfL) Cycle Infrastructure Database (CID). Our plan is outlined on the wiki:
+> https://wiki.openstreetmap.org/wiki/TfL_Cycling_Infrastructure_Database
+> 
+> The data is open source and we have obtained permission from the OSMF Licensing Working Group and prepared the files for import, which can be reviewed here:
+> https://bikedata.cyclestreets.net/tflcid/#17/51.51137/-0.10498
+> 
+> The proposed attribute conversion has been released and undergone public consultation:
+> https://bikedata.cyclestreets.net/tflcid/conversion/
+> 
+> The import is also being discussed in the OSM London mailing list:
+> https://lists.openstreetmap.org/mailman/listinfo/talk-gb-london
+> 
+> Any feedback would be much appreciated,
+> 
+> Thanks,
+> 
+> Ed Whittaker
+> Senior Transport Planner
+> Sweco UK Limited | Solihull
+> Telephone 0121 711 6600
+> ed.whittaker at sweco.co.uk
+> www.sweco.co.uk
+> 
+> LinkedIn | Instagram
+> Reg. No.: 2888385 | Reg. Office: Leeds (Registered in England and Wales)
+> Reg. Office Address: Sweco UK Limited, Grove House, Mansion Gate Drive, Leeds, LS7 4DN
+> For more information on how Sweco processes your personal data, please read here.
+> 
+> 
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+	
+
+

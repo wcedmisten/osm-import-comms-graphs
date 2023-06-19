@@ -1,0 +1,132 @@
+From tsuneo.okada at gmail.com  Wed Jun 14 00:31:19 2023
+From: tsuneo.okada at gmail.com (OKADA Tsuneo)
+Date: Wed, 14 Jun 2023 09:31:19 +0900
+Subject: [Imports] Share cycle ports import in Japan
+Message-ID: <CAHfkPP8UOQtG0kbv71kwUwpHNFcdrjT9kKvMN9WePAGsbyq68g@mail.gmail.com>
+
+Hello,
+
+I'm planning to import share cycle ports for one of the major networks in
+Japan.
+
+"Hello Cycling" is the name of the brand/network.
+A list of the cycle ports is provided in GBFS format.
+The type of license is a multi-license, including ODbL.
+
+I made an announcement about this import to the OSM Japan community
+(talk-ja ML and Slack channel),
+and the wiki page has been reviewed.
+https://wiki.openstreetmap.org/wiki/Import/Catalogue/GBFS_HelloCycling_Import
+
+Any comments/suggestions to help refine the workflow and other portions of
+the wiki page are appreciated.
+
+Best regards,
+
+--
+OKADA Tsuneo
+tsuneo.okada at gmail.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230614/21afa84a/attachment.htm>
+
+From K.y.l.e at outlook.co.nz  Wed Jun 14 06:57:16 2023
+From: K.y.l.e at outlook.co.nz (Kyle Hensel)
+Date: Wed, 14 Jun 2023 06:57:16 +0000
+Subject: [Imports] LINZ Data Import - Undersea features
+Message-ID: <SY7P282MB41073D29FE3D8FA762CB680BF05AA@SY7P282MB4107.AUSP282.PROD.OUTLOOK.COM>
+
+Hi all,
+
+In New Zealand the LINZ data import has been slowly progressing for many years. It began in 2009 and has been discussed a few times on this mailing list. For more info see https://wiki.osm.org/LINZ
+
+There are about 100 underwater place names that have not been imported yet. They would be tagged with name=* + seamark:type=sea_area + seamark:sea_area:category=*, which is well documented on the wiki (see https://wiki.osm.org/Key:seamark:sea_area:category). Nearly all of these features would have a wikidata=* tag since they are well known places, e.g. the ?Brothers Seamount?.
+
+Some of these features are located in the South Pacific Ocean quite far away from the New Zealand mainland, so I thought this mailing list might be interested.
+
+The wiki page has more info about other data layers from LINZ which are being slowly imported: https://wiki.osm.org/LINZ
+
+
+Thanks,
+Kyle
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230614/e17ff588/attachment.htm>
+
+From frederik at remote.org  Wed Jun 14 07:41:43 2023
+From: frederik at remote.org (Frederik Ramm)
+Date: Wed, 14 Jun 2023 09:41:43 +0200
+Subject: [Imports] LINZ Data Import - Undersea features
+In-Reply-To: <SY7P282MB41073D29FE3D8FA762CB680BF05AA@SY7P282MB4107.AUSP282.PROD.OUTLOOK.COM>
+References: <SY7P282MB41073D29FE3D8FA762CB680BF05AA@SY7P282MB4107.AUSP282.PROD.OUTLOOK.COM>
+Message-ID: <6b1ca6ea-de16-41a9-2e6c-e5d857e4f31d@remote.org>
+
+Hi,
+
+On 6/14/23 08:57, Kyle Hensel wrote:
+> There are about 100 underwater place names that have not been imported 
+> yet.
+
+If two mappers disagreed where exactly a certain underwater feature was, 
+how could that dispute be resolved? Are these names relating to 
+geographical features or sunken objects so that they could - in theory 
+and with the right diving equipment - be verified "on the ground"?
+
+Or is the only means of verification "check LINZ / Wikidata / ..."?
+
+Bye
+Frederik
+
+-- 
+Frederik Ramm  ##  eMail frederik at remote.org  ##  N49?00'09" E008?23'33"
+
+
+From K.y.l.e at outlook.co.nz  Wed Jun 14 07:58:56 2023
+From: K.y.l.e at outlook.co.nz (Kyle Hensel)
+Date: Wed, 14 Jun 2023 07:58:56 +0000
+Subject: [Imports] LINZ Data Import - Undersea features
+In-Reply-To: <6b1ca6ea-de16-41a9-2e6c-e5d857e4f31d@remote.org>
+References: <SY7P282MB41073D29FE3D8FA762CB680BF05AA@SY7P282MB4107.AUSP282.PROD.OUTLOOK.COM>
+ <6b1ca6ea-de16-41a9-2e6c-e5d857e4f31d@remote.org>
+Message-ID: <SY7P282MB41070E8930E9E433DE3655BBF05AA@SY7P282MB4107.AUSP282.PROD.OUTLOOK.COM>
+
+To clarify, yes these are all natural features, https://wiki.osm.org/Key:seamark:sea_area:category has a list of examples (such as an underwater shelf, an abyssal hill, a shoal, ...)
+
+So anyone who is curious could use a bathymetry map or any map that shows the depth of the water. Or as you mentioned, they could refer to an external source. Another example is https://gebco.net<https://gebco.net/> which lists underwater geographical features.
+
+
+Sent from Outlook<https://go.microsoft.com/fwlink/?LinkId=550986> for Android
+
+From: Frederik Ramm<mailto:frederik at remote.org>
+Sent: Wednesday, 14 June 2023 19:44
+To: imports at openstreetmap.org<mailto:imports at openstreetmap.org>
+Subject: Re: [Imports] LINZ Data Import - Undersea features
+
+Hi,
+
+On 6/14/23 08:57, Kyle Hensel wrote:
+> There are about 100 underwater place names that have not been imported
+> yet.
+
+If two mappers disagreed where exactly a certain underwater feature was,
+how could that dispute be resolved? Are these names relating to
+geographical features or sunken objects so that they could - in theory
+and with the right diving equipment - be verified "on the ground"?
+
+Or is the only means of verification "check LINZ / Wikidata / ..."?
+
+Bye
+Frederik
+
+--
+Frederik Ramm  ##  eMail frederik at remote.org  ##  N49?00'09" E008?23'33"
+
+_______________________________________________
+Imports mailing list
+Imports at openstreetmap.org
+https://aus01.safelinks.protection.outlook.com/?url=https%3A%2F%2Flists.openstreetmap.org%2Flistinfo%2Fimports&data=05%7C01%7C%7C491036e6f7a042c01cfa08db6cab27c3%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638223254610474320%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=7yVB6hFXymQJv0aGSALn2vD988JWt1LaS%2FPP921nNK0%3D&reserved=0<https://lists.openstreetmap.org/listinfo/imports>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230614/e02e4deb/attachment-0001.htm>
+

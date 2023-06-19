@@ -1,0 +1,1189 @@
+From hubaishan at outlook.sa  Wed Mar  1 10:02:59 2023
+From: hubaishan at outlook.sa (Saeed Hubaishan)
+Date: Wed, 1 Mar 2023 10:02:59 +0000
+Subject: [Imports] =?iso8859-6?q?=D1=CF=3A_A_lot_of_nodes_imported_from_G?=
+ =?iso8859-6?q?EOnet_Names_Server_=28GNS_=29_were_deleted_in_Yemen=2C_KSA?=
+ =?iso8859-6?q?=2C_Egypt_Iraq_and_other_countries?=
+In-Reply-To: <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+References: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <BY5PR02MB6962B188F0C9067A194586E4CCA99@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+Message-ID: <BY5PR02MB69625D72EE740FA929867F46CCAD9@BY5PR02MB6962.namprd02.prod.outlook.com>
+
+This email sent also to data at openstreetmap.org<mailto:data at openstreetmap.org>
+Hello,
+
+For deleted nodes from Yemen in (https://openstreetmap.org/changeset/119556694)
+Andy Townsend in https://lists.openstreetmap.org/pipermail/imports/2023-February/007170.html talk about "complaint that this import was of particularly poor quality." And give us a link to 6 comment of various nodes but there aren't one of them in Yemen and one in Saudi Arabia but user Abdullah Abdulrhman commented that the node is right.
+
+I agree that many of nodes imported from GNS by Metehyi are in wrong location because that some GNS sources are not accurate. But we are talking about deleting  14,822 nodes  in Yemen changeset/119556694/119559125/119563423 the summary of these nodes is:
+
+count    code                     desg explain
+9718      PPL                       Populated Places 5185 of them are listed in Yemen census 2004
+2629      WAD                    Wadis
+658        MT                       mountains
+150        HLL                       Hills
+435        TRB                      Tribes
+358        AREA                Areas
+262        WLL                 Water Wills
+121        PASS                     Pass between mountains
+491                                     OTHERS
+
+68% of all deleted nodes as populated places. This node type is usually important and take attention from  the users of the map if it has wrong location. Stability of location of these nodes in the map for more than 10 years means one of two things:
+
+
+  *   The location is true . and these are the most
+  *   The location is wrong but the node is of minimum importance. So no one correct it or send note about it.
+Deleting all these 14,822  nodes for very little minimum importance nodes that have wrong location is Wrong decision from DWG.
+And when I imported new nodes from GNS I revised the work of user Metehyi and corrected some tagging mistakes. I noticed some locations are moved from the location in GNS but I assumed Metehyi corrected some node by imagery.
+
+
+Saeed Hubaishan
+
+
+Saeed Hubaishan
+https://github.com/hubaishan
+https://www.openstreetmap.org/user/??????
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230301/1ba04011/attachment.htm>
+
+From privatemajory at gmail.com  Wed Mar  1 12:32:20 2023
+From: privatemajory at gmail.com (Dolly Andriatsiferana)
+Date: Wed, 1 Mar 2023 15:32:20 +0300
+Subject: [Imports] Possible import of buildings in Antananarivo,
+ Madagascar?
+In-Reply-To: <23ebba7c-5db7-62f8-d5f4-0850ca04d4b7@remote.org>
+References: <CABzN_KLSk3NdWw5W=MvoFeynjKRAw2ZUtNUwvNmzJfza8B2-xQ@mail.gmail.com>
+ <23ebba7c-5db7-62f8-d5f4-0850ca04d4b7@remote.org>
+Message-ID: <CABzN_KLZkcakLiQczDDJDqmGPg6qnmOiM4_iAPuHvX7owTJeyw@mail.gmail.com>
+
+Hi all,
+
+I received a response from the user in my e-mail inbox. The e-mail
+translated from French:
+
+---
+Hello
+- I got these data during a project in Tana. I don't really know where they
+come from. I reworked them on QGIS and JOSM.
+- The housenumber corresponds to the number in the batch
+Sincerely
+Yves
+---
+
+So this means it is really an undiscussed import and the importer is not
+sure about the source.
+--
+Dolly Andriatsiferana
+
+
+Le mar. 28 f?vr. 2023 ? 14:09, Frederik Ramm <frederik at remote.org> a ?crit :
+
+> Hi,
+>
+> I have placed a temporary block on the user account to make them aware
+> of the issues: https://www.openstreetmap.org/user_blocks/6904
+>
+> Bye
+> Frederik
+>
+>
+> On 28.02.23 11:32, Dolly Andriatsiferana wrote:
+> > Hello list,
+> >
+> > I am possibly wrong, but there is likely an undiscussed import of
+> > buildings happening in Antananarivo, Madagascar. Please see this
+> > changeset that I commented and all previous and following changesets by
+> > the same user: https://www.openstreetmap.org/changeset/133061376
+> > <https://www.openstreetmap.org/changeset/133061376>
+> >
+> > What makes me think those buildings are from a certain source:
+> >
+> > - They don't align with any of the imageries available on OSM editors,
+> > so they were likely drawn from some third party imagery (although the
+> > source tag of the changesets says Bing).
+> >
+> > - The attribute table is consistent and all added buildings have the
+> > same keys addr:suburb, addr:secteur, addr:lot, addr:housenumber, and
+> > addr:city
+> >
+> > - The values of addr:lot=* are not valid house addresses like we use
+> > here (As per the comment on
+> > https://www.openstreetmap.org/changeset/132331988
+> > <https://www.openstreetmap.org/changeset/132331988> it looks like it
+> was
+> > initially added to OSM as addr:ilot but then changed to addr:lot)
+> >
+> > - Every house has addr:housenumber=* which is very rarely used here
+> > (only in downtowns where streets are named). We use a lot-based address
+> > system and I am not sure what these numbers on each building are
+> > supposed to represent (even gas station canopies are numbered).
+> >
+> > I put a comment on one of the changesets (first link) but haven't had a
+> > response yet.
+> >
+> > I hope I am wrong and this is not an import at all. And if this is an
+> > import and has been discussed here but I missed it, sorry too.
+> >
+> > Have a nice day!
+> >
+> > --
+> > Dolly Andriatsiferana
+> >
+> >
+> > _______________________________________________
+> > Imports mailing list
+> > Imports at openstreetmap.org
+> > https://lists.openstreetmap.org/listinfo/imports
+>
+> --
+> Frederik Ramm  ##  eMail frederik at remote.org  ##  N49?00'09" E008?23'33"
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230301/daed22a4/attachment.htm>
+
+From matkoniecz at tutanota.com  Wed Mar  1 14:04:28 2023
+From: matkoniecz at tutanota.com (Mateusz Konieczny)
+Date: Wed, 1 Mar 2023 15:04:28 +0100 (CET)
+Subject: [Imports] Possible import of buildings in Antananarivo,
+ Madagascar?
+In-Reply-To: <CABzN_KLZkcakLiQczDDJDqmGPg6qnmOiM4_iAPuHvX7owTJeyw@mail.gmail.com>
+References: <CABzN_KLSk3NdWw5W=MvoFeynjKRAw2ZUtNUwvNmzJfza8B2-xQ@mail.gmail.com>
+ <23ebba7c-5db7-62f8-d5f4-0850ca04d4b7@remote.org>
+ <CABzN_KLZkcakLiQczDDJDqmGPg6qnmOiM4_iAPuHvX7owTJeyw@mail.gmail.com>
+Message-ID: <NPSUGvG--7-9@tutanota.com>
+
+Also, what is being tagged as address data is apparently some
+meaningless internal id.
+
+Overall, it clearly needs to be reverted - for start due to unknown
+licensing situation.
+
+
+Mar 1, 2023, 13:40 by privatemajory at gmail.com:
+
+> Hi all,
+>
+> I received a response from the user in my e-mail inbox. The e-mail translated from French:
+>
+> ---
+> Hello
+> - I got these data during a project in Tana. I don't really know where they come from. I reworked them on QGIS and JOSM.
+> - The housenumber corresponds to the number in the batch
+> Sincerely
+> Yves
+> ---
+>
+> So this means it is really an undiscussed import and the importer is not sure about the source.
+> --
+> Dolly Andriatsiferana
+>
+>
+> Le?mar. 28 f?vr. 2023 ??14:09, Frederik Ramm <> frederik at remote.org> > a ?crit?:
+>
+>> Hi,
+>>  
+>>  I have placed a temporary block on the user account to make them aware 
+>>  of the issues: >> https://www.openstreetmap.org/user_blocks/6904
+>>  
+>>  Bye
+>>  Frederik
+>>  
+>>  
+>>  On 28.02.23 11:32, Dolly Andriatsiferana wrote:
+>>  > Hello list,
+>>  > 
+>>  > I am possibly wrong, but there is likely an undiscussed import of 
+>>  > buildings happening in Antananarivo, Madagascar. Please see this 
+>>  > changeset that I commented and all previous and following changesets by 
+>>  > the same user: >> https://www.openstreetmap.org/changeset/133061376>>  
+>>  > <>> https://www.openstreetmap.org/changeset/133061376>> >
+>>  > 
+>>  > What makes me think those buildings are from a certain source:
+>>  > 
+>>  > - They don't align with any of the imageries available on OSM editors, 
+>>  > so they were likely drawn from some third party imagery (although the 
+>>  > source tag of the changesets says Bing).
+>>  > 
+>>  > - The attribute table is consistent and all added buildings have the 
+>>  > same keys addr:suburb, addr:secteur, addr:lot, addr:housenumber, and 
+>>  > addr:city
+>>  > 
+>>  > - The values of addr:lot=* are not valid house addresses like we use 
+>>  > here (As per the comment on 
+>>  > >> https://www.openstreetmap.org/changeset/132331988>>  
+>>  > <>> https://www.openstreetmap.org/changeset/132331988>> > it looks like it was 
+>>  > initially added to OSM as addr:ilot but then changed to addr:lot)
+>>  > 
+>>  > - Every house has addr:housenumber=* which is very rarely used here 
+>>  > (only in downtowns where streets are named). We use a lot-based address 
+>>  > system and I am not sure what these numbers on each building are 
+>>  > supposed to represent (even gas station canopies are numbered).
+>>  > 
+>>  > I put a comment on one of the changesets (first link) but haven't had a 
+>>  > response yet.
+>>  > 
+>>  > I hope I am wrong and this is not an import at all. And if this is an 
+>>  > import and has been discussed here but I missed it, sorry too.
+>>  > 
+>>  > Have a nice day!
+>>  > 
+>>  > --
+>>  > Dolly Andriatsiferana
+>>  > 
+>>  > 
+>>  > _______________________________________________
+>>  > Imports mailing list
+>>  > >> Imports at openstreetmap.org
+>>  > >> https://lists.openstreetmap.org/listinfo/imports
+>>  
+>>  -- 
+>>  Frederik Ramm? ##? eMail >> frederik at remote.org>> ? ##? N49?00'09" E008?23'33"
+>>  
+>>  _______________________________________________
+>>  Imports mailing list
+>>  >> Imports at openstreetmap.org
+>>  >> https://lists.openstreetmap.org/listinfo/imports
+>>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230301/1a6a418a/attachment.htm>
+
+From privatemajory at gmail.com  Thu Mar  2 12:14:09 2023
+From: privatemajory at gmail.com (Dolly Andriatsiferana)
+Date: Thu, 2 Mar 2023 15:14:09 +0300
+Subject: [Imports] Possible import of buildings in Antananarivo,
+ Madagascar?
+In-Reply-To: <NPSUGvG--7-9@tutanota.com>
+References: <CABzN_KLSk3NdWw5W=MvoFeynjKRAw2ZUtNUwvNmzJfza8B2-xQ@mail.gmail.com>
+ <23ebba7c-5db7-62f8-d5f4-0850ca04d4b7@remote.org>
+ <CABzN_KLZkcakLiQczDDJDqmGPg6qnmOiM4_iAPuHvX7owTJeyw@mail.gmail.com>
+ <NPSUGvG--7-9@tutanota.com>
+Message-ID: <CABzN_KJ4USW8xwmbk=ibPR0MTBPy4+Q8Gg095nHAgS6BjFgv-Q@mail.gmail.com>
+
+>
+> Also, what is being tagged as address data is apparently some
+> meaningless internal id.
+>
+
+Yes, none of the addr:housenumber and addr:lot are valid. Given that
+addr:lot was originally addr:ilot, I think it represents blocks as there
+are dozens of buildings sharing the same ID ("il?t" means block -
+https://en.wikipedia.org/wiki/City_block). None of these can be verified in
+the field so they must be internal to some database.
+
+Btw, the user is continuing to add tons of buildings, but now with only
+building=yes as tag.
+
+Dolly Andriatsiferana
+
+
+Le mer. 1 mars 2023 ? 17:10, Mateusz Konieczny via Imports <
+imports at openstreetmap.org> a ?crit :
+
+> Also, what is being tagged as address data is apparently some
+> meaningless internal id.
+>
+> Overall, it clearly needs to be reverted - for start due to unknown
+> licensing situation.
+>
+>
+> Mar 1, 2023, 13:40 by privatemajory at gmail.com:
+>
+> Hi all,
+>
+> I received a response from the user in my e-mail inbox. The e-mail
+> translated from French:
+>
+> ---
+> Hello
+> - I got these data during a project in Tana. I don't really know where
+> they come from. I reworked them on QGIS and JOSM.
+> - The housenumber corresponds to the number in the batch
+> Sincerely
+> Yves
+> ---
+>
+> So this means it is really an undiscussed import and the importer is not
+> sure about the source.
+> --
+> Dolly Andriatsiferana
+>
+>
+> Le mar. 28 f?vr. 2023 ? 14:09, Frederik Ramm <frederik at remote.org> a
+> ?crit :
+>
+> Hi,
+>
+> I have placed a temporary block on the user account to make them aware
+> of the issues: https://www.openstreetmap.org/user_blocks/6904
+>
+> Bye
+> Frederik
+>
+>
+> On 28.02.23 11:32, Dolly Andriatsiferana wrote:
+> > Hello list,
+> >
+> > I am possibly wrong, but there is likely an undiscussed import of
+> > buildings happening in Antananarivo, Madagascar. Please see this
+> > changeset that I commented and all previous and following changesets by
+> > the same user: https://www.openstreetmap.org/changeset/133061376
+> > <https://www.openstreetmap.org/changeset/133061376>
+> >
+> > What makes me think those buildings are from a certain source:
+> >
+> > - They don't align with any of the imageries available on OSM editors,
+> > so they were likely drawn from some third party imagery (although the
+> > source tag of the changesets says Bing).
+> >
+> > - The attribute table is consistent and all added buildings have the
+> > same keys addr:suburb, addr:secteur, addr:lot, addr:housenumber, and
+> > addr:city
+> >
+> > - The values of addr:lot=* are not valid house addresses like we use
+> > here (As per the comment on
+> > https://www.openstreetmap.org/changeset/132331988
+> > <https://www.openstreetmap.org/changeset/132331988> it looks like it
+> was
+> > initially added to OSM as addr:ilot but then changed to addr:lot)
+> >
+> > - Every house has addr:housenumber=* which is very rarely used here
+> > (only in downtowns where streets are named). We use a lot-based address
+> > system and I am not sure what these numbers on each building are
+> > supposed to represent (even gas station canopies are numbered).
+> >
+> > I put a comment on one of the changesets (first link) but haven't had a
+> > response yet.
+> >
+> > I hope I am wrong and this is not an import at all. And if this is an
+> > import and has been discussed here but I missed it, sorry too.
+> >
+> > Have a nice day!
+> >
+> > --
+> > Dolly Andriatsiferana
+> >
+> >
+> > _______________________________________________
+> > Imports mailing list
+> > Imports at openstreetmap.org
+> > https://lists.openstreetmap.org/listinfo/imports
+>
+> --
+> Frederik Ramm  ##  eMail frederik at remote.org  ##  N49?00'09" E008?23'33"
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230302/5ec7c97b/attachment.htm>
+
+From frederik at remote.org  Thu Mar  2 14:06:55 2023
+From: frederik at remote.org (Frederik Ramm)
+Date: Thu, 2 Mar 2023 15:06:55 +0100
+Subject: [Imports] Possible import of buildings in Antananarivo,
+ Madagascar?
+In-Reply-To: <CABzN_KJ4USW8xwmbk=ibPR0MTBPy4+Q8Gg095nHAgS6BjFgv-Q@mail.gmail.com>
+References: <CABzN_KLSk3NdWw5W=MvoFeynjKRAw2ZUtNUwvNmzJfza8B2-xQ@mail.gmail.com>
+ <23ebba7c-5db7-62f8-d5f4-0850ca04d4b7@remote.org>
+ <CABzN_KLZkcakLiQczDDJDqmGPg6qnmOiM4_iAPuHvX7owTJeyw@mail.gmail.com>
+ <NPSUGvG--7-9@tutanota.com>
+ <CABzN_KJ4USW8xwmbk=ibPR0MTBPy4+Q8Gg095nHAgS6BjFgv-Q@mail.gmail.com>
+Message-ID: <04234212-5192-d2ff-5edb-698a25fca46d@remote.org>
+
+Hi,
+
+On 02.03.23 13:14, Dolly Andriatsiferana wrote:
+> Btw, the user is continuing to add tons of buildings, but now with only 
+> building=yes as tag.
+
+Blocked the account again, and reverting the import now.
+
+Bye
+Frederik
+
+-- 
+Frederik Ramm  ##  eMail frederik at remote.org  ##  N49?00'09" E008?23'33"
+
+
+From hubaishan at outlook.sa  Sat Mar  4 13:46:39 2023
+From: hubaishan at outlook.sa (Saeed Hubaishan)
+Date: Sat, 4 Mar 2023 13:46:39 +0000
+Subject: [Imports] =?iso8859-6?q?=D1=CF=3A_A_lot_of_nodes_imported_from_G?=
+ =?iso8859-6?q?EOnet_Names_Server_=28GNS_=29_were_deleted_in_Yemen=2C_KSA?=
+ =?iso8859-6?q?=2C_Egypt_Iraq_and_other_countries?=
+In-Reply-To: <BY5PR02MB69625D72EE740FA929867F46CCAD9@BY5PR02MB6962.namprd02.prod.outlook.com>
+References: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <BY5PR02MB6962B188F0C9067A194586E4CCA99@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+ <BY5PR02MB69625D72EE740FA929867F46CCAD9@BY5PR02MB6962.namprd02.prod.outlook.com>
+Message-ID: <BY5PR02MB6962291116F616760D2095D7CCB09@BY5PR02MB6962.namprd02.prod.outlook.com>
+
+Hello,
+
+Is there a chance to restore deleted node for Yemen? Or we must do new import?
+
+Saeed Hubaishan
+https://github.com/hubaishan
+https://www.openstreetmap.org/user/??????
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230304/192b8a58/attachment.htm>
+
+From marc_marc at mailo.com  Sat Mar  4 14:40:15 2023
+From: marc_marc at mailo.com (Marc_marc)
+Date: Sat, 4 Mar 2023 15:40:15 +0100
+Subject: [Imports] 
+ =?utf-8?q?=D8=B1=D8=AF=3A_A_lot_of_nodes_imported_from?=
+ =?utf-8?q?_GEOnet_Names_Server_=28GNS_=29_were_deleted_in_Yemen=2C_KSA=2C?=
+ =?utf-8?q?_Egypt_Iraq_and_other_countries?=
+In-Reply-To: <BY5PR02MB6962291116F616760D2095D7CCB09@BY5PR02MB6962.namprd02.prod.outlook.com>
+References: <BY5PR02MB6962EAD8E483E1E6B5F482C4CCA69@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <BY5PR02MB6962B188F0C9067A194586E4CCA99@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <fce4d1fc-8c58-3db8-7a71-0622af7b6e1d@gmail.com>
+ <BY5PR02MB69625D72EE740FA929867F46CCAD9@BY5PR02MB6962.namprd02.prod.outlook.com>
+ <BY5PR02MB6962291116F616760D2095D7CCB09@BY5PR02MB6962.namprd02.prod.outlook.com>
+Message-ID: <e4b02e89-d26e-6a45-c58a-2e2cd850f9b7@mailo.com>
+
+Le 04.03.23 ? 14:46, Saeed Hubaishan a ?crit?:
+> Hello,
+> 
+> Is there a chance to restore deleted node for Yemen? Or we must do new 
+> import?
+
+several message but i don't understand the issue
+lokking at one of them
+https://www.openstreetmap.org/node/1218202166
+
+remove nodes from an old and inaccurate GNS import where no meaningful 
+edits have been made in the mean time, and after attempts to contact the 
+importer failed (DWG ticket #2020112810000282)
+
+import changeset https://www.openstreetmap.org/changeset/7670368
+no message
+any contact with the DWG ?
+making another un-answered impoort don't fix the issue
+
+
+
+
+
+From andrew.harvey4 at gmail.com  Mon Mar 20 05:04:50 2023
+From: andrew.harvey4 at gmail.com (Andrew Harvey)
+Date: Mon, 20 Mar 2023 16:04:50 +1100
+Subject: [Imports] VIC Traffic Lights MapRoulette import
+Message-ID: <CAD5Vjst1Aw1p+0OES-4BD5njVvqmwk8am2_UZ1TMFJoSsgQbcQ@mail.gmail.com>
+
+I've prepared an import proposal at
+https://wiki.openstreetmap.org/wiki/Import/Catalogue/VIC_Traffic_Lights#Import_Data
+for missing traffic lights from DTP data.
+
+The import has been prepared as a MapRoulette challenge at
+https://maproulette.org/browse/challenges/38490.
+
+Any feedback or issues appreciated.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230320/18632118/attachment.htm>
+
+From daniel.oconnor at gmail.com  Wed Mar 22 10:57:00 2023
+From: daniel.oconnor at gmail.com (Daniel O'Connor)
+Date: Wed, 22 Mar 2023 21:27:00 +1030
+Subject: [Imports] [talk-au] VIC Traffic Lights MapRoulette import
+In-Reply-To: <CAD5Vjst1Aw1p+0OES-4BD5njVvqmwk8am2_UZ1TMFJoSsgQbcQ@mail.gmail.com>
+References: <CAD5Vjst1Aw1p+0OES-4BD5njVvqmwk8am2_UZ1TMFJoSsgQbcQ@mail.gmail.com>
+Message-ID: <CAJsZyFCfFcaCe5qX149s83B_8ZwE6V_24HTtpBZajgs1eNrq4Q@mail.gmail.com>
+
+https://maproulette.org/challenge/38490/task/155741018 seems a bit weird!
+
+Is it possible to easily split the pedestrian crossings from traffic lights?
+Some appear to just be "crossings" for example -
+https://maproulette.org/challenge/38490/task/155740397 - no lights/etc.
+Worth mapping, but a fair bit different!
+
+On Mon, Mar 20, 2023 at 3:40?PM Andrew Harvey <andrew.harvey4 at gmail.com>
+wrote:
+
+> I've prepared an import proposal at
+> https://wiki.openstreetmap.org/wiki/Import/Catalogue/VIC_Traffic_Lights#Import_Data
+> for missing traffic lights from DTP data.
+>
+> The import has been prepared as a MapRoulette challenge at
+> https://maproulette.org/browse/challenges/38490.
+>
+> Any feedback or issues appreciated.
+>
+>
+> _______________________________________________
+> Talk-au mailing list
+> Talk-au at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/talk-au
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230322/8a35e6b2/attachment.htm>
+
+From dieterdreist at gmail.com  Wed Mar 22 16:18:29 2023
+From: dieterdreist at gmail.com (Martin Koppenhoefer)
+Date: Wed, 22 Mar 2023 17:18:29 +0100
+Subject: [Imports] [talk-au] VIC Traffic Lights MapRoulette import
+In-Reply-To: <CAJsZyFCfFcaCe5qX149s83B_8ZwE6V_24HTtpBZajgs1eNrq4Q@mail.gmail.com>
+References: <CAD5Vjst1Aw1p+0OES-4BD5njVvqmwk8am2_UZ1TMFJoSsgQbcQ@mail.gmail.com>
+ <CAJsZyFCfFcaCe5qX149s83B_8ZwE6V_24HTtpBZajgs1eNrq4Q@mail.gmail.com>
+Message-ID: <CABPTjTDb-_-aXz3b-JgY5O=NziWqzLTC19Gnbo9ymAwhJ5nDQw@mail.gmail.com>
+
+Am Mi., 22. M?rz 2023 um 12:05 Uhr schrieb Daniel O'Connor <
+daniel.oconnor at gmail.com>:
+
+> https://maproulette.org/challenge/38490/task/155741018 seems a bit weird!
+>
+> Is it possible to easily split the pedestrian crossings from traffic
+> lights?
+>
+
+
+if the position is ok for the pedestrian crossing you can retag
+highway=traffic_signals to highway=crossing and add
+crossing=traffic_signals. Then you add a new node for
+highway=traffic_signals at the correct position
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230322/23f2f470/attachment.htm>
+
+From andrew.harvey4 at gmail.com  Thu Mar 23 04:22:03 2023
+From: andrew.harvey4 at gmail.com (Andrew Harvey)
+Date: Thu, 23 Mar 2023 15:22:03 +1100
+Subject: [Imports] [talk-au] VIC Traffic Lights MapRoulette import
+In-Reply-To: <CAJsZyFCfFcaCe5qX149s83B_8ZwE6V_24HTtpBZajgs1eNrq4Q@mail.gmail.com>
+References: <CAD5Vjst1Aw1p+0OES-4BD5njVvqmwk8am2_UZ1TMFJoSsgQbcQ@mail.gmail.com>
+ <CAJsZyFCfFcaCe5qX149s83B_8ZwE6V_24HTtpBZajgs1eNrq4Q@mail.gmail.com>
+Message-ID: <CAD5VjssYgUoNgn-R-FDq+F0JA9tm=8vEcETPA=M04yBwM89Vqg@mail.gmail.com>
+
+They are split already in the task properties, so the challenge should only
+contain traffic signal controlled pedestrian crossings and no uncontrolled
+crossings.
+
+The data sheet indicates it was only installed in 2018 and the Mapillary
+imagery there is older, so might need to mark this as too hard. We could
+leave a note instead for a survey check.
+
+On Wed, 22 Mar 2023 at 21:57, Daniel O'Connor <daniel.oconnor at gmail.com>
+wrote:
+
+> https://maproulette.org/challenge/38490/task/155741018 seems a bit weird!
+>
+> Is it possible to easily split the pedestrian crossings from traffic
+> lights?
+> Some appear to just be "crossings" for example -
+> https://maproulette.org/challenge/38490/task/155740397 - no lights/etc.
+> Worth mapping, but a fair bit different!
+>
+> On Mon, Mar 20, 2023 at 3:40?PM Andrew Harvey <andrew.harvey4 at gmail.com>
+> wrote:
+>
+>> I've prepared an import proposal at
+>> https://wiki.openstreetmap.org/wiki/Import/Catalogue/VIC_Traffic_Lights#Import_Data
+>> for missing traffic lights from DTP data.
+>>
+>> The import has been prepared as a MapRoulette challenge at
+>> https://maproulette.org/browse/challenges/38490.
+>>
+>> Any feedback or issues appreciated.
+>>
+>>
+>> _______________________________________________
+>> Talk-au mailing list
+>> Talk-au at openstreetmap.org
+>> https://lists.openstreetmap.org/listinfo/talk-au
+>>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230323/f4f3c672/attachment.htm>
+
+From andrew.harvey4 at gmail.com  Thu Mar 23 04:26:37 2023
+From: andrew.harvey4 at gmail.com (Andrew Harvey)
+Date: Thu, 23 Mar 2023 15:26:37 +1100
+Subject: [Imports] VIC Traffic Lights MapRoulette import
+In-Reply-To: <CAD5Vjst1Aw1p+0OES-4BD5njVvqmwk8am2_UZ1TMFJoSsgQbcQ@mail.gmail.com>
+References: <CAD5Vjst1Aw1p+0OES-4BD5njVvqmwk8am2_UZ1TMFJoSsgQbcQ@mail.gmail.com>
+Message-ID: <CAD5VjsszsA9KdZrp1KeO7yHvzskzv_6TNB9bbEwGbeKAfi=jUg@mail.gmail.com>
+
+There was positive support for the proposal on Discord #oceania and no
+issues identified here so we've started working through the challenge and
+invite anyone interested to join in.
+
+On Mon, 20 Mar 2023 at 16:04, Andrew Harvey <andrew.harvey4 at gmail.com>
+wrote:
+
+> I've prepared an import proposal at
+> https://wiki.openstreetmap.org/wiki/Import/Catalogue/VIC_Traffic_Lights#Import_Data
+> for missing traffic lights from DTP data.
+>
+> The import has been prepared as a MapRoulette challenge at
+> https://maproulette.org/browse/challenges/38490.
+>
+> Any feedback or issues appreciated.
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230323/c13d1be1/attachment.htm>
+
+From branko at kokanovic.org  Sun Mar 26 20:11:55 2023
+From: branko at kokanovic.org (Branko Kokanovic)
+Date: Sun, 26 Mar 2023 20:11:55 +0000
+Subject: [Imports] Address import from government open data in Serbia
+Message-ID: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+
+Hi all,
+Serbia government released address registry (streets and housenumbers with point geometries) on 12. December 2022. as open data from national cadastre ("RGZ" in the rest of the mail). We are preparing import to OSM now and we want to ask for feedback to our approach, what we are missing and to answer any questions. Below are some details that we have been working on for past month.
+
+tl;dr
+
+Main wiki (en and sr): https://wiki.openstreetmap.org/wiki/Serbia/Projekti/Adresni_registar
+Main topic (sr only): https://community.openstreetmap.org/t/uvoz-adresnog-registra-plan/8916
+
+--------------------------
+
+1. Data quality
+
+Data from RGZ is checked by sampling and looks like it is of good quality, far better than what we have today in OSM. In OSM, except couple of major cities (Belgrade have 80% of addresses for example), addresses are mostly non-existent in Serbia. There are some cases where address exists in RGZ, but building is missing on satellite imagery (either not yet erected or is demolished), but we agreed to add these addresses too. There are also cases with local shops (on the ground floor) are empty/ruined, but exists in RGZ.
+
+In total, there are around 2.428.000 addresses in RGZ and 250.000 addresses in OSM. We think that 190.000 of these addresses can be "conflated" (by adding new tag) and 60.000 will have to be resolved case by case. Rest of it (>2.000.000) could be imported simply as points.
+
+One downside is that addresses in cadastre are given as "ALL CAPS" (e.g. data from RGZ would have something like "ABBEY ROAD" as street name). We fixed this (more on this later).
+
+--------------------------
+
+2. Preparation
+
+We have couple of topics in community forum, but main thread is this one: https://community.openstreetmap.org/t/uvoz-adresnog-registra-plan/8916. We prepared wiki page for import here: https://wiki.openstreetmap.org/wiki/Serbia/Projekti/Adresni_registar.
+
+As a community, we first discussed and agreed on tagging schema for addresses. It was always kind of assumed to be Karlsruhe schema, but now we discussed in fine details if address should be node or way, what if there are apartments and some shops on ground floor etc. Main thread for this specific topic is here: https://community.openstreetmap.org/t/uvoz-adresnog-registra-pravila-tagovanja-adresa-u-srbiji/8915 and final outcome is written in details here: https://wiki.openstreetmap.org/wiki/Serbia/Adresses.
+
+Regarding street names that are given as "ALL CAPS", as a community, we agreed to import them with "Proper Casing", including grammatical and on-the-ground rules (punctuation, spacing, hyphens, correcting cases, plurals, striping "street" as suffix in <1% of cases...). We took all addresses in RGZ (there is 30.000 distinct addresses), put them online in https://lite.framacalc.org/tgux01sydx-9ztp and distributed work among us to fix their naming. This work is done already and we will use this (proper) naming when doing import. Main topic for this is here: https://community.openstreetmap.org/t/pravilno-imenovanje-ulica/96891/
+
+We also created new tile server that shows only street geometries and housenumbers based on RGZ data. It can be accessed here: https://tiles.openstreetmap.rs/rgz/{zoom}/{x}/{y}.png. It will be invaluable help when importing addresses and when solving cases manually.
+
+We also agreed on script when housenumbers have letters (e.g. "30b"). We could use either Cyrillic ("30?") or Latin ("30b"). Cyrillic is what "name" tag usually we have for streets, but if we used it for "addr:housenumber" too, we would run into problem - support in geocoders for different languages in "addr:housenumber" tag is almost non-existent. So, for purely pragmatic reasons, we opted for using latin for housenumbers (we will use "30b" instead of "30?"). This is not related to Serbia, but it affects us greatly and we talked about it at length even 4 years ago: https://community.openstreetmap.org/t/cirilica-i-latinica-u-kucnim-brojevima/88545. Whomever wants to tackle this problem, please contact me, I will be eager to help.
+
+We also agreed what to do when OSM and RGZ differ in addresses - we agree to keep OSM if there is note tag, and clarified all of that in import instructions.
+
+Finally, we introduced new tag to reference addresses with RGZ - "ref:RS:kucni_broj" (translated to English as "ref:RS:housenumber"), as well as new "source=RGZ_AR_Import" for changesets (we plan to add this to https://taginfo.openstreetmap.org/projects once we import start).
+
+--------------------------
+
+3. Import
+
+There are lot of addresses to import. We want import to have human in the loop, but to be as easy as possible. We created web site to help us with this: https://openstreetmap.rs/download/ar/.
+
+There are 3 main cases when doing import:
+
+* Adding new addresses - it should be as easy as going to above-mentioned web site, navigate to municipality and settlement and downloading .osm file with new addresses. All .osm files are split into max 100 addresses that can be imported at once. Web site is refreshed daily. Rest of the instructions are on wiki page, but boils down to: use JOSM, check geometries one by one, move addresses on top of houses on satellite images, check naming of streets and upload. We might even try to automate this after couple thousands of addresses are added, enough of time passed and based on overall feedback from community. We will use separate bot account for this, if we go down this route.
+
+* Conflating existing addresses - it should be as easy as downloading another .osm where we only add "ref:RS:kucni_broj" tag while repeating same procedure as above. Also bounded to max 100 addresses and refreshed daily. It should be noted here that only addresses that are matching 100% (both street name and housenumber are exact and within 200m between OSM and RGZ) are proposed in .osm files here.
+
+* Fuzzy matched addresses - this is hardest case and no automation is given. There are "only" 60.000 of these addresses and this will take most of the time. We plan to use mentioned tile server with rendered addresses to aid in this, but it will still require a lot of work as there is lot of randomness here (typos in names, old addresses, locations that are too far away...)
+
+We plan to create special tutorial video to make onboarding for people easier, same as we did for import of administrative boundaries (https://vimeo.com/401994061), but this time on https://peertube.openstreetmap.fr (to be honest, we had this video on fediverse at https://peertube.live/videos/watch/d5ef0a85-2578-4c7d-8430-1395e853eca7, but it is gone now...).
+
+Overall, my personal hope is that with dozens of very active people (that we have in community already) and dozen more that are sporadically active and with good tooling, we can have 80% of addresses from RGZ imported in OSM by end of 2023. 
+
+--------------------------
+
+4. Quality assurance
+
+As previously mentioned, we created website https://openstreetmap.rs/download/ar/ which is refreshed daily and which has section for QA. Idea is to monitor import as we go and detect any problems. These are some of things we plan to check continuously:
+
+* duplicated ref:RS:kucni_broj - in ideal case, there will be no 2 OSM entities with same "ref:RS:kucni_broj" tag as there are no duplicates in RGZ either. This report should have 0 entries. Report is done and generated daily.
+* addresses in buildings - as we agreed in tagging schema, we want to place addresses on buildings' way (if building exist). However, if we require this, it will mean to add building for each address and it will slow down import itself. So, plan is to proceed with import and add addresses as node, and have this QA check that will let us know where we have addresses as nodes inside buildings. Today, we counted 76.000 address nodes inside buildings, out of which 57.500 are simple cases where there is single address node inside building that can be deleted and moved to building. Rest (18.000) are cases that need to be checked case by case (POIs, multiple addresses, typos...). For simple case, we even have generated .osm files to automate this problem. One of the problem of moving these nodes is that we are losing history for them. We split .osm files to 10 entities max, so to make it easier for anyone to find deep history of deleted nodes. Report is done and generated daily.
+* QA on conflated addresses - once we detect "ref:RS:kucni_broj" tag on some OSM address, we will have couple of checks - is that reference to RGZ actually exists in RGZ, is it too far away from RGZ data, that those street names/housenumbers match... This report will tell us all this and it should ideally have 0 entries. This report is still being worked on.
+
+--------------------------
+
+5. Licence
+
+License of this data is clarified as open data in https://data.gov.rs/sr/terms/. This data is released in the open on 12. December 2022. by changes in the law as defined in this PDF: https://geosrbija.rs/?mdocs-file=6186 (article 34) which (along with other RGZ documents) can be downloaded here: https://geosrbija.rs/dokumentacija/. While we already imported some other data from Open Data portal (GTFS, admin boundaries, national heritage...), we also wanted to add RGZ as a source to https://www.openstreetmap.org/copyright and we have PR request: https://github.com/openstreetmap/openstreetmap-website/pull/3959. Afterwards, we also contacted LWG (on 08. March 2023.) for further consulting, but answer is still pending. However, we think we are on safe side to start import even now. Please raise concerns if this is not the case!
+
+
+Thanks, Branko
+
+
+From marc_marc at mailo.com  Sun Mar 26 20:31:17 2023
+From: marc_marc at mailo.com (Marc_marc)
+Date: Sun, 26 Mar 2023 22:31:17 +0200
+Subject: [Imports] Address import from government open data in Serbia
+In-Reply-To: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+References: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+Message-ID: <f3a914e7-b7ea-a10d-3d8f-748b8ee1d54d@mailo.com>
+
+Le 26.03.23 ? 22:11, Branko Kokanovic a ?crit?:
+> Main wiki (en and sr):https://wiki.openstreetmap.org/wiki/Serbia/Projekti/Adresni_registar
+
+Thank you for this multilingual page
+unfortunately the English page contains a lot of non-English sentence/word.
+
+3 remarks if I understood correctly :
+- you refer to the addr page in Serbia for the tags, this one is in Serbian
+Could you instead include the correspondence between the data names
+in the opendata data and the osm tags you plan to use ?
+- you plan to use a ref in some cases.
+Unfortunately, practice shows that these refs are of no use either for a 
+future import or for the QA since you have to take into account the new 
+addresses without refs anyway. I recommend deleting this external ref 
+which only makes the data heavier for the contributor
+- I don't see a changeset tag, could you add the tags you plan to use?
+
+
+
+
+From branko at kokanovic.org  Sun Mar 26 21:36:15 2023
+From: branko at kokanovic.org (Branko Kokanovic)
+Date: Sun, 26 Mar 2023 21:36:15 +0000
+Subject: [Imports] Address import from government open data in Serbia
+In-Reply-To: <f3a914e7-b7ea-a10d-3d8f-748b8ee1d54d@mailo.com>
+References: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+ <f3a914e7-b7ea-a10d-3d8f-748b8ee1d54d@mailo.com>
+Message-ID: <3651a14f-ec11-44d4-b3bb-5fd9f4a3c48b@app.fastmail.com>
+
+Hi, comments inline
+
+On Sun, Mar 26, 2023, at 20:31, Marc_marc wrote:
+> Le 26.03.23 ? 22:11, Branko Kokanovic a ?crit?:
+>> Main wiki (en and sr):https://wiki.openstreetmap.org/wiki/Serbia/Projekti/Adresni_registar
+>
+> Thank you for this multilingual page
+> unfortunately the English page contains a lot of non-English sentence/word.
+
+Ah, sorry, I started translating and did only headings and forgot:). It is translated fully now, check please!
+
+>
+> 3 remarks if I understood correctly :
+> - you refer to the addr page in Serbia for the tags, this one is in Serbian
+> Could you instead include the correspondence between the data names
+> in the opendata data and the osm tags you plan to use ?
+
+Not sure what you mean here? RGZ (cadastre) data include street and housenumber that we are converting to addr:street and addr:housenumber as explained, all other fields are not from RGZ. There will be "ref:RS:kucni_broj" which is reference to ID in RGZ. There are other fields in RGZ like district, municipality, settlement that we will use to match RGZ and OSM, but those will not be imported. Maybe I can translate https://wiki.openstreetmap.org/wiki/Serbia/Adresses if it can help? Or maybe I just don't understand question fully?
+
+> - you plan to use a ref in some cases.
+> Unfortunately, practice shows that these refs are of no use either for a 
+> future import or for the QA since you have to take into account the new 
+> addresses without refs anyway. I recommend deleting this external ref 
+> which only makes the data heavier for the contributor
+
+Interestingly, our experience is quite different - having reference to open data is huge help for lot of scripts/reports we have. For example, we use this: https://gitlab.com/osm-serbia/prostorne-jedinice-import for daily check of administrative boundaries (download OSM and open data each day and check quality in OSM) and references (tag "ref:RS:naselje") are used to match these. Also for other stuff like heritage https://www.osmsrbija.iz.rs/nkd/ with tag "ref:RS:nkd". It offers us to do two-way sync and report newly added/recently removed entities from both OSM and open data! Since it is mostly automated effort to check them (and report those missing refs), there is no expectation that anyone should add these manually, so I hope it is no burden to any contributor.
+
+> - I don't see a changeset tag, could you add the tags you plan to use?
+
+Yes, we plan to use it (are you referring to source during changeset commit?). It should be mentioned in my original mail as "RGZ_AR_Import". It is also part of .osm files in report.
+
+Hope this clarifies things better!
+
+Thanks, Branko
+
+>
+>
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+
+
+From matthew.whilden at gmail.com  Mon Mar 27 18:47:45 2023
+From: matthew.whilden at gmail.com (Matthew Whilden)
+Date: Mon, 27 Mar 2023 11:47:45 -0700
+Subject: [Imports] Address import from government open data in Serbia
+In-Reply-To: <3651a14f-ec11-44d4-b3bb-5fd9f4a3c48b@app.fastmail.com>
+References: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+ <f3a914e7-b7ea-a10d-3d8f-748b8ee1d54d@mailo.com>
+ <3651a14f-ec11-44d4-b3bb-5fd9f4a3c48b@app.fastmail.com>
+Message-ID: <CAD7uiQdb-fNMCSk_YjbCGkMhmbT8Tr9gmMsXw=OTi-Akd3pTsw@mail.gmail.com>
+
+One of the nice secondary benefits of high quality address data is that you
+get a good cross-check on the street information already in OSM. You may
+consider adding either the MapWithAI plugin for JOSM users (it has a great
+validator rule for this) OR do a post facto cleanup using the address view
+over at https://tools.geofabrik.de/osmi/. For the United States equivalent,
+it has caught typos, misspellings, incorrect abbreviation expansions etc.
+
+Here's a diary about verifying US roadway data with our National Address
+Database: https://www.openstreetmap.org/user/watmildon/diary/400827
+
+Matt
+
+On Sun, Mar 26, 2023 at 2:39?PM Branko Kokanovic <branko at kokanovic.org>
+wrote:
+
+> Hi, comments inline
+>
+> On Sun, Mar 26, 2023, at 20:31, Marc_marc wrote:
+> > Le 26.03.23 ? 22:11, Branko Kokanovic a ?crit :
+> >> Main wiki (en and sr):
+> https://wiki.openstreetmap.org/wiki/Serbia/Projekti/Adresni_registar
+> >
+> > Thank you for this multilingual page
+> > unfortunately the English page contains a lot of non-English
+> sentence/word.
+>
+> Ah, sorry, I started translating and did only headings and forgot:). It is
+> translated fully now, check please!
+>
+> >
+> > 3 remarks if I understood correctly :
+> > - you refer to the addr page in Serbia for the tags, this one is in
+> Serbian
+> > Could you instead include the correspondence between the data names
+> > in the opendata data and the osm tags you plan to use ?
+>
+> Not sure what you mean here? RGZ (cadastre) data include street and
+> housenumber that we are converting to addr:street and addr:housenumber as
+> explained, all other fields are not from RGZ. There will be
+> "ref:RS:kucni_broj" which is reference to ID in RGZ. There are other fields
+> in RGZ like district, municipality, settlement that we will use to match
+> RGZ and OSM, but those will not be imported. Maybe I can translate
+> https://wiki.openstreetmap.org/wiki/Serbia/Adresses if it can help? Or
+> maybe I just don't understand question fully?
+>
+> > - you plan to use a ref in some cases.
+> > Unfortunately, practice shows that these refs are of no use either for a
+> > future import or for the QA since you have to take into account the new
+> > addresses without refs anyway. I recommend deleting this external ref
+> > which only makes the data heavier for the contributor
+>
+> Interestingly, our experience is quite different - having reference to
+> open data is huge help for lot of scripts/reports we have. For example, we
+> use this: https://gitlab.com/osm-serbia/prostorne-jedinice-import for
+> daily check of administrative boundaries (download OSM and open data each
+> day and check quality in OSM) and references (tag "ref:RS:naselje") are
+> used to match these. Also for other stuff like heritage
+> https://www.osmsrbija.iz.rs/nkd/ with tag "ref:RS:nkd". It offers us to
+> do two-way sync and report newly added/recently removed entities from both
+> OSM and open data! Since it is mostly automated effort to check them (and
+> report those missing refs), there is no expectation that anyone should add
+> these manually, so I hope it is no burden to any contributor.
+>
+> > - I don't see a changeset tag, could you add the tags you plan to use?
+>
+> Yes, we plan to use it (are you referring to source during changeset
+> commit?). It should be mentioned in my original mail as "RGZ_AR_Import". It
+> is also part of .osm files in report.
+>
+> Hope this clarifies things better!
+>
+> Thanks, Branko
+>
+> >
+> >
+> >
+> > _______________________________________________
+> > Imports mailing list
+> > Imports at openstreetmap.org
+> > https://lists.openstreetmap.org/listinfo/imports
+>
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230327/893c71b6/attachment.htm>
+
+From cascafico at gmail.com  Tue Mar 28 13:40:18 2023
+From: cascafico at gmail.com (Cascafico Giovanni)
+Date: Tue, 28 Mar 2023 15:40:18 +0200
+Subject: [Imports] Address import from government open data in Serbia
+In-Reply-To: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+References: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+Message-ID: <CALPJ3wb2KnDa0iVyTtQ592ojSGp+kWDdE4KjiJLG_12kLm34Gg@mail.gmail.com>
+
+Hello Branko,
+
+I'd like to suggest openrefine [1] for ALLCAPS and mispelling issues. The
+tool can save a sequence of regex replaces on huge lists. Besides, a
+replacing sequence is automatically saved and can be a resource in case of
+further imports.
+
+Like others pointed out, I found osminspector [2] a very useful tool for
+post-import quality assessment.
+
+I didn't understand how you plan to perform conflation. My approach would
+be using osm_conflator tool and audit service [3]. Basically osm_conflator
+works on nodes by overpass extracting a category (ie, addr:) and trying to
+match import candidates in a certain radius. Once a set of candidates is
+generated, actual conflation (audit) can be done via crowd-checking on a
+shared map like this [4].
+
+
+
+[1] https://openrefine.org/
+[2]
+https://tools.geofabrik.de/osmi/?view=addresses&lon=20.40677&lat=44.84030&zoom=12
+[3]
+https://wiki.openstreetmap.org/wiki/Import/Catalogue/Milan_addresses_import
+[4] http://audit.osmz.ru/map/MI-M9
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230328/23709741/attachment.htm>
+
+From branko at kokanovic.org  Tue Mar 28 20:48:03 2023
+From: branko at kokanovic.org (Branko Kokanovic)
+Date: Tue, 28 Mar 2023 20:48:03 +0000
+Subject: [Imports] Address import from government open data in Serbia
+In-Reply-To: <CAD7uiQdb-fNMCSk_YjbCGkMhmbT8Tr9gmMsXw=OTi-Akd3pTsw@mail.gmail.com>
+References: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+ <f3a914e7-b7ea-a10d-3d8f-748b8ee1d54d@mailo.com>
+ <3651a14f-ec11-44d4-b3bb-5fd9f4a3c48b@app.fastmail.com>
+ <CAD7uiQdb-fNMCSk_YjbCGkMhmbT8Tr9gmMsXw=OTi-Akd3pTsw@mail.gmail.com>
+Message-ID: <0e7001bf-2eeb-4f11-a6b2-b71cdc597573@app.fastmail.com>
+
+Yes, it will be interesting to see match with street names. Together with addresses as open data, we also got streets (with full geometries) as open data! However, since 1) most streets are already there and with good names, 2) addresses are really lacking in OSM data, 3) conflating points is far easier than conflating LineStrings, and 4) addresses seems more valuable overall, we decided to start with import of addresses first. There is another "team" that is actually preparing street import, but links you send are valuable once we have both to cross-check!
+
+Thanks for taking time to read and give suggestion! Branko
+
+On Mon, Mar 27, 2023, at 18:47, Matthew Whilden wrote:
+> One of the nice secondary benefits of high quality address data is that you get a good cross-check on the street information already in OSM. You may consider adding either the MapWithAI plugin for JOSM users (it has a great validator rule for this) OR do a post facto cleanup using the address view over at https://tools.geofabrik.de/osmi/. For the United States equivalent, it has caught typos, misspellings, incorrect abbreviation expansions etc. 
+> 
+> Here's a diary about verifying US roadway data with our National Address Database: https://www.openstreetmap.org/user/watmildon/diary/400827
+> 
+> Matt
+> 
+> On Sun, Mar 26, 2023 at 2:39?PM Branko Kokanovic <branko at kokanovic.org> wrote:
+>> Hi, comments inline
+>> 
+>> On Sun, Mar 26, 2023, at 20:31, Marc_marc wrote:
+>> > Le 26.03.23 ? 22:11, Branko Kokanovic a ?crit :
+>> >> Main wiki (en and sr):https://wiki.openstreetmap.org/wiki/Serbia/Projekti/Adresni_registar
+>> >
+>> > Thank you for this multilingual page
+>> > unfortunately the English page contains a lot of non-English sentence/word.
+>> 
+>> Ah, sorry, I started translating and did only headings and forgot:). It is translated fully now, check please!
+>> 
+>> >
+>> > 3 remarks if I understood correctly :
+>> > - you refer to the addr page in Serbia for the tags, this one is in Serbian
+>> > Could you instead include the correspondence between the data names
+>> > in the opendata data and the osm tags you plan to use ?
+>> 
+>> Not sure what you mean here? RGZ (cadastre) data include street and housenumber that we are converting to addr:street and addr:housenumber as explained, all other fields are not from RGZ. There will be "ref:RS:kucni_broj" which is reference to ID in RGZ. There are other fields in RGZ like district, municipality, settlement that we will use to match RGZ and OSM, but those will not be imported. Maybe I can translate https://wiki.openstreetmap.org/wiki/Serbia/Adresses if it can help? Or maybe I just don't understand question fully?
+>> 
+>> > - you plan to use a ref in some cases.
+>> > Unfortunately, practice shows that these refs are of no use either for a 
+>> > future import or for the QA since you have to take into account the new 
+>> > addresses without refs anyway. I recommend deleting this external ref 
+>> > which only makes the data heavier for the contributor
+>> 
+>> Interestingly, our experience is quite different - having reference to open data is huge help for lot of scripts/reports we have. For example, we use this: https://gitlab.com/osm-serbia/prostorne-jedinice-import for daily check of administrative boundaries (download OSM and open data each day and check quality in OSM) and references (tag "ref:RS:naselje") are used to match these. Also for other stuff like heritage https://www.osmsrbija.iz.rs/nkd/ with tag "ref:RS:nkd". It offers us to do two-way sync and report newly added/recently removed entities from both OSM and open data! Since it is mostly automated effort to check them (and report those missing refs), there is no expectation that anyone should add these manually, so I hope it is no burden to any contributor.
+>> 
+>> > - I don't see a changeset tag, could you add the tags you plan to use?
+>> 
+>> Yes, we plan to use it (are you referring to source during changeset commit?). It should be mentioned in my original mail as "RGZ_AR_Import". It is also part of .osm files in report.
+>> 
+>> Hope this clarifies things better!
+>> 
+>> Thanks, Branko
+>> 
+>> >
+>> >
+>> >
+>> > _______________________________________________
+>> > Imports mailing list
+>> > Imports at openstreetmap.org
+>> > https://lists.openstreetmap.org/listinfo/imports
+>> 
+>> _______________________________________________
+>> Imports mailing list
+>> Imports at openstreetmap.org
+>> https://lists.openstreetmap.org/listinfo/imports
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230328/650b5999/attachment.htm>
+
+From branko at kokanovic.org  Tue Mar 28 21:18:53 2023
+From: branko at kokanovic.org (Branko Kokanovic)
+Date: Tue, 28 Mar 2023 21:18:53 +0000
+Subject: [Imports] Address import from government open data in Serbia
+In-Reply-To: <CALPJ3wb2KnDa0iVyTtQ592ojSGp+kWDdE4KjiJLG_12kLm34Gg@mail.gmail.com>
+References: <0c5cc126-5937-455a-b586-5a8f68e4aedc@app.fastmail.com>
+ <CALPJ3wb2KnDa0iVyTtQ592ojSGp+kWDdE4KjiJLG_12kLm34Gg@mail.gmail.com>
+Message-ID: <8db86c1f-51f6-4116-8e7d-89935339e6e7@app.fastmail.com>
+
+Hi,
+I didn't know for openrefine software, seems like a nice think to be aware of! However, we opted for "full control" approach. Our algorithm (just shouting it here, someone might find it useful) to create mapping from "ALL CAPS" to "All Caps" is something like:
+* check in curated list of overridden street names (those are names that we crowdsourced in online spreadsheet and put in files as special cases)
+* Find streets in OSM by cadastre reference (since streets are also open data). If found, we are sure that mapping is correct
+* Normalize "ALL CAPS" name (remove punctuation, put to lowercase, trim...) and try to find that normalized name in OSM. If found, assume that this is correct street name
+* Do best effort. Keep "First Letter" (as we have lot of names of people, so mostly first letter is capital case) and create list of words that are exception ("street", "river", "valley", "brigades", "stream", "creek"...). This is highly specific to grammar rules.
+
+Regarding osminspector, we will surely use it during and after import.
+
+WRT question how we plan to do conflation, we also opted for "full control" solution - harder, but more customizable, I think. We might be wrong on this, maybe it was overarchitecture, but this is what we think will give us best ratio of import quality/speed of import. 2.5 mil address is not small number. Basically, we have daily job which is set of pipelines[1] that downloads cadastre data, as well as PBF from OSM, does some normalization, street name mapping and then conflation, generates HTML and import .osm files and uploads everything. Conflation is done by matching street names by Levensthein distance, housenumbers as numeric and distance as numeric too and doing linear combination of these to get percentage of match. If match is perfect (100%), we prepare .osm files to be imported to JOSM (in these files, we just add "ref" to existing entities). If there is not a single address at all within 200m (0% match), which is very common case in villages today, we prepare .osm files to be added as new nodes to OSM. If there is partial match (between 0-100%), we do hands-off and leave it to human to sort things manually. There is import instructions in wiki how to handle those .osm files and I just published instruction video[2] (in Serbian, I will add subtitles these days),
+
+Thanks for great suggestions! Branko
+
+[1] https://gitlab.com/osm-serbia/adresniregistar/-/blob/main/Makefile
+[2] https://peertube.openstreetmap.fr/w/s7tiAyeK592Btj9ficfHJH
+
+
+On Tue, Mar 28, 2023, at 13:40, Cascafico Giovanni wrote:
+> Hello Branko,
+> 
+> I'd like to suggest openrefine [1] for ALLCAPS and mispelling issues. The tool can save a sequence of regex replaces on huge lists. Besides, a replacing sequence is automatically saved and can be a resource in case of further imports.
+> 
+> Like others pointed out, I found osminspector [2] a very useful tool for post-import quality assessment.
+> 
+> I didn't understand how you plan to perform conflation. My approach would be using osm_conflator tool and audit service [3]. Basically osm_conflator works on nodes by overpass extracting a category (ie, addr:) and trying to match import candidates in a certain radius. Once a set of candidates is generated, actual conflation (audit) can be done via crowd-checking on a shared map like this [4].
+> 
+> 
+> 
+> [1] https://openrefine.org/
+> [2] https://tools.geofabrik.de/osmi/?view=addresses&lon=20.40677&lat=44.84030&zoom=12
+> [3] https://wiki.openstreetmap.org/wiki/Import/Catalogue/Milan_addresses_import
+> [4] http://audit.osmz.ru/map/MI-M9
+> _______________________________________________
+> Imports mailing list
+> Imports at openstreetmap.org
+> https://lists.openstreetmap.org/listinfo/imports
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230328/9e0a172f/attachment-0001.htm>
+
+From stefano.losa at setesrl.it  Thu Mar 30 16:07:56 2023
+From: stefano.losa at setesrl.it (stefano.losa at setesrl.it)
+Date: Thu, 30 Mar 2023 18:07:56 +0200
+Subject: [Imports] Import Civic House Numbers in Samolaco
+In-Reply-To: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@LocalDomain>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@LocalDomain>
+Message-ID: <OF3B6E8F98.6475CED9-ONC1258982.0058858D-C1258982.00586E5F@setesrl.it>
+
+Hello,
+
+After successfully importing house numbers for the out-of-town area of 
+Sondrio last month 
+(https://wiki.openstreetmap.org/wiki/Import/Catalogue/Sondrio_House_Numbers_Street_Import
+) we'd love to continue our contributions to OSM and we are ready to start 
+talking about importing Samolaco house numbers. 
+
+This proposal has already been discussed in the Italian and Lombard 
+mailing lists (Lombardy is the region where Samolaco is located), where no 
+one showed objections. 
+
+More info about this proposal can be found on the wiki: 
+https://wiki.openstreetmap.org/wiki/Import/Catalogue/Samolaco_House_Numbers_Street_Import 
+
+
+The data format and the plan are much alike the previous import, so we 
+don't expect to find any relevant issue. 
+
+Best regards, 
+
+
+
+Stefano Losa 
+Settore cartografia tecnica, escursionistica, GIS senior
+E-mail: stefano.losa at setesrl.it
+Cell.: +39 339 22 45 295
+-
+SeTe Srl
+Via Pignotti, 14, 23020, Poggiridenti SO
+Tel.: 0342 200296
+-
+Sito:  www.setesrl.it - www.setemap.it - www.setetrack.it | Shop:
+https://store.setesrl.it
+-
+Questa e-mail e i relativi allegati possono contenere informazioni 
+riservate esclusivamente al DESTINATARIO specificato in indirizzo.
+Le informazioni trasmesse attraverso la presente e-mail ed i suoi allegati 
+sono diretti esclusivamente al destinatario e devono ritenersi riservati 
+con divieto di diffusione e di uso salva espressa autorizzazione. Se la 
+presente e-mail ed i suoi allegati fossero stati ricevuti per errore da 
+persona diversa dal destinatario siete pregati di distruggere tutto quanto 
+ricevuto e di informare il mittente con lo stesso mezzo. Qualunque 
+utilizzazione, divulgazione o copia non autorizzata di questa 
+comunicazione ? rigorosamente vietata e comporta violazione delle 
+disposizioni di Legge sulla tutela dei dati personali REGOLAMENTO EUROPEO 
+2016/679.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230330/d6976be6/attachment.htm>
+
+From sherbets at disroot.org  Fri Mar 31 03:02:57 2023
+From: sherbets at disroot.org (sherbets at disroot.org)
+Date: Thu, 30 Mar 2023 22:02:57 -0500
+Subject: [Imports] Import Civic House Numbers in Samolaco
+In-Reply-To: <OF3B6E8F98.6475CED9-ONC1258982.0058858D-C1258982.00586E5F@setesrl.it>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@LocalDomain>
+ <OF3B6E8F98.6475CED9-ONC1258982.0058858D-C1258982.00586E5F@setesrl.it>
+Message-ID: <2da67956f53245e0de8976c082eecfe1@disroot.org>
+
+
+Hey Stefano,
+
+How many of these datasets exist, and how many do you plan to add to 
+OSM? If there are several, and you plan on working through them one by 
+one, I would suggest creating a blanket wiki page that documents all the 
+available datasets and any special processes for each one. This would 
+make it easier to propose a collective page and allow you to continue 
+your good work without getting bogged down in mailing list bureaucracy.
+
+--SherbetS
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230330/b3e108a4/attachment.htm>
+
+From dieterdreist at gmail.com  Fri Mar 31 08:02:24 2023
+From: dieterdreist at gmail.com (Martin Koppenhoefer)
+Date: Fri, 31 Mar 2023 10:02:24 +0200
+Subject: [Imports] Import Civic House Numbers in Samolaco
+In-Reply-To: <OF3B6E8F98.6475CED9-ONC1258982.0058858D-C1258982.00586E5F@setesrl.it>
+References: <OF494C3591.2B19B09C-ONC1258935.00604B19-C1258935.0061529A@LocalDomain>
+ <OF3B6E8F98.6475CED9-ONC1258982.0058858D-C1258982.00586E5F@setesrl.it>
+Message-ID: <CABPTjTAMSDY=j3+uBfo7DUMYXWLWkEDuY=NtU2pq1726mTj7+Q@mail.gmail.com>
+
+Am Do., 30. M?rz 2023 um 18:09 Uhr schrieb <stefano.losa at setesrl.it>:
+
+> After successfully importing house numbers for the out-of-town area of
+> Sondrio last month
+> *(https://wiki.openstreetmap.org/wiki/Import/Catalogue/Sondrio_House_Numbers_Street_Import*
+> <https://wiki.openstreetmap.org/wiki/Import/Catalogue/Sondrio_House_Numbers_Street_Import>)
+> we'd love to continue our contributions to OSM and we are ready to start
+> talking about importing Samolaco house numbers.
+
+
+
+I am pleased to see there are still addr:housenumber address tags on POI in
+Sondrio that are represented as ways, which means you have abided to the
+updated plan to not remove or "convert" these to points, +1.
+Looking at what is present in Samolaco, conflation seems to be easy, I only
+counted about 25 objects with addresses.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openstreetmap.org/pipermail/imports/attachments/20230331/6ac9025e/attachment.htm>
+
