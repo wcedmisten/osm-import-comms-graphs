@@ -25,8 +25,6 @@ for post in all_topics["topics"]:
 
     post_data = res.json()
 
-    # pprint.pprint(post_data)
-
     for reply in post_data["post_stream"]["posts"]:
         replies.append(
             {

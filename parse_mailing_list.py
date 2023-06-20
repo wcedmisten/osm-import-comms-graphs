@@ -16,8 +16,6 @@ FROM_LINE_REGEX = "From (.+ at .+)  [A-Z][a-z]{2} ([A-Z][a-z]{2} *\d{1,2} \d{2}:
 
 replies = []
 
-subjects = set()
-
 # manually classified each thread by country
 subject_country_map = {
     '[talk-au] VIC Traffic Lights MapRoulette import': 'AU',
@@ -59,7 +57,6 @@ for idx, line in enumerate(lines):
         subject_line = subject_line.replace("\n", "")
 
         subject = subject_line.split("Subject: [Imports] ")[1]
-        subjects.add(subject)
 
         replies.append({
             "email": match.group(1).replace(" at ", "@"),
